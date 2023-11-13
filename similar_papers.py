@@ -30,12 +30,14 @@ def main():
         alias="default",
         user='username',
         password='password',
-        host='localhost',
+        host='milvus-standalone',
         port='19530'
     )
-
+    
     database_name = "papers"
-    if database_name in db.list_database():
+    collection_name = "research_papers"
+
+    if database_name not in db.list_database():
         db.create_database(database_name)
         
     db.using_database(database_name)
@@ -62,7 +64,6 @@ def main():
         description="Paper similarity finder",
         enable_dynamic_field=True
     )
-    collection_name = "research_papers"
 
     collection = Collection(
         name=collection_name,
@@ -72,6 +73,8 @@ def main():
     )
 
     file_list = list_files("/home/input_ttl_files")
+
+    print("Adding vectors to collection...")
 
     for ttl_file in file_list:
         g = Graph()
@@ -83,6 +86,8 @@ def main():
 
         data = [[paper_uri], [embedding], [title]]
         collection.insert(data)
+    
+    print("Collection created")
 
     index_params = {
         "metric_type":"COSINE",
@@ -102,27 +107,32 @@ def main():
 
     search_params = {
         "metric_type": "COSINE", 
-        "offset": 0, 
+        "offset": 1, 
         "ignore_growing": False, 
         "params": {"nprobe": 10}
     }
 
     g_sim = Graph()
     base = Namespace("https://w3id.org/ocs/ont/papers/")
+    g_sim.bind("base", base)
+
+    print("Querying the collection...")
 
     for ttl_file in file_list:
+        print(f"Processing file {os.path.basename(ttl_file)}")
+
         g = Graph()
         g.parse(os.path.join(ttl_file), format="ttl")
 
         embedding = extract_embedding_from_graph(g)
-        paper_uri = extract_paper_uri(g)
+        paper_uri = URIRef(extract_paper_uri(g))
 
     
         results = collection.search(
             data=[embedding], 
             anns_field="embedding_field", 
             param=search_params,
-            limit=10,
+            limit=3,
             expr=None,
             output_fields=['paper_title', 'distance']
         )
@@ -132,12 +142,13 @@ def main():
             blank_node = BNode()
             g_sim.add((paper_uri, base.hasRelatedPapers, blank_node))
             
-            sim_paper_uri = res.id
+            sim_paper_uri = URIRef(res.id)
             sim_score = res.distance
             
             g_sim.add((blank_node, base.hasOpencsUID, sim_paper_uri))
             g_sim.add((blank_node, base.similarityScore, Literal(sim_score, datatype=XSD.integer)))
 
+    print("Saving results...")
 
     with open("/home/output/similarity_graph.ttl", "wb") as file:
         g_sim = g_sim.serialize(format="turtle")
@@ -145,7 +156,16 @@ def main():
             g_sim = g_sim.encode()
         file.write(g_sim)
 
-          
+    for coll in utility.list_collections():
+        utility.drop_collection(coll)
+    
+    if database_name in db.list_database():
+        db.drop_database(database_name)
 
+    connections.disconnect(alias="default")
+
+    print("Success")
+
+          
 if __name__ == "__main__":
     main()
