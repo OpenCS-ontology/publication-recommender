@@ -1,6 +1,7 @@
 from merge_graphs import list_files
 from rdflib import Graph, Namespace, RDF, URIRef, BNode, Literal, XSD
 from pymilvus import connections, Collection, CollectionSchema, FieldSchema, DataType, utility, db
+from kneed import KneeLocator
 import os
 
 
@@ -91,8 +92,7 @@ def main():
 
     index_params = {
         "metric_type":"COSINE",
-        "index_type":"IVF_FLAT",
-        "params":{"nlist":768}
+        "index_type":"FLAT"
     }
 
     collection.create_index(
@@ -108,8 +108,7 @@ def main():
     search_params = {
         "metric_type": "COSINE", 
         "offset": 1, 
-        "ignore_growing": False, 
-        "params": {"nprobe": 10}
+        "ignore_growing": False
     }
 
     g_sim = Graph()
@@ -132,12 +131,18 @@ def main():
             data=[embedding], 
             anns_field="embedding_field", 
             param=search_params,
-            limit=3,
+            limit=10,
             expr=None,
             output_fields=['paper_title', 'distance']
         )
 
-        for res in results[0]:
+        n = 10
+        x = [i / (n-1) for i in range(n)]
+        y = results[0].distances
+        kl = KneeLocator(x, y, curve="concave", direction="decreasing")
+        knee = kl.knee
+
+        for res in results[0][knee:10]:
 
             blank_node = BNode()
             g_sim.add((paper_uri, base.hasRelatedPapers, blank_node))
