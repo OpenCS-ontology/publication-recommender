@@ -113,7 +113,9 @@ def main():
 
     g_sim = Graph()
     base = Namespace("https://w3id.org/ocs/ont/papers/")
+    dc = Namespace("http://purl.org/dc/terms/")
     g_sim.bind("base", base)
+    g.bind("dc", dc)
 
     print("Querying the collection...")
 
@@ -125,33 +127,40 @@ def main():
 
         embedding = extract_embedding_from_graph(g)
         paper_uri = URIRef(extract_paper_uri(g))
-
+        paper_title = extract_title_from_graph(g)
+        g_sim.add((paper_uri, dc.title, Literal(paper_title, datatype=XSD.string)))
     
         results = collection.search(
             data=[embedding], 
             anns_field="embedding_field", 
             param=search_params,
-            limit=10,
+            limit=16,
             expr=None,
             output_fields=['paper_title', 'distance']
         )
 
-        n = 10
-        x = [i / (n-1) for i in range(n)]
+        n = len(results[0])
+        x = [i for i in range(n)]
         y = results[0].distances
-        kl = KneeLocator(x, y, curve="concave", direction="decreasing")
+        kl = KneeLocator(x, y, curve="convex", direction="decreasing", online=True, S=1, interp_method="polynomial", polynomial_degree=5)
         knee = kl.knee
 
-        for res in results[0][knee:10]:
+        print(f"Distances: {results[0].distances}")
 
-            blank_node = BNode()
-            g_sim.add((paper_uri, base.hasRelatedPapers, blank_node))
-            
+        for res in results[0][0:knee]:
             sim_paper_uri = URIRef(res.id)
             sim_score = res.distance
+            sim_title = res.entity.get('paper_title')
+
+            if sim_score > 0.85:
+                blank_node = BNode()
+                g_sim.add((paper_uri, base.hasRelatedPapers, blank_node))
             
-            g_sim.add((blank_node, base.hasOpencsUID, sim_paper_uri))
-            g_sim.add((blank_node, base.similarityScore, Literal(sim_score, datatype=XSD.integer)))
+                g_sim.add((blank_node, base.hasOpencsUID, sim_paper_uri))
+                g_sim.add((blank_node, base.similarityScore, Literal(sim_score, datatype=XSD.integer)))
+                g_sim.add((blank_node, dc.title, Literal(sim_title, datatype=XSD.string)))
+
+
 
     print("Saving results...")
 

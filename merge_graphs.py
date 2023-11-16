@@ -15,6 +15,8 @@ def list_files(directory):
 
 def main():
 
+    print("Merging the knowledge graph...")
+
     directory_path = '/home/input_ttl_files'
     file_list = list_files(directory_path)
 
@@ -31,6 +33,8 @@ def main():
         if isinstance(merged_graph, str):
             merged_graph = merged_graph.encode()
         file.write(merged_graph)
+
+    print("Graph merged successfully")
 
 
 if __name__ == "__main__":
