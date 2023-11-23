@@ -6,7 +6,7 @@ import os
 
 
 def extract_embedding_from_graph(graph: Graph):
-    bn = Namespace("https://w3id.org/ocs/ont/papers/")
+    bn = Namespace("https://w3id.org/ocs/kg/papers/")
     graph.bind("", bn)
     embedding = eval(str(list(graph.triples((None, bn.hasWordEmbedding, None)))[0][2]))
     return embedding
@@ -112,10 +112,14 @@ def main():
     }
 
     g_sim = Graph()
-    base = Namespace("https://w3id.org/ocs/ont/papers/")
+    cs_kg = Namespace("https://w3id.org/ocs/kg/papers/")
     dc = Namespace("http://purl.org/dc/terms/")
-    g_sim.bind("base", base)
-    g.bind("dc", dc)
+    cs_ont = Namespace("https://w3id.org/ocs/ont/papers/")
+    owl = Namespace("http://www.w3.org/2002/07/owl#")
+    g_sim.bind("", cs_kg)
+    g_sim.bind("cs_ont", cs_ont)
+    g_sim.bind("dc", dc)
+    g.bind("owl", owl)
 
     print("Querying the collection...")
 
@@ -154,11 +158,11 @@ def main():
 
             if sim_score > 0.85:
                 blank_node = BNode()
-                g_sim.add((paper_uri, base.hasRelatedPapers, blank_node))
+                g_sim.add((paper_uri, cs_ont.hasRelatedPapers, blank_node))
             
-                g_sim.add((blank_node, base.hasOpencsUID, sim_paper_uri))
-                g_sim.add((blank_node, base.similarityScore, Literal(sim_score, datatype=XSD.integer)))
-                g_sim.add((blank_node, dc.title, Literal(sim_title, datatype=XSD.string)))
+                g_sim.add((blank_node, owl.sameAs, sim_paper_uri))
+                g_sim.add((blank_node, cs_ont.similarityScore, Literal(sim_score, datatype=XSD.integer)))
+                #g_sim.add((blank_node, dc.title, Literal(sim_title, datatype=XSD.string)))
 
 
 
