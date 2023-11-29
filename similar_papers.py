@@ -30,7 +30,13 @@ def extract_title_from_graph(graph: Graph):
 
 def main():
 
-    connections.connect("default", host="localhost", port="19530")
+    connections.connect(
+        alias='default',
+        user='username',
+        password='password',
+        host='milvus-standalone',
+        port='19530'
+    )
     
     database_name = "papers"
     collection_name = "research_papers"
