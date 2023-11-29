@@ -3,7 +3,7 @@ FROM python:3.10.9-slim-bullseye
 COPY requirements.txt /home/requirements.txt
 COPY merge_graphs.py /home/merge_graphs.py
 COPY similar_papers.py /home/similar_papers.py
-COPY container_test container_test
+COPY container_test /home/container_test
 
 RUN apt-get update
 RUN apt-get install -y git
