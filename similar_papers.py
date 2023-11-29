@@ -9,18 +9,21 @@ def extract_embedding_from_graph(graph: Graph):
     bn = Namespace("https://w3id.org/ocs/kg/papers/")
     graph.bind("", bn)
     embedding = eval(str(list(graph.triples((None, bn.hasWordEmbedding, None)))[0][2]))
+    assert embedding
     return embedding
 
 def extract_paper_uri(graph: Graph):
     fabio = Namespace("http://purl.org/spar/fabio/")
     graph.bind("fabio", fabio)
     paper_uri = str(list(graph.triples((None, RDF.type, fabio.ResearchPaper)))[0][0])
+    assert paper_uri
     return paper_uri
 
 def extract_title_from_graph(graph: Graph):
     pred_uri = URIRef("http://purl.org/dc/terms/title")
     title_triple = list(graph.triples((None, pred_uri, None)))[0]
     object_literal = str(title_triple[2])
+    assert object_literal
     return object_literal
 
 
@@ -74,6 +77,7 @@ def main():
     )
 
     file_list = list_files("/home/input_ttl_files")
+    assert file_list
 
     print("Adding vectors to collection...")
 
@@ -142,6 +146,7 @@ def main():
             expr=None,
             output_fields=['paper_title', 'distance']
         )
+        assert results
 
         n = len(results[0])
         x = [i for i in range(n)]
@@ -153,8 +158,12 @@ def main():
 
         for res in results[0][0:knee]:
             sim_paper_uri = URIRef(res.id)
+            assert sim_paper_uri
+
             sim_score = res.distance
-            sim_title = res.entity.get('paper_title')
+            assert sim_score
+
+            #sim_title = res.entity.get('paper_title')
 
             if sim_score > 0.85:
                 blank_node = BNode()
