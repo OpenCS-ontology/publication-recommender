@@ -17,12 +17,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup milvus-etcd
-      - run: |
+        run: |
           docker pull quay.io/coreos/etcd:v3.5.5
           docker run -d -p 2379:2379 --name milvus-etcd quay.io/coreos/etcd:v3.5.5 etcd -advertise-client-urls=http://127.0.0.1:2379 -listen-client-urls http://0.0.0.0:2379 --data-dir /etcd
 
       - name: Setup milvus-minio
-      - run: |
+        run: |
           docker pull minio/minio:RELEASE.2023-03-20T20-16-18Z
           docker run -p 9000:9000 -p 9001:9001 --name milvus-minio -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/minio:/minio_data minio/minio:RELEASE.2023-03-20T20-16-18Z server /minio_data --console-address ":9001"
 
