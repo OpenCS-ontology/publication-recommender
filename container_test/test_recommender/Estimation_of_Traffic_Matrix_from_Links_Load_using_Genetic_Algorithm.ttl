@@ -1,0 +1,1357 @@
+@prefix : <https://w3id.org/ocs/kg/papers/> .
+@prefix c4o: <http://purl.org/spar/c4o/> .
+@prefix co: <http://purl.org/co/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix default1: <https://w3id.org/ocs/ont/papers/> .
+@prefix deo: <http://purl.org/spar/deo/> .
+@prefix doco: <http://purl.org/spar/doco/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix po: <http://www.essepuntato.it/2008/12/pattern#> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:paper_d9925951f a fabio:ResearchPaper ;
+    prism:keyword "Genetic Alogorithm"^^xsd:string,
+        "Gravity Model"^^xsd:string,
+        "Link Loads"^^xsd:string,
+        "Traffic Engineering"^^xsd:string,
+        "Traffic Matrix"^^xsd:string ;
+    dcterms:created "2021-02-09"^^xsd:date ;
+    dcterms:creator [ :hasItem :author_962e81ea4,
+                :author_b2a099769,
+                :author_cd2965c6b,
+                :author_dafe8004b ] ;
+    dcterms:title "Estimation of Traffic Matrix from Links Load using Genetic Algorithm"^^xsd:string ;
+    datacite:hasDescription [ datacite:hasDescriptionType datacite:abstract ;
+            literal:hasLiteralValue "Traffic Matrix (TM) is a representation of all traffic flows in a network. It is helpful for traffic engineering and network management. It contains the traffic measurement for all parts of a network and thus for larger network it is difficult to measure precisely. Link load are easily obtainable but they fail to provide a complete TM representation. Also link load and TM relationship forms an under-determined system with infinite set of solutions. One of the well known traffic models Gravity model provides a rough estimation of the TM. We have proposed a Genetic algorithm (GA) based optimization method to further the solutions of the Gravity model. The Gravity model is applied as an initial solution and then GA model is applied taking the link load-TM relationship as a objective function. Results shows improvement over Gravity model."^^xsd:string ] ;
+    frbr:realization :Journal_Article_482025a14 ;
+    po:contains :back_matter_d9925951f,
+        :body_matter_d9925951f ;
+    default1:hasWordEmbedding "[0.09881910681724548, -0.08184073120355606, 0.4749282896518707, 0.6583139300346375, 0.033966030925512314, 0.7096208333969116, -0.48240968585014343, -1.1548272371292114, 0.3856566250324249, 0.5247059464454651, 0.12193773686885834, -0.802266001701355, -0.285818487405777, -0.9949542880058289, 0.0029507961589843035, -0.30538785457611084, -0.485493004322052, 0.22614458203315735, 0.485981822013855, -0.5420948266983032, 0.06869693100452423, -0.013725203461945057, -1.2668181657791138, 0.003864765865728259, 0.5249365568161011, 0.9390450119972229, -0.4052967429161072, 0.9214220643043518, -0.8478139042854309, 0.2860403060913086, 0.42915764451026917, -0.029912838712334633, 1.1431242227554321, -0.6784307956695557, -0.2282247245311737, 0.3138194978237152, 0.3568422794342041, 0.14902785420417786, -0.4474068880081177, 0.9139109253883362, 0.08355208486318588, 0.34437137842178345, 0.27010005712509155, -1.2591543197631836, 0.34011635184288025, 0.7149332165718079, -0.2782333791255951, 0.9933758974075317, 0.34910550713539124, -0.5448303818702698, 0.5593116283416748, -0.3072161376476288, 0.1150892898440361, 1.2500605583190918, 0.8844245076179504, 0.051008984446525574, -0.2660781741142273, -1.2313584089279175, -0.28091132640838623, -0.41482013463974, -0.7148624062538147, 0.4837253987789154, 0.4663951098918915, -0.22369350492954254, 1.1099896430969238, 0.48724353313446045, -0.3443290889263153, -0.2521933317184448, -0.09653710573911667, 0.24679416418075562, -0.05152549594640732, -0.9600902199745178, -0.39802315831184387, 0.3764134347438812, -0.2677130401134491, 0.6537868976593018, 0.4459325075149536, 0.25673380494117737, -0.09160447865724564, -0.411361426115036, -0.04479903355240822, -0.4363095164299011, 0.663554847240448, -0.9787254929542542, -0.03083731047809124, 0.8594669103622437, -0.5417461395263672, -0.5407018661499023, -0.0022055881563574076, 0.8395339250564575, 0.5430325865745544, 0.817686915397644, -0.22677496075630188, -0.23897284269332886, -0.0073613920249044895, 0.22975505888462067, -0.31719571352005005, -0.1698300540447235, 0.12088567018508911, 0.7559643387794495, 0.06547082215547562, 1.17155122756958, 0.012908545322716236, 0.2752152681350708, 1.2316532135009766, 0.5002886652946472, 0.2953038215637207, -0.5113617777824402, 0.489905446767807, 0.5000098347663879, -0.3170570135116577, -1.5393351316452026, -0.3822135031223297, -0.764569878578186, -0.24148568511009216, -0.6622524857521057, -0.16343748569488525, -0.44561767578125, -0.5134279131889343, 0.23138625919818878, -0.2146250456571579, 0.2282150685787201, -0.17702215909957886, 0.20366528630256653, 0.030237125232815742, 0.687524676322937, 0.11385316401720047, 0.5710219144821167, -0.14147032797336578, -0.4387682378292084, 0.19466635584831238, -0.159368097782135, 0.44138413667678833, -0.6699536442756653, 0.044040746986866, -0.2917465269565582, -0.8294398784637451, -0.24487672746181488, -0.2831311821937561, 1.0884231328964233, -0.5983619093894958, 0.4062443673610687, 1.3531180620193481, 0.9602821469306946, -0.9840359091758728, -0.018807552754878998, -0.10919343680143356, -1.275834560394287, -0.16744780540466309, 0.5472198128700256, 0.5789942741394043, -0.20195932686328888, -0.9008157849311829, -0.25971344113349915, 0.07859499007463455, -0.6748371124267578, 0.06195421889424324, 0.4112492501735687, 0.2871077358722687, 0.07060738652944565, 0.9216182827949524, -0.5006033778190613, -0.07953349500894547, -0.05454215407371521, -1.2919228076934814, 0.10304883867502213, 0.43958425521850586, -0.13150504231452942, -0.011499332264065742, 0.8288260698318481, -0.8120627999305725, -0.23338112235069275, 0.040152452886104584, 0.13910479843616486, -0.2303936928510666, -0.371040940284729, -0.9024073481559753, 0.19241735339164734, -0.3717294931411743, -0.023450490087270737, 0.3238863945007324, 0.7355679869651794, -0.19460593163967133, 0.13995873928070068, 0.5898731350898743, -0.07047511637210846, -0.3931649625301361, -0.05265587195754051, -1.0777443647384644, -0.2897285521030426, 1.138666033744812, -0.2242528200149536, 1.2667384147644043, 0.3605786859989166, -0.5649465322494507, 0.27913805842399597, -0.5774499177932739, -0.037244223058223724, -0.42765912413597107, 0.9455559253692627, -0.36890900135040283, 0.10928544402122498, -0.09758759289979935, 0.6280728578567505, -0.2719286382198334, 0.3037548363208771, -0.23421014845371246, -0.5308258533477783, -0.1789429932832718, 0.7956823110580444, -0.5565807819366455, 0.1199694350361824, 0.5467301607131958, -0.7057917714118958, -0.038285136222839355, 0.9357980489730835, 0.12262324243783951, -0.7111891508102417, -0.4072631597518921, 0.5059720277786255, 0.5470054149627686, 0.5481041669845581, 0.35715752840042114, -0.009688514284789562, 0.606214165687561, -0.04510565102100372, -0.8083282709121704, 0.8907318115234375, -0.3359547257423401, 0.1473352015018463, -0.14485403895378113, -1.5443141460418701, 0.6585429906845093, 0.11729717999696732, 0.3752553164958954, -0.6202715039253235, 0.5941662192344666, -0.007416769862174988, -0.21950258314609528, -0.7044872641563416, -0.09586717188358307, 1.4975348711013794, -0.12087021768093109, 0.5102081894874573, 0.2735042870044708, 0.17066547274589539, 0.6667866110801697, 0.6756443381309509, 0.8322970867156982, -0.13410574197769165, 0.08036235719919205, 0.11768879741430283, 0.5507756471633911, -0.14182689785957336, -0.4237780272960663, 0.014115501195192337, 0.5799605250358582, 0.11696798354387283, 0.5713690519332886, -1.1980315446853638, -0.15364329516887665, -0.5445421934127808, 1.1138495206832886, 0.7463011741638184, -0.3521883487701416, 0.3192014992237091, -0.16756592690944672, -0.38186752796173096, 0.20999795198440552, 0.3749651312828064, -0.583698034286499, -0.6039344072341919, -0.4835614860057831, -1.418885350227356, 0.6619201302528381, -0.3135530650615692, 0.10763910412788391, 0.14231152832508087, 0.37642431259155273, -0.7035276889801025, -0.16715800762176514, -0.5763115286827087, 0.19335974752902985, -0.14655260741710663, -0.7200562357902527, -0.6356945633888245, 0.5943899154663086, 0.2454860657453537, 0.31132951378822327, 0.33839523792266846, 0.9757111668586731, 0.16360436379909515, -0.4214506447315216, 0.06200231984257698, 0.43603554368019104, -0.7440075278282166, -0.29174602031707764, -0.000733313849195838, -0.06403365731239319, 0.3064170777797699, 0.7759460806846619, -0.06808868795633316, 0.3361376225948334, 0.17761896550655365, -0.16654354333877563, -0.21155041456222534, 0.31581589579582214, -0.2629017233848572, -0.7531836628913879, 0.4351344406604767, 0.2587628960609436, -0.2424682378768921, 1.160129427909851, -0.3048844039440155, -1.442517638206482, -0.2355717122554779, 0.0872936025261879, -0.7292912006378174, 0.23340992629528046, -0.0031159177888184786, 0.20624230802059174, -0.3793083131313324, 0.7817856073379517, -0.23897680640220642, -0.02953559346497059, 0.18920296430587769, 0.45382243394851685, -0.4408692419528961, 0.2607653737068176, -0.37990114092826843, 1.0437918901443481, -0.4041057229042053, 0.20184724032878876, 0.15980809926986694, 0.26003754138946533, -0.5027467608451843, 0.6088380217552185, 0.08046332746744156, 0.9931979775428772, -0.4537242650985718, 0.137854665517807, -0.2275274246931076, -0.30841246247291565, -0.7611491680145264, -0.2653171420097351, -0.42455214262008667, -0.975874125957489, -0.8220363259315491, 0.20401380956172943, 0.3603799343109131, 0.38848817348480225, 0.5954642295837402, 0.2150617390871048, -0.45234596729278564, -0.6527321338653564, -0.8147453665733337, 0.11454565823078156, -0.8580713272094727, -0.02563517540693283, -0.39256376028060913, 0.12405228614807129, -0.7519735097885132, 0.03606043756008148, 0.19682198762893677, 1.1212012767791748, 0.5602895617485046, 0.2786916196346283, 0.2804558575153351, -0.2535190284252167, -0.40758663415908813, 0.0018575845751911402, -0.3078955411911011, 0.24621477723121643, 0.7725091576576233, 0.3739476799964905, 0.22950679063796997, -0.465369313955307, 0.1556709259748459, 0.05532421916723251, 0.45519471168518066, 0.33041316270828247, -0.04948219656944275, -0.521880567073822, 0.3338063657283783, 1.4921927452087402, -0.3848991394042969, 0.2601528465747833, 0.669001042842865, 0.766705334186554, 1.0085781812667847, -0.24568317830562592, 0.3404574394226074, -0.22531422972679138, 1.2386054992675781, 0.3202647566795349, 0.013893510214984417, -0.08363936841487885, 0.5419286489486694, 0.23023957014083862, 0.980544924736023, 0.30495062470436096, -0.22932712733745575, -0.8967140913009644, 0.2563582956790924, -1.0096015930175781, -0.5315625071525574, -0.044920407235622406, 0.6360481381416321, -0.3912811279296875, -0.46929094195365906, 0.38708192110061646, 0.07508096843957901, 0.6473103165626526, -1.1018619537353516, 0.44971993565559387, -0.8558269739151001, 0.6324874758720398, -0.21500720083713531, 0.9703509211540222, 0.8603845238685608, 0.32701942324638367, 0.46253132820129395, 15.14317798614502, 1.0279581546783447, -0.19909101724624634, -0.01997745782136917, -0.11463211476802826, -0.32199111580848694, -0.3271247446537018, 0.6454969644546509, -0.8988922238349915, 0.5920224785804749, 0.869316041469574, -0.04504526033997536, 0.9196621179580688, 0.36734139919281006, 0.12407051026821136, -0.7088536024093628, 0.38026732206344604, 0.24882814288139343, 0.3307727873325348, -0.11542738229036331, 0.508247971534729, 0.4766615629196167, 0.3176935613155365, 0.6327338814735413, 0.15768538415431976, 0.27159255743026733, 0.48649027943611145, 0.29724279046058655, -0.2588866651058197, -0.15178363025188446, 0.13894934952259064, -0.550480842590332, 0.5480583906173706, -0.052414972335100174, -0.757736325263977, -0.5888043642044067, -0.9443302750587463, -1.2089157104492188, 0.4770788550376892, 0.6256150603294373, -1.0572819709777832, 0.19111430644989014, -0.5036650896072388, -0.6273890733718872, -0.5896036028862, 1.0682355165481567, 0.45302653312683105, 0.45720961689949036, -0.4482058584690094, -0.05270601809024811, -0.16968052089214325, -0.295184463262558, 0.1693655103445053, -0.18031904101371765, 0.5083395838737488, -0.5215730667114258, 0.46848416328430176, 0.485270619392395, 0.22639207541942596, 0.02777824178338051, -0.48052725195884705, -0.14064010977745056, -0.13382337987422943, 0.7315503358840942, 0.33061736822128296, -0.012844640761613846, -0.2921910285949707, -0.634209394454956, 0.5464979410171509, 0.2451692521572113, -0.8109006881713867, -0.4373186528682709, 0.5910922288894653, 0.22952918708324432, -0.19589334726333618, 0.08374491333961487, -0.30916377902030945, -0.29996544122695923, -0.855809211730957, 0.2499161660671234, 0.31733188033103943, -0.9070740342140198, -0.45582863688468933, 0.6077414155006409, -0.15530920028686523, -1.2649869918823242, 0.2578210234642029, -0.7864834070205688, -0.4182029366493225, 0.6999371647834778, -0.833301842212677, 0.06959177553653717, -0.4886198043823242, -0.5249382257461548, -0.39860549569129944, -0.7754024267196655, 0.038965173065662384, 0.15695232152938843, -1.0727072954177856, -0.0400741882622242, 0.01586351916193962, -0.3123076558113098, -0.2918333113193512, -0.5970708131790161, 0.8651509881019592, 0.60312420129776, -0.3688940107822418, -0.1177697628736496, 0.11291790753602982, -0.5930661559104919, -0.6026220917701721, -0.7512603998184204, -0.23759427666664124, -0.6603898406028748, 0.0789681151509285, -0.40394338965415955, -0.32094433903694153, -0.10132177174091339, 0.25530368089675903, -0.34999775886535645, -0.0673442929983139, -0.4169362187385559, 0.510334849357605, -0.38397714495658875, -0.9202062487602234, 0.06522057950496674, 0.08307156711816788, -0.08459728211164474, -0.10648278146982193, 0.4010162651538849, -0.09898874163627625, -0.1357138305902481, 0.2251904159784317, 0.20240463316440582, 0.28136250376701355, -0.3294999301433563, 1.141445517539978, -0.6468799114227295, -0.19241854548454285, -0.26535212993621826, -0.46909400820732117, -0.4984584152698517, -0.2818867266178131, -0.6762361526489258, 0.3599952459335327, -0.24438507854938507, 0.7811987996101379, -0.4010465145111084, 0.8612790107727051, 0.45991119742393494, 0.335255891084671, 0.2956857979297638, -0.07573571056127548, -0.48994261026382446, -0.2146652638912201, -0.628208339214325, 0.5998473763465881, -0.10350093245506287, -0.4258245527744293, 0.2207898646593094, -0.20084567368030548, 0.6586130857467651, 0.9005680680274963, -0.837270200252533, 0.954666018486023, -0.8775091171264648, 0.2901161015033722, -0.7032232880592346, -0.9035173058509827, 0.016382772475481033, 0.2010301649570465, -0.7688325643539429, -0.4106023907661438, -1.545570969581604, -0.43449386954307556, -0.22968514263629913, 0.0552610345184803, -0.4036242663860321, 0.40183988213539124, -0.052031464874744415, -0.9015914797782898, -0.9316121935844421, -0.7856881618499756, -0.07135055214166641, 0.6036416292190552, 0.2118767499923706, 0.3205629587173462, 0.4080117344856262, 0.19507691264152527, -0.04096435382962227, 0.9654524326324463, -0.8987607359886169, -0.7442360520362854, -1.0886296033859253, 0.3172324597835541, -0.21323497593402863, -0.4641217887401581, -1.218858003616333, 0.5737758874893188, -0.06424733251333237, -0.3009584844112396, -0.7286971807479858, 0.17525315284729004, -0.6657553911209106, 0.37745344638824463, 0.32469162344932556, 0.09174196422100067, 0.12144581228494644, -0.18376372754573822, 0.26226863265037537, 0.09272746741771698, 0.11536600440740585, -0.1641998440027237, -1.1686650514602661, -0.3024497330188751, 0.3289426267147064, -0.9636314511299133, 0.03593411669135094, 0.38238927721977234, -0.935926079750061, -0.20671604573726654, -0.3081940710544586, -0.03206431120634079, 0.1744978129863739, 0.32662323117256165, 0.6143619418144226, -0.21680250763893127, -1.285615086555481, 0.028229987248778343, 0.3301835358142853, -0.3673594892024994, -0.9368320107460022, -0.43657344579696655, 0.6185040473937988, -1.2316765785217285, 1.1803703308105469, -0.5114205479621887, -0.057524971663951874, -0.36684390902519226, 0.29907625913619995, 0.4603275954723358, 0.3737129867076874, 0.4120330214500427, 0.768858015537262, -0.3909820318222046, -1.1373540163040161, 0.5335286259651184, -0.5917263031005859, 0.0651753768324852, -1.0734663009643555, 0.34008336067199707, 1.354675531387329, -0.2138489931821823, -0.19642721116542816, 0.08069644123315811, 0.8219040632247925, 0.8587048053741455, 0.38719943165779114, -0.3440159261226654, -0.8395593762397766, -0.5779913663864136, -0.3730839490890503, 1.0633183717727661, -0.4860421121120453, 0.25161945819854736, 0.31854626536369324, 0.1867312490940094, -0.8846328854560852, -0.11464612185955048, -0.5832602381706238, -1.3547241687774658, 0.730593740940094, 0.3714374303817749, 0.19410327076911926, 0.1642453968524933, -0.986420750617981, 0.7646780610084534, 0.268246054649353, 0.7017039060592651, -0.4755057692527771, -0.29981693625450134, 0.7586838006973267, 1.0759856700897217, -0.5623731017112732, 0.014307113364338875, -0.9000469446182251, -0.7232335805892944, 1.482068657875061, 0.4344055950641632, -0.7019627690315247, 0.5343061685562134, 0.0727883130311966, 0.5004477500915527, -0.09391673654317856, -0.93026202917099, -0.7324753403663635, 0.3937656879425049, 1.1404399871826172, -0.045798394829034805, 0.10011211037635803, 0.021204844117164612, -0.3523951470851898, 0.09646531939506531, 0.6855533123016357, 0.7988672852516174, 0.4639821946620941, -0.7184886336326599, -0.5459205508232117, -0.6509621143341064, 0.804111897945404, -0.15407510101795197, -0.29082155227661133, -0.5920568704605103, 0.32936105132102966, -0.5101107358932495, 0.8708760738372803, 0.4632742404937744, -0.5764221549034119, 0.4443073272705078, -0.6444351077079773, 0.1433333307504654, -0.3007585406303406, 0.5541310906410217, 0.39261168241500854, 0.3789726495742798, -0.9261096715927124, -0.1259615570306778, -0.14768582582473755, -0.47806525230407715, -0.7819867730140686, -0.36821621656417847, 0.5775772929191589, 0.6512910723686218, -0.03170318529009819, 0.5468371510505676, 0.14519819617271423, 0.08432583510875702, -0.13027052581310272, 0.38663673400878906, -0.9180636405944824, -0.4171908497810364, -0.25617894530296326, -1.04893159866333, -0.6680877208709717, -0.6248040795326233, -0.8420912623405457]"^^xsd:string .
+
+:Journal_492d0f08a a fabio:Journal ;
+    frbr:part :Journal_Volume_fbb9d73c2 .
+
+:Journal_Article_482025a14 a fabio:JournalArticle ;
+    prism:endingPage 38 ;
+    prism:pageCount 9 ;
+    prism:startingPage 29 ;
+    datacite:doi "10.12694/scpe.v22i1.1834"^^xsd:anyURI ;
+    fabio:hasURL "https://www.scpe.org/index.php/scpe/article/view/1834"^^xsd:anyURI ;
+    frbr:partOf :Journal_Issue_093a01064 ;
+    owl:sameAs <https://www.scpe.org/index.php/scpe/article/view/1834> .
+
+:ListOfFigures_d9925951f a doco:ListOfFigures ;
+    po:contains :figure_0_d9925951f,
+        :figure_1_d9925951f,
+        :figure_2_d9925951f,
+        :figure_3_d9925951f,
+        :figure_4_d9925951f .
+
+:ListOfTables_d9925951f a doco:ListOfTables ;
+    po:contains :table_0_d9925951f,
+        :table_1_d9925951f,
+        :table_2_d9925951f,
+        :table_3_d9925951f .
+
+:author_962e81ea4 a schema:Person ;
+    pro:holdsRoleInTime :role_dbc4aadce ;
+    schema:familyName "Krishna"^^xsd:string ;
+    schema:givenName "Gopal"^^xsd:string ;
+    schema:name "Gopal Krishna"^^xsd:string .
+
+:author_b2a099769 a schema:Person ;
+    pro:holdsRoleInTime :role_68e64c730 ;
+    schema:familyName "Saha"^^xsd:string ;
+    schema:givenName "Anish Kumar"^^xsd:string ;
+    schema:name "Anish Kumar Saha"^^xsd:string .
+
+:author_cd2965c6b a schema:Person ;
+    pro:holdsRoleInTime :role_0ed31c661 ;
+    schema:familyName "Pachuau"^^xsd:string ;
+    schema:givenName "Joseph L"^^xsd:string ;
+    schema:name "Joseph L Pachuau"^^xsd:string .
+
+:author_dafe8004b a schema:Person ;
+    pro:holdsRoleInTime :role_233766b27 ;
+    schema:familyName "Roy"^^xsd:string ;
+    schema:givenName "Arnab"^^xsd:string ;
+    schema:name "Arnab Roy"^^xsd:string .
+
+:back_matter_d9925951f a doco:BackMatter ;
+    co:firstItem [ co:itemContent :bibliography_d9925951f ] ;
+    po:contains :ListOfFigures_d9925951f,
+        :ListOfTables_d9925951f,
+        :bibliography_d9925951f .
+
+:body_matter_d9925951f a doco:BodyMatter ;
+    co:firstItem [ co:itemContent :section1_d9925951f ;
+            co:nextItem [ co:itemContent :section2_d9925951f ;
+                    co:nextItem [ co:itemContent :section10_d9925951f ;
+                            co:nextItem [ co:itemContent :section11_d9925951f ] ] ] ] ;
+    po:contains :section10_d9925951f,
+        :section11_d9925951f,
+        :section1_d9925951f,
+        :section2_d9925951f .
+
+:figure_0_d9925951f a doco:Figure ;
+    po:contains :figure_box_0_d9925951f,
+        :figure_description_0_d9925951f,
+        :figure_label_0_d9925951f .
+
+:figure_1_d9925951f a doco:Figure ;
+    po:contains :figure_box_1_d9925951f,
+        :figure_description_1_d9925951f,
+        :figure_label_1_d9925951f .
+
+:figure_2_d9925951f a doco:Figure ;
+    po:contains :figure_box_2_d9925951f,
+        :figure_description_2_d9925951f,
+        :figure_label_2_d9925951f .
+
+:figure_3_d9925951f a doco:Figure ;
+    po:contains :figure_box_3_d9925951f,
+        :figure_description_3_d9925951f,
+        :figure_label_3_d9925951f .
+
+:figure_4_d9925951f a doco:Figure ;
+    po:contains :figure_box_4_d9925951f,
+        :figure_description_4_d9925951f,
+        :figure_label_4_d9925951f .
+
+:figure_box_0_d9925951f a doco:FigureBox ;
+    c4o:hasContent "[[148.17, 283.76, 298.94, 9.96], [129.61, 93.46, 336.14, 179.44]]" ;
+    schema:pagination 4 .
+
+:figure_box_1_d9925951f a doco:FigureBox ;
+    c4o:hasContent "[[234.24, 279.59, 126.8, 9.96], [105.61, 94.57, 382.86, 174.16]]" ;
+    schema:pagination 6 .
+
+:figure_box_2_d9925951f a doco:FigureBox ;
+    c4o:hasContent "[[127.97, 354.82, 339.33, 9.96]]" ;
+    schema:pagination 7 .
+
+:figure_box_3_d9925951f a doco:FigureBox ;
+    c4o:hasContent "[[152.0, 514.04, 291.27, 9.96]]" ;
+    schema:pagination 8 .
+
+:figure_box_4_d9925951f a doco:FigureBox ;
+    c4o:hasContent "[[57.6, 294.89, 480.08, 9.96], [57.6, 306.84, 44.32, 9.96]]" ;
+    schema:pagination 9 .
+
+:figure_description_0_d9925951f a doco:FigureLabel ;
+    c4o:hasContent "Fig. 3.1: Abilene network topology with various link traffic direction" .
+
+:figure_description_1_d9925951f a doco:FigureLabel ;
+    c4o:hasContent "Fig. 3.3: Crossover operation" .
+
+:figure_description_2_d9925951f a doco:FigureLabel ;
+    c4o:hasContent "Fig. 4.1: Output of proposed GA with Population size for time instance, t=1." .
+
+:figure_description_3_d9925951f a doco:FigureLabel ;
+    c4o:hasContent "Fig. 4.2: Comparison of various TM to raw value for instance t=1." .
+
+:figure_description_4_d9925951f a doco:FigureLabel ;
+    c4o:hasContent "Fig. 4.3: RMSE of Gravity model and proposed GA for different time instances t= 1 to 50 & fixed population size= 300." .
+
+:figure_label_0_d9925951f a doco:Label ;
+    c4o:hasContent "Fig. 3 . 1 :" .
+
+:figure_label_1_d9925951f a doco:Label ;
+    c4o:hasContent "Fig. 3 . 3 :" .
+
+:figure_label_2_d9925951f a doco:Label ;
+    c4o:hasContent "Fig. 4 . 1 :" .
+
+:figure_label_3_d9925951f a doco:Label ;
+    c4o:hasContent "Fig. 4 . 2 :" .
+
+:figure_label_4_d9925951f a doco:Label ;
+    c4o:hasContent "Fig. 4 . 3 :" .
+
+:referenceToBIBREF0_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF0_d9925951f ;
+    c4o:hasContent "[1]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF10_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF10_d9925951f ;
+    c4o:hasContent "[11]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF11_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF11_d9925951f ;
+    c4o:hasContent "[12]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF12_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF12_d9925951f ;
+    c4o:hasContent "[13]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF13_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF13_d9925951f ;
+    c4o:hasContent "[14]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF14_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF14_d9925951f ;
+    c4o:hasContent "[15]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF15_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF15_d9925951f ;
+    c4o:hasContent "[16]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF16_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF16_d9925951f ;
+    c4o:hasContent "[17]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF17_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF17_d9925951f ;
+    c4o:hasContent "[18]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF18_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF18_d9925951f ;
+    c4o:hasContent "[19]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF19_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF19_d9925951f ;
+    c4o:hasContent "[20]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF1_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF1_d9925951f ;
+    c4o:hasContent "[2]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF20_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF20_d9925951f ;
+    c4o:hasContent "[21]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF21_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF21_d9925951f ;
+    c4o:hasContent "[22]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF22_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF22_d9925951f ;
+    c4o:hasContent "[23]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF23_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF23_d9925951f ;
+    c4o:hasContent "[24]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF24_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF24_d9925951f ;
+    c4o:hasContent "[25]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF25_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF25_d9925951f ;
+    c4o:hasContent "[26]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF26_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF26_d9925951f ;
+    c4o:hasContent "[27]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF27_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF27_d9925951f ;
+    c4o:hasContent "[28]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF28_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF28_d9925951f ;
+    c4o:hasContent "[29]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF29_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF29_d9925951f ;
+    c4o:hasContent "[30]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF2_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF2_d9925951f ;
+    c4o:hasContent "[3]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF31_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF31_d9925951f ;
+    c4o:hasContent "[32]" ;
+    schema:pagination 4 .
+
+:referenceToBIBREF32_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF32_d9925951f ;
+    c4o:hasContent "[33]" ;
+    schema:pagination 4 .
+
+:referenceToBIBREF33_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF33_d9925951f ;
+    c4o:hasContent "[34]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF34_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF34_d9925951f ;
+    c4o:hasContent "[35]" ;
+    schema:pagination 6 .
+
+:referenceToBIBREF3_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF3_d9925951f ;
+    c4o:hasContent "[4]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF5_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF5_d9925951f ;
+    c4o:hasContent "[6]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF6_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF6_d9925951f ;
+    c4o:hasContent "[7]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF7_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF7_d9925951f ;
+    c4o:hasContent "[8]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF8_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF8_d9925951f ;
+    c4o:hasContent "[9]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF9_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF9_d9925951f ;
+    c4o:hasContent "[10]" ;
+    schema:pagination 1 .
+
+:reference_32_d9925951f a deo:Reference ;
+    dcterms:references :table_0_d9925951f ;
+    c4o:hasContent "Table 3" ;
+    schema:pagination 3 .
+
+:reference_35_d9925951f a deo:Reference ;
+    c4o:hasContent "Figure 3" ;
+    schema:pagination 5 .
+
+:reference_37_d9925951f a deo:Reference ;
+    c4o:hasContent "Figure 3" ;
+    schema:pagination 5 .
+
+:reference_40_d9925951f a deo:Reference ;
+    c4o:hasContent "Figure 4" ;
+    schema:pagination 6 .
+
+:reference_41_d9925951f a deo:Reference ;
+    c4o:hasContent "Figure 4" ;
+    schema:pagination 6 .
+
+:reference_43_d9925951f a deo:Reference ;
+    c4o:hasContent "Figure 4" ;
+    schema:pagination 7 .
+
+:reference_44_d9925951f a deo:Reference ;
+    dcterms:references :table_1_d9925951f ;
+    c4o:hasContent "Table 4" ;
+    schema:pagination 7 .
+
+:reference_45_d9925951f a deo:Reference ;
+    dcterms:references :table_1_d9925951f ;
+    c4o:hasContent "Table 4" ;
+    schema:pagination 7 .
+
+:reference_46_d9925951f a deo:Reference ;
+    dcterms:references :table_1_d9925951f ;
+    c4o:hasContent "Table 4" ;
+    schema:pagination 7 .
+
+:role_0ed31c661 a pro:RoleInTime ;
+    pro:relatesToOrganization :org_b272380bd ;
+    pro:withRole pro:author .
+
+:role_233766b27 a pro:RoleInTime ;
+    pro:relatesToOrganization :org_b272380bd ;
+    pro:withRole pro:author .
+
+:role_68e64c730 a pro:RoleInTime ;
+    pro:relatesToOrganization :org_b272380bd ;
+    pro:withRole pro:author .
+
+:role_dbc4aadce a pro:RoleInTime ;
+    pro:relatesToOrganization :org_b272380bd ;
+    pro:withRole pro:author .
+
+:sectionLabel10_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "4." .
+
+:sectionLabel11_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "5." .
+
+:sectionLabel1_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "1." .
+
+:sectionLabel2_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "2." .
+
+:sectionLabel3_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "3.1." .
+
+:sectionLabel4_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "3.2." .
+
+:sectionLabel5_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "3.3." .
+
+:sectionLabel6_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "3.3.1." .
+
+:sectionLabel7_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "3.3.2." .
+
+:sectionLabel8_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "3.3.3." .
+
+:sectionLabel9_d9925951f a doco:SectionLabel ;
+    c4o:hasContent "3.3.5." .
+
+:sectionTitle10_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Results and Analysis." .
+
+:sectionTitle11_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Conclusion." .
+
+:sectionTitle1_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Introduction." .
+
+:sectionTitle2_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Related Works." .
+
+:sectionTitle3_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Basics of Traffic Matrix Model." .
+
+:sectionTitle4_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Basics of Gravity" .
+
+:sectionTitle5_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Proposed TM model." .
+
+:sectionTitle6_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Initialization." .
+
+:sectionTitle7_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Selection." .
+
+:sectionTitle8_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Crossover." .
+
+:sectionTitle9_d9925951f a doco:SectionTitle ;
+    c4o:hasContent "Constraint Validation." .
+
+:table_2_d9925951f a doco:Table ;
+    po:contains :table_box_2_d9925951f,
+        :table_description_2_d9925951f,
+        :table_label_2_d9925951f .
+
+:table_3_d9925951f a doco:Table ;
+    po:contains :table_box_3_d9925951f,
+        :table_description_3_d9925951f,
+        :table_label_3_d9925951f .
+
+:table_box_0_d9925951f a doco:TableBox ;
+    c4o:hasContent "[[67.31, 104.46, 455.28, 127.56]]" ;
+    schema:pagination 3 .
+
+:table_box_1_d9925951f a doco:TableBox ;
+    c4o:hasContent "[[189.17, 704.82, 348.5, 9.96]]" ;
+    schema:pagination 6 .
+
+:table_box_2_d9925951f a doco:TableBox ;
+    c4o:hasContent "[[104.37, 405.47, 379.4, 145.65]]" ;
+    schema:pagination 7 .
+
+:table_box_3_d9925951f a doco:TableBox ;
+    c4o:hasContent "[[137.77, 561.01, 316.42, 56.99]]" ;
+    schema:pagination 8 .
+
+:table_description_0_d9925951f a doco:TableLabel ;
+    c4o:hasContent "1: An Instance of Traffic Matrix for duration of 5 min. on 01/03/2004" .
+
+:table_description_1_d9925951f a doco:TableLabel ;
+    c4o:hasContent "2. It is observed that the RMSE value shows good improvement while" .
+
+:table_description_2_d9925951f a doco:TableLabel ;
+    c4o:hasContent "None" .
+
+:table_description_3_d9925951f a doco:TableLabel ;
+    c4o:hasContent "2: Comparison of RMSE and Averrage error TM instance t=1." .
+
+:table_label_0_d9925951f a doco:Label ;
+    c4o:hasContent "Table 3 ." .
+
+:table_label_1_d9925951f a doco:Label ;
+    c4o:hasContent "Table 4 ." .
+
+:table_label_2_d9925951f a doco:Label ;
+    c4o:hasContent "Table 4 ." .
+
+:table_label_3_d9925951f a doco:Label ;
+    c4o:hasContent "Table 4 ." .
+
+:Journal_Issue_093a01064 a fabio:JournalIssue ;
+    frbr:partOf :Journal_Volume_fbb9d73c2 .
+
+:Journal_Volume_fbb9d73c2 a fabio:JournalVolume ;
+    prism:volume 22 ;
+    frbr:part :Journal_Issue_093a01064 ;
+    frbr:partOf :Journal_492d0f08a .
+
+:bibliography_d9925951f a doco:Bibliography ;
+    co:firstItem [ co:itemContent :BIBREF0_d9925951f ;
+            co:nextItem [ co:itemContent :BIBREF1_d9925951f ;
+                    co:nextItem [ co:itemContent :BIBREF2_d9925951f ;
+                            co:nextItem [ co:itemContent :BIBREF3_d9925951f ;
+                                    co:nextItem [ co:itemContent :BIBREF4_d9925951f ;
+                                            co:nextItem [ co:itemContent :BIBREF5_d9925951f ;
+                                                    co:nextItem [ co:itemContent :BIBREF6_d9925951f ;
+                                                            co:nextItem [ co:itemContent :BIBREF7_d9925951f ;
+                                                                    co:nextItem [ co:itemContent :BIBREF8_d9925951f ;
+                                                                            co:nextItem [ co:itemContent :BIBREF9_d9925951f ;
+                                                                                    co:nextItem [ co:itemContent :BIBREF10_d9925951f ;
+                                                                                            co:nextItem [ co:itemContent :BIBREF11_d9925951f ;
+                                                                                                    co:nextItem [ co:itemContent :BIBREF12_d9925951f ;
+                                                                                                            co:nextItem [ co:itemContent :BIBREF13_d9925951f ;
+                                                                                                                    co:nextItem [ co:itemContent :BIBREF14_d9925951f ;
+                                                                                                                            co:nextItem [ co:itemContent :BIBREF15_d9925951f ;
+                                                                                                                                    co:nextItem [ co:itemContent :BIBREF16_d9925951f ;
+                                                                                                                                            co:nextItem [ co:itemContent :BIBREF17_d9925951f ;
+                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF18_d9925951f ;
+                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF19_d9925951f ;
+                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF20_d9925951f ;
+                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF21_d9925951f ;
+                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF22_d9925951f ;
+                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF23_d9925951f ;
+                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF24_d9925951f ;
+                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF25_d9925951f ;
+                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF26_d9925951f ;
+                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF27_d9925951f ;
+                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF28_d9925951f ;
+                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF29_d9925951f ;
+                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF30_d9925951f ;
+                                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF31_d9925951f ;
+                                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF32_d9925951f ;
+                                                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF33_d9925951f ;
+                                                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF34_d9925951f ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ;
+    po:contains :BIBREF0_d9925951f,
+        :BIBREF10_d9925951f,
+        :BIBREF11_d9925951f,
+        :BIBREF12_d9925951f,
+        :BIBREF13_d9925951f,
+        :BIBREF14_d9925951f,
+        :BIBREF15_d9925951f,
+        :BIBREF16_d9925951f,
+        :BIBREF17_d9925951f,
+        :BIBREF18_d9925951f,
+        :BIBREF19_d9925951f,
+        :BIBREF1_d9925951f,
+        :BIBREF20_d9925951f,
+        :BIBREF21_d9925951f,
+        :BIBREF22_d9925951f,
+        :BIBREF23_d9925951f,
+        :BIBREF24_d9925951f,
+        :BIBREF25_d9925951f,
+        :BIBREF26_d9925951f,
+        :BIBREF27_d9925951f,
+        :BIBREF28_d9925951f,
+        :BIBREF29_d9925951f,
+        :BIBREF2_d9925951f,
+        :BIBREF30_d9925951f,
+        :BIBREF31_d9925951f,
+        :BIBREF32_d9925951f,
+        :BIBREF33_d9925951f,
+        :BIBREF34_d9925951f,
+        :BIBREF3_d9925951f,
+        :BIBREF4_d9925951f,
+        :BIBREF5_d9925951f,
+        :BIBREF6_d9925951f,
+        :BIBREF7_d9925951f,
+        :BIBREF8_d9925951f,
+        :BIBREF9_d9925951f .
+
+:referenceToBIBREF30_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF30_d9925951f ;
+    c4o:hasContent "[31]" ;
+    schema:pagination 3,
+        6 .
+
+:referenceToBIBREF4_d9925951f a deo:Reference ;
+    dcterms:references :BIBREF4_d9925951f ;
+    c4o:hasContent "[5]" ;
+    schema:pagination 1,
+        6 .
+
+:section10_d9925951f a doco:Section ;
+    po:contains :referenceToBIBREF30_d9925951f,
+        :referenceToBIBREF4_d9925951f,
+        :reference_40_d9925951f,
+        :reference_41_d9925951f,
+        :reference_43_d9925951f,
+        :reference_44_d9925951f,
+        :reference_45_d9925951f,
+        :reference_46_d9925951f,
+        :sectionLabel10_d9925951f ;
+    po:containsAsHeader :sectionTitle10_d9925951f .
+
+:section11_d9925951f a doco:Section ;
+    po:contains :sectionLabel11_d9925951f ;
+    po:containsAsHeader :sectionTitle11_d9925951f .
+
+:section1_d9925951f a doco:Section ;
+    po:contains :referenceToBIBREF0_d9925951f,
+        :referenceToBIBREF10_d9925951f,
+        :referenceToBIBREF1_d9925951f,
+        :referenceToBIBREF2_d9925951f,
+        :referenceToBIBREF3_d9925951f,
+        :referenceToBIBREF4_d9925951f,
+        :referenceToBIBREF5_d9925951f,
+        :referenceToBIBREF6_d9925951f,
+        :referenceToBIBREF7_d9925951f,
+        :referenceToBIBREF8_d9925951f,
+        :referenceToBIBREF9_d9925951f,
+        :sectionLabel1_d9925951f ;
+    po:containsAsHeader :sectionTitle1_d9925951f .
+
+:section2_d9925951f a doco:Section ;
+    co:firstItem [ co:itemContent :section3_d9925951f ;
+            co:nextItem [ co:itemContent :section4_d9925951f ;
+                    co:nextItem [ co:itemContent :section5_d9925951f ] ] ] ;
+    po:contains :referenceToBIBREF11_d9925951f,
+        :referenceToBIBREF12_d9925951f,
+        :referenceToBIBREF13_d9925951f,
+        :referenceToBIBREF14_d9925951f,
+        :referenceToBIBREF15_d9925951f,
+        :referenceToBIBREF16_d9925951f,
+        :referenceToBIBREF17_d9925951f,
+        :referenceToBIBREF18_d9925951f,
+        :referenceToBIBREF19_d9925951f,
+        :referenceToBIBREF20_d9925951f,
+        :referenceToBIBREF21_d9925951f,
+        :referenceToBIBREF22_d9925951f,
+        :referenceToBIBREF23_d9925951f,
+        :referenceToBIBREF24_d9925951f,
+        :referenceToBIBREF25_d9925951f,
+        :referenceToBIBREF26_d9925951f,
+        :referenceToBIBREF27_d9925951f,
+        :referenceToBIBREF28_d9925951f,
+        :referenceToBIBREF29_d9925951f,
+        :section3_d9925951f,
+        :section4_d9925951f,
+        :section5_d9925951f,
+        :sectionLabel2_d9925951f ;
+    po:containsAsHeader :sectionTitle2_d9925951f .
+
+:section3_d9925951f a doco:Section ;
+    po:contains :referenceToBIBREF30_d9925951f,
+        :reference_32_d9925951f,
+        :sectionLabel3_d9925951f ;
+    po:containsAsHeader :sectionTitle3_d9925951f .
+
+:section4_d9925951f a doco:Section ;
+    po:contains :referenceToBIBREF31_d9925951f,
+        :sectionLabel4_d9925951f ;
+    po:containsAsHeader :sectionTitle4_d9925951f .
+
+:section5_d9925951f a doco:Section ;
+    co:firstItem [ co:itemContent :section6_d9925951f ;
+            co:nextItem [ co:itemContent :section7_d9925951f ;
+                    co:nextItem [ co:itemContent :section8_d9925951f ;
+                            co:nextItem [ co:itemContent :section9_d9925951f ] ] ] ] ;
+    po:contains :referenceToBIBREF32_d9925951f,
+        :reference_35_d9925951f,
+        :section6_d9925951f,
+        :section7_d9925951f,
+        :section8_d9925951f,
+        :section9_d9925951f,
+        :sectionLabel5_d9925951f ;
+    po:containsAsHeader :sectionTitle5_d9925951f .
+
+:section6_d9925951f a doco:Section ;
+    po:contains :sectionLabel6_d9925951f ;
+    po:containsAsHeader :sectionTitle6_d9925951f .
+
+:section7_d9925951f a doco:Section ;
+    po:contains :sectionLabel7_d9925951f ;
+    po:containsAsHeader :sectionTitle7_d9925951f .
+
+:section8_d9925951f a doco:Section ;
+    po:contains :referenceToBIBREF33_d9925951f,
+        :reference_37_d9925951f,
+        :sectionLabel8_d9925951f ;
+    po:containsAsHeader :sectionTitle8_d9925951f .
+
+:section9_d9925951f a doco:Section ;
+    po:contains :referenceToBIBREF34_d9925951f,
+        :sectionLabel9_d9925951f ;
+    po:containsAsHeader :sectionTitle9_d9925951f .
+
+:table_0_d9925951f a doco:Table ;
+    po:contains :table_box_0_d9925951f,
+        :table_description_0_d9925951f,
+        :table_label_0_d9925951f .
+
+:BIBREF0_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "1592" ;
+    prism:issueIdentifier "3" ;
+    prism:startingPage "1582" ;
+    prism:volume "25" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Tune" ;
+            schema:givenName "Paul" ],
+        [ a schema:Person ;
+            schema:familyName "Roughan" ;
+            schema:givenName "Matthew" ] ;
+    dcterms:issued 2013 ;
+    dcterms:publisher [ schema:name "IEEE/ACM Transactions on Networking" ] ;
+    dcterms:title "Controlled Synthesis of Traffic Matrices" ;
+    datacite:doi "http://dx.doi.org/10.1109/tnet.2016.2639066"^^xsd:anyURI .
+
+:BIBREF10_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "510" ;
+    prism:issueIdentifier "2" ;
+    prism:startingPage "501" ;
+    prism:volume "63" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Lee" ;
+            schema:givenName "Je" ],
+        [ a schema:Person ;
+            schema:familyName "Park" ;
+            schema:givenName "Jong" ],
+        [ a schema:Person ;
+            schema:familyName "Lee" ;
+            schema:givenName "Sang" ],
+        [ a schema:Person ;
+            schema:familyName "Kim" ;
+            schema:givenName "Dong" ] ;
+    dcterms:issued 2012 ;
+    dcterms:publisher [ schema:name "Computers & Mathematics with Applications" ] ;
+    dcterms:title "Detection of DDoS attacks using optimized traffic matrix" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.camwa.2011.08.020"^^xsd:anyURI .
+
+:BIBREF11_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "50" ;
+    prism:startingPage "36" ;
+    prism:volume "85" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Murata" ;
+            schema:givenName "Masayuki" ],
+        [ a schema:Person ;
+            schema:familyName "Ohsita" ;
+            schema:givenName "Yuichi" ],
+        [ a schema:Person ;
+            schema:familyName "Shiomoto" ;
+            schema:givenName "Kohei" ],
+        [ a schema:Person ;
+            schema:familyName "Takahashi" ;
+            schema:givenName "Yousuke" ],
+        [ a schema:Person ;
+            schema:familyName "Ishibashi" ;
+            schema:givenName "Keisuke" ],
+        [ a schema:Person ;
+            schema:familyName "Otoshi" ;
+            schema:givenName "Tatsuya" ] ;
+    dcterms:issued 2015 ;
+    dcterms:publisher [ schema:name "Computer Networks" ] ;
+    dcterms:title "Traffic prediction for dynamic traffic engineering" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.comnet.2015.05.001"^^xsd:anyURI .
+
+:BIBREF12_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "627" ;
+    prism:startingPage "610" ;
+    prism:volume "69" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Liao" ;
+            schema:givenName "Dan" ],
+        [ a schema:Person ;
+            schema:familyName "Chang" ;
+            schema:givenName "Victor" ],
+        [ a schema:Person ;
+            schema:familyName "Sangaiah" ;
+            schema:givenName "Arun" ],
+        [ a schema:Person ;
+            schema:familyName "Li" ;
+            schema:givenName "Ke" ],
+        [ a schema:Person ;
+            schema:familyName "Sun" ;
+            schema:givenName "Jian" ],
+        [ a schema:Person ;
+            schema:familyName "Sun" ;
+            schema:givenName "Siyu" ] ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "Computers & Electrical Engineering" ] ;
+    dcterms:title "Efficient algorithm for traffic engineering in Cloud-of-Things and edge computing" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.compeleceng.2018.02.016"^^xsd:anyURI .
+
+:BIBREF13_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "67" ;
+    prism:startingPage "59" ;
+    prism:volume "92" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Zuo" ;
+            schema:givenName "Yuan" ],
+        [ a schema:Person ;
+            schema:familyName "Min" ;
+            schema:givenName "Geyong" ],
+        [ a schema:Person ;
+            schema:familyName "Cui" ;
+            schema:givenName "Laizhong" ],
+        [ a schema:Person ;
+            schema:familyName "Wu" ;
+            schema:givenName "Yulei" ] ;
+    dcterms:issued 2019 ;
+    dcterms:publisher [ schema:name "Future Generation Computer Systems" ] ;
+    dcterms:title "Learning-based network path planning for traffic engineering" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.future.2018.09.043"^^xsd:anyURI .
+
+:BIBREF14_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "224" ;
+    prism:startingPage "212" ;
+    prism:volume "116" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Islam" ;
+            schema:givenName "Maheen" ],
+        [ a schema:Person ;
+            schema:familyName "Mehedi Hassan" ;
+            schema:givenName "Mohammad" ],
+        [ a schema:Person ;
+            schema:familyName "Mamun-Or-Rashid" ;
+            schema:givenName "M" ],
+        [ a schema:Person ;
+            schema:familyName "Alelaiwi" ;
+            schema:givenName "Abdulhameed" ],
+        [ a schema:Person ;
+            schema:familyName "Alamri" ;
+            schema:givenName "Atif" ],
+        [ a schema:Person ;
+            schema:familyName "Abdur Razzaque" ;
+            schema:givenName "M" ] ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "Computer Communications" ] ;
+    dcterms:title "Traffic engineering in cognitive mesh networks: Joint link-channel selection and power allocation" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.comcom.2017.12.002"^^xsd:anyURI .
+
+:BIBREF15_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "199" ;
+    prism:startingPage "187" ;
+    prism:volume "126" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Wang" ;
+            schema:givenName "Zhiliang" ],
+        [ a schema:Person ;
+            schema:familyName "Wu" ;
+            schema:givenName "Jianping" ],
+        [ a schema:Person ;
+            schema:familyName "Guo" ;
+            schema:givenName "Yingya" ],
+        [ a schema:Person ;
+            schema:familyName "Shi" ;
+            schema:givenName "Xingang" ],
+        [ a schema:Person ;
+            schema:familyName "Yin" ;
+            schema:givenName "Xia" ] ;
+    dcterms:issued 2017 ;
+    dcterms:publisher [ schema:name "Computer Networks" ] ;
+    dcterms:title "Traffic engineering in hybrid SDN networks with multiple traffic matrices" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.comnet.2017.07.008"^^xsd:anyURI .
+
+:BIBREF16_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "137" ;
+    prism:startingPage "125" ;
+    prism:volume "107" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Da Mata" ;
+            schema:givenName "Saulo" ],
+        [ a schema:Person ;
+            schema:familyName "Guardieiro" ;
+            schema:givenName "Paulo" ] ;
+    dcterms:issued 2017 ;
+    dcterms:publisher [ schema:name "Computer Communications" ] ;
+    dcterms:title "Resource allocation for the LTE uplink based on Genetic Algorithms in mixed traffic environments" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.comcom.2017.04.004"^^xsd:anyURI .
+
+:BIBREF17_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "142" ;
+    prism:startingPage "135" ;
+    prism:volume "95" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Avcı" ;
+            schema:givenName "Engin" ],
+        [ a schema:Person ;
+            schema:familyName "Ertam" ;
+            schema:givenName "Fatih" ] ;
+    dcterms:issued 2017 ;
+    dcterms:publisher [ schema:name "Measurement" ] ;
+    dcterms:title "A new approach for internet traffic classification: GA-WK-ELM" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.measurement.2016.10.001"^^xsd:anyURI .
+
+:BIBREF18_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "6423" ;
+    prism:issueIdentifier "6" ;
+    prism:startingPage "6417" ;
+    prism:volume "38" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Raahemi" ;
+            schema:givenName "Bijan" ],
+        [ a schema:Person ;
+            schema:familyName "Nasersharif" ;
+            schema:givenName "Babak" ],
+        [ a schema:Person ;
+            schema:familyName "Moeinzadeh" ;
+            schema:givenName "Hossein" ],
+        [ a schema:Person ;
+            schema:familyName "Akbari" ;
+            schema:givenName "Ahmad" ],
+        [ a schema:Person ;
+            schema:familyName "Mohammadi" ;
+            schema:givenName "Mehdi" ] ;
+    dcterms:issued 2011 ;
+    dcterms:publisher [ schema:name "Expert Systems with Applications" ] ;
+    dcterms:title "Genetic-based minimum classification error mapping for accurate identifying Peer-to-Peer applications in the internet traffic" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.eswa.2010.09.114"^^xsd:anyURI .
+
+:BIBREF19_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "254" ;
+    prism:startingPage "251" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Kuo" ;
+            schema:givenName "C-C" ],
+        [ a schema:Person ;
+            schema:familyName "Tyan" ;
+            schema:givenName "Hsiao-Rong" ],
+        [ a schema:Person ;
+            schema:familyName "Park" ;
+            schema:givenName "Junghun" ] ;
+    dcterms:issued 2006 ;
+    dcterms:publisher [ schema:name "2006 International Conference on Intelligent Information Hiding and Multimedia" ] ;
+    dcterms:title "GA-Based Internet Traffic Classification Technique for QoS Provisioning" ;
+    datacite:doi "http://dx.doi.org/10.1109/iih-msp.2006.264991"^^xsd:anyURI .
+
+:BIBREF1_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "377" ;
+    prism:issueIdentifier "433" ;
+    prism:startingPage "365" ;
+    prism:volume "91" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1996 ;
+    dcterms:publisher [ schema:name "Journal of the American Statistical Association" ] ;
+    dcterms:title "Network Tomography: Estimating Source-Destination Traffic Intensities from Link Data" ;
+    datacite:doi "http://dx.doi.org/10.1080/01621459.1996.10476697"^^xsd:anyURI .
+
+:BIBREF20_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "40" ;
+    prism:startingPage "29" ;
+    prism:volume "51" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Liu" ;
+            schema:givenName "Fang" ],
+        [ a schema:Person ;
+            schema:familyName "Tang" ;
+            schema:givenName "Jinjun" ],
+        [ a schema:Person ;
+            schema:familyName "Wang" ;
+            schema:givenName "Yinhai" ],
+        [ a schema:Person ;
+            schema:familyName "Wang" ;
+            schema:givenName "Hua" ],
+        [ a schema:Person ;
+            schema:familyName "Zhang" ;
+            schema:givenName "Guohui" ] ;
+    dcterms:issued 2015 ;
+    dcterms:publisher [ schema:name "Transportation Research Part C: Emerging Technologies" ] ;
+    dcterms:title "A hybrid approach to integrate fuzzy C-means based imputation method with genetic algorithm for missing traffic volume data estimation" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.trc.2014.11.003"^^xsd:anyURI .
+
+:BIBREF21_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "1728" ;
+    prism:issueIdentifier "10" ;
+    prism:startingPage "1709" ;
+    prism:volume "28" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Ge" ;
+            schema:givenName "Fei" ],
+        [ a schema:Person ;
+            schema:familyName "Zhou" ;
+            schema:givenName "Haifeng" ],
+        [ a schema:Person ;
+            schema:familyName "Tan" ;
+            schema:givenName "Liansheng" ],
+        [ a schema:Person ;
+            schema:familyName "Chan" ;
+            schema:givenName "Sammy" ] ;
+    dcterms:issued 2015 ;
+    dcterms:publisher [ schema:name "International Journal of Communication Systems" ] ;
+    dcterms:title "Traffic matrix estimation: Advanced‐Tomogravity method based on a precise gravity model" ;
+    datacite:doi "http://dx.doi.org/10.1002/dac.2787"^^xsd:anyURI .
+
+:BIBREF22_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "608" ;
+    prism:startingPage "603" ;
+    prism:volume "2" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Juva" ;
+            schema:givenName "Ilmari" ],
+        [ a schema:Person ;
+            schema:familyName "Vaton" ;
+            schema:givenName "Sandrine" ],
+        [ a schema:Person ;
+            schema:familyName "Virtamo" ;
+            schema:givenName "Jorma" ] ;
+    dcterms:issued 2006 ;
+    dcterms:publisher [ schema:name "2006 IEEE International Conference on Communications" ] ;
+    dcterms:title "Quick Traffic Matrix Estimation Based on Link Count Covariances" ;
+    datacite:doi "http://dx.doi.org/10.1109/icc.2006.254861"^^xsd:anyURI .
+
+:BIBREF23_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "54" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "52" ;
+    prism:volume "13" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Jiang" ;
+            schema:givenName "Dingde" ],
+        [ a schema:Person ;
+            schema:familyName "Hu" ;
+            schema:givenName "Guangmin" ] ;
+    dcterms:issued 2009 ;
+    dcterms:publisher [ schema:name "IEEE Communications Letters" ] ;
+    dcterms:title "GARCH model-based large-scale IP traffic matrix estimation" ;
+    datacite:doi "http://dx.doi.org/10.1109/lcomm.2008.081271"^^xsd:anyURI .
+
+:BIBREF24_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "96" ;
+    prism:startingPage "90" ;
+    prism:volume "1" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Alfa" ;
+            schema:givenName "Attahiru" ],
+        [ a schema:Person ;
+            schema:familyName "Saha" ;
+            schema:givenName "Subrata" ],
+        [ a schema:Person ;
+            schema:familyName "Chengan" ;
+            schema:givenName "Usha" ],
+        [ a schema:Person ;
+            schema:familyName "Rahman" ;
+            schema:givenName "M" ] ;
+    dcterms:issued 2006 ;
+    dcterms:publisher [ schema:name "2006 IEEE International Conference on Communications" ] ;
+    dcterms:title "IP Traffic Matrix Estimation Methods: Comparisons and Improvements" ;
+    datacite:doi "http://dx.doi.org/10.1109/icc.2006.254710"^^xsd:anyURI .
+
+:BIBREF25_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "160" ;
+    prism:startingPage "149" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Johansson" ;
+            schema:givenName "Mikael" ],
+        [ a schema:Person ;
+            schema:familyName "Telkamp" ;
+            schema:givenName "Thomas" ],
+        [ a schema:Person ;
+            schema:familyName "Gunnar" ;
+            schema:givenName "Anders" ] ;
+    dcterms:issued 2004 ;
+    dcterms:publisher [ schema:name "Proceedings of the 4th ACM SIGCOMM conference on Internet measurement" ] ;
+    dcterms:title "Traffic matrix estimation on a large IP backbone" ;
+    datacite:doi "http://dx.doi.org/10.1145/1028788.1028807"^^xsd:anyURI .
+
+:BIBREF26_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "480" ;
+    prism:issueIdentifier "2" ;
+    prism:startingPage "465" ;
+    prism:volume "12" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Dai" ;
+            schema:givenName "Ningyun" ],
+        [ a schema:Person ;
+            schema:familyName "Li" ;
+            schema:givenName "Dongyang" ],
+        [ a schema:Person ;
+            schema:familyName "Xing" ;
+            schema:givenName "Changyou" ],
+        [ a schema:Person ;
+            schema:familyName "Zhang" ;
+            schema:givenName "Guomin" ],
+        [ a schema:Person ;
+            schema:familyName "Dai" ;
+            schema:givenName "Fei" ] ;
+    dcterms:issued 2019 ;
+    dcterms:publisher [ schema:name "Peer-to-Peer Networking and Applications" ] ;
+    dcterms:title "Estimating SDN traffic matrix based on online adaptive information gain maximization method" ;
+    datacite:doi "http://dx.doi.org/10.1007/s12083-018-0646-0"^^xsd:anyURI .
+
+:BIBREF27_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "568" ;
+    prism:issueIdentifier "9" ;
+    prism:startingPage "566" ;
+    prism:volume "54" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Qu" ;
+            schema:givenName "Hua" ],
+        [ a schema:Person ;
+            schema:familyName "Zhao" ;
+            schema:givenName "Jihong" ],
+        [ a schema:Person ;
+            schema:familyName "Zhao" ;
+            schema:givenName "Jianlong" ],
+        [ a schema:Person ;
+            schema:familyName "Jiang" ;
+            schema:givenName "Dingchao" ] ;
+    dcterms:issued 2018 ;
+    dcterms:publisher [ schema:name "Electronics Letters" ] ;
+    dcterms:title "Towards traffic matrix prediction with LSTM recurrent neural networks" ;
+    datacite:doi "http://dx.doi.org/10.1049/el.2018.0336"^^xsd:anyURI .
+
+:BIBREF28_d9925951f a deo:BibliographicReference ;
+    prism:issueIdentifier "6" ;
+    prism:volume "30" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Emami" ;
+            schema:givenName "Mohsen" ],
+        [ a schema:Person ;
+            schema:familyName "Javidan" ;
+            schema:givenName "Reza" ],
+        [ a schema:Person ;
+            schema:familyName "Akbari" ;
+            schema:givenName "Reza" ],
+        [ a schema:Person ;
+            schema:familyName "Zamani" ;
+            schema:givenName "Ali" ] ;
+    dcterms:issued 2019 ;
+    dcterms:publisher [ schema:name "Transactions on Emerging Telecommunications Technologies" ] ;
+    dcterms:title "A new approach for traffic matrix estimation in high load computer networks based on graph embedding and convolutional neural network" ;
+    datacite:doi "http://dx.doi.org/10.1002/ett.3604"^^xsd:anyURI .
+
+:BIBREF29_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "149076" ;
+    prism:startingPage "149065" ;
+    prism:volume "8" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Capretz" ;
+            schema:givenName "Miriam" ],
+        [ a schema:Person ;
+            schema:familyName "Dantas" ;
+            schema:givenName "Mario" ],
+        [ a schema:Person ;
+            schema:familyName "Queiroz" ;
+            schema:givenName "Wander" ] ;
+    dcterms:issued 2020 ;
+    dcterms:publisher [ schema:name "IEEE Access" ] ;
+    dcterms:title "A MapReduce Approach for Traffic Matrix Estimation in SDN" ;
+    datacite:doi "http://dx.doi.org/10.1109/access.2020.3016249"^^xsd:anyURI .
+
+:BIBREF2_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "573" ;
+    prism:issueIdentifier "442" ;
+    prism:startingPage "557" ;
+    prism:volume "93" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Tebaldi" ;
+            schema:givenName "Claudia" ],
+        [ a schema:Person ;
+            schema:familyName "West" ;
+            schema:givenName "Mike" ] ;
+    dcterms:issued 1998 ;
+    dcterms:publisher [ schema:name "Journal of the American Statistical Association" ] ;
+    dcterms:title "Bayesian Inference on Network Traffic Using Link Count Data" ;
+    datacite:doi "http://dx.doi.org/10.1080/01621459.1998.10473707"^^xsd:anyURI .
+
+:BIBREF30_d9925951f a deo:BibliographicReference ;
+    dcterms:issued 2004 .
+
+:BIBREF31_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "96" ;
+    prism:issueIdentifier "5" ;
+    prism:startingPage "93" ;
+    prism:volume "35" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 2005 ;
+    dcterms:publisher [ schema:name "ACM SIGCOMM Computer Communication Review" ] ;
+    dcterms:title "Simplifying the synthesis of internet traffic matrices" ;
+    datacite:doi "http://dx.doi.org/10.1145/1096536.1096551"^^xsd:anyURI .
+
+:BIBREF32_d9925951f a deo:BibliographicReference ;
+    dcterms:issued 1998 ;
+    dcterms:publisher [ schema:name "An Introduction to Genetic Algorithms" ] .
+
+:BIBREF33_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "218" ;
+    prism:startingPage "205" ;
+    prism:volume "1" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1991 ;
+    dcterms:publisher [ schema:name "Foundations of Genetic Algorithms" ] ;
+    dcterms:title "Genetic Algorithms for Real Parameter Optimization" ;
+    datacite:doi "http://dx.doi.org/10.1016/b978-0-08-050684-5.50016-1"^^xsd:anyURI .
+
+:BIBREF34_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "361" ;
+    prism:startingPage "341" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Craenen" ;
+            schema:givenName "B" ],
+        [ a schema:Person ;
+            schema:familyName "Marchiori" ;
+            schema:givenName "E" ],
+        [ a schema:Person ;
+            schema:familyName "Eiben" ;
+            schema:givenName "A" ] ;
+    dcterms:issued 2001 ;
+    dcterms:publisher [ schema:name "The Practical Handbook of Genetic Algorithms" ] ;
+    dcterms:title "How to Handle Constraints with Evolutionary Algorithms" ;
+    datacite:doi "http://dx.doi.org/10.1201/9781420035568.ch10"^^xsd:anyURI .
+
+:BIBREF3_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "1075" ;
+    prism:issueIdentifier "452" ;
+    prism:startingPage "1063" ;
+    prism:volume "95" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Davis" ;
+            schema:givenName "Drew" ],
+        [ a schema:Person ;
+            schema:familyName "Cao" ;
+            schema:givenName "Jin" ],
+        [ a schema:Person ;
+            schema:familyName "Yu" ;
+            schema:givenName "Bin" ],
+        [ a schema:Person ;
+            schema:familyName "Vander Wiel" ;
+            schema:givenName "Scott" ] ;
+    dcterms:issued 2000 ;
+    dcterms:publisher [ schema:name "Journal of the American Statistical Association" ] ;
+    dcterms:title "Time-Varying Network Tomography: Router Link Data" ;
+    datacite:doi "http://dx.doi.org/10.1080/01621459.2000.10474303"^^xsd:anyURI .
+
+:BIBREF4_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "217" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "206" ;
+    prism:volume "31" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Roughan" ;
+            schema:givenName "Matthew" ],
+        [ a schema:Person ;
+            schema:familyName "Greenberg" ;
+            schema:givenName "Albert" ],
+        [ a schema:Person ;
+            schema:familyName "Zhang" ;
+            schema:givenName "Yin" ],
+        [ a schema:Person ;
+            schema:familyName "Duffield" ;
+            schema:givenName "Nick" ] ;
+    dcterms:issued 2003 ;
+    dcterms:publisher [ schema:name "ACM SIGMETRICS Performance Evaluation Review" ] ;
+    dcterms:title "Fast accurate computation of large-scale IP traffic matrices from link loads" ;
+    datacite:doi "http://dx.doi.org/10.1145/885651.781053"^^xsd:anyURI .
+
+:BIBREF5_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "232" ;
+    prism:startingPage "220" ;
+    prism:volume "60" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Zhou" ;
+            schema:givenName "Haifeng" ],
+        [ a schema:Person ;
+            schema:familyName "Zeng" ;
+            schema:givenName "Qian" ],
+        [ a schema:Person ;
+            schema:familyName "Tan" ;
+            schema:givenName "Liansheng" ],
+        [ a schema:Person ;
+            schema:familyName "Wu" ;
+            schema:givenName "Chunming" ] ;
+    dcterms:issued 2016 ;
+    dcterms:publisher [ schema:name "Journal of Network and Computer Applications" ] ;
+    dcterms:title "Traffic matrix estimation: A neural network approach with extended input and expectation maximization iteration" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.jnca.2015.11.013"^^xsd:anyURI .
+
+:BIBREF6_d9925951f a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Harris" ;
+            schema:givenName "Richard" ],
+        [ a schema:Person ;
+            schema:familyName "Eum" ;
+            schema:givenName "Suyong" ],
+        [ a schema:Person ;
+            schema:familyName "Kist" ;
+            schema:givenName "Alexander" ] ;
+    dcterms:issued 2005 ;
+    dcterms:publisher [ schema:name "2006 14th IEEE International Conference on Networks" ] ;
+    dcterms:title "Generalized Kruithof Approach for Traffic Matrix Estimation" ;
+    datacite:doi "http://dx.doi.org/10.1109/icon.2006.302620"^^xsd:anyURI .
+
+:BIBREF7_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "198" ;
+    prism:startingPage "181" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 2000 ;
+    dcterms:publisher [ schema:name "Internet Statistics and Metrics Analysis (ISMA) Workshop" ] ;
+    dcterms:title "Internet traffic management – the ISP perspective" ;
+    datacite:doi "http://dx.doi.org/10.1002/047002531x.ch5"^^xsd:anyURI .
+
+:BIBREF8_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "689" ;
+    prism:issueIdentifier "7" ;
+    prism:startingPage "685" ;
+    prism:volume "64" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Wang" ;
+            schema:givenName "Xingwei" ],
+        [ a schema:Person ;
+            schema:familyName "Guo" ;
+            schema:givenName "Lei" ],
+        [ a schema:Person ;
+            schema:familyName "Jiang" ;
+            schema:givenName "Dingde" ] ;
+    dcterms:issued 2010 ;
+    dcterms:publisher [ schema:name "AEU - International Journal of Electronics and Communications" ] ;
+    dcterms:title "An optimization method of large-scale IP traffic matrix estimation" ;
+    datacite:doi "http://dx.doi.org/10.1016/j.aeue.2009.04.012"^^xsd:anyURI .
+
+:BIBREF9_d9925951f a deo:BibliographicReference ;
+    prism:endingPage "6" ;
+    prism:startingPage "1" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Omidvar" ;
+            schema:givenName "A" ],
+        [ a schema:Person ;
+            schema:familyName "Shahhoseini" ;
+            schema:givenName "H" ] ;
+    dcterms:issued 2011 ;
+    dcterms:publisher [ schema:name "2011 IEEE 7th International Symposium on Intelligent Signal Processing" ] ;
+    dcterms:title "Intelligent IP traffic matrix estimation by neural network and genetic algorithm" ;
+    datacite:doi "http://dx.doi.org/10.1109/wisp.2011.6051689"^^xsd:anyURI .
+
+:org_b272380bd a frapo:Organization ;
+    schema:name "Department of Computer Science and Engineering, National Institute of Technology Silchar, India"^^xsd:string .
+
+:table_1_d9925951f a doco:Table ;
+    po:contains :table_box_1_d9925951f,
+        :table_description_1_d9925951f,
+        :table_label_1_d9925951f .
+
