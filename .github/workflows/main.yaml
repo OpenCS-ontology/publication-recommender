@@ -33,6 +33,7 @@ jobs:
 
           docker pull milvusdb/milvus:v2.3.3
           docker run --name milvus-standalone -d milvusdb/milvus:v2.3.3 milvus run standalone
+          docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' milvus-standalone
 
           docker build -t recommender_image .
           docker run -t -d --name recommender-container --network host recommender_image
