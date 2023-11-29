@@ -31,10 +31,10 @@ def extract_title_from_graph(graph: Graph):
 def main():
 
     connections.connect(
-        alias="default",
+        alias='default',
         user='username',
         password='password',
-        host='milvus-standalone',
+        host='172.17.0.4',
         port='19530'
     )
     
