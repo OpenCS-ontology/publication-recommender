@@ -23,8 +23,9 @@ jobs:
 
       - name: Setup milvus-minio
         run: |
-          docker pull minio/minio:latest
-          docker run -p 9000:9000 -p 9001:9001 --name milvus-minio minio/minio:latest server --console-address ":9001"
+          docker pull quay.io/minio/minio
+          docker run -p 9000:9000 -d -p 9001:9001 -e "MINIO_ROOT_USER=minio99" -e "MINIO_ROOT_PASSWORD=minio123" --name minio-container quay.io/minio/minio server /data --console-address ":9001"
+
 
 
       - name: Set up milvus and recommender
