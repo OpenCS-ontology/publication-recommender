@@ -23,8 +23,9 @@ jobs:
 
       - name: Setup milvus-minio
         run: |
-          docker pull minio/minio:RELEASE.2023-03-20T20-16-18Z
-          docker run -p 9000:9000 -p 9001:9001 --name milvus-minio minio/minio server --console-address ":9001"
+          docker pull minio/minio:latest
+          docker run -p 9000:9000 -p 9001:9001 --name milvus-minio minio/minio:latest server --console-address ":9001"
+
 
       - name: Set up milvus and recommender
         run: |
