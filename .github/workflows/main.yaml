@@ -24,7 +24,6 @@ jobs:
           - 9001:9001
       publication_recommender:
         image: ghcr.io/opencs-ontology/publication-recommender:main
-        container_name: publication_recommender_container
         ports:
           - "8060"
 
