@@ -19,18 +19,55 @@ jobs:
       - name: Run etcd container
         run: |
           docker pull quay.io/coreos/etcd:v3.5.5
-          docker run -d -t --name milvus-etcd -p 2379:2379 quay.io/coreos/etcd:v3.5.5
+          docker run -d \
+            --name milvus-etcd \
+            -p 2379:2379 \
+            -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/etcd:/etcd \
+            --health-cmd="etcdctl endpoint health" \
+            --health-interval=30s \
+            --health-timeout=20s \
+            --health-retries=3 \
+            quay.io/coreos/etcd:v3.5.5 \
+            etcd -advertise-client-urls=http://127.0.0.1:2379 -listen-client-urls http://0.0.0.0:2379 --data-dir /etcd
+
 
       - name: Run minio container
         run: |
           docker pull quay.io/minio/minio
-          docker run -d -t --name milvus-minio -p 9000:9000 -p 9001:9001 -e MINIO_ACCESS_KEY=minioadmin -e MINIO_SECRET_KEY=minioadmin minio/minio:RELEASE.2023-03-20T20-16-18Z server /minio_data --console-address ":9001"
+          docker run -d \
+            --name milvus-minio \
+            -p 9001:9001 \
+            -p 9000:9000 \
+            -e MINIO_ACCESS_KEY=minioadmin \
+            -e MINIO_SECRET_KEY=minioadmin \
+            -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/minio:/minio_data \
+            --health-cmd="curl -f http://localhost:9000/minio/health/live" \
+            --health-interval=30s \
+            --health-timeout=20s \
+            --health-retries=3 \
+            minio/minio:RELEASE.2023-03-20T20-16-18Z \
+            server /minio_data --console-address ":9001"
+
 
       - name: Run milvus container
         run: |
           docker pull milvusdb/milvus:v2.3.3
-          docker run -d -t --name milvus-standalone -p 19530:19530 -p 9091:9091 -e ETCD_ENDPOINTS=etcd:2379 -e MINIO_ADDRESS=minio:9000 -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/var/lib/milvus milvusdb/milvus:v2.3.3 milvus run standalone
-          echo "IP address"
+          docker run -d \
+            --name milvus-standalone \
+            -p 19530:19530 \
+            -p 9091:9091 \
+            --security-opt seccomp=unconfined \
+            -e ETCD_ENDPOINTS=etcd:2379 \
+            -e MINIO_ADDRESS=minio:9000 \
+            -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/var/lib/milvus \
+            --health-cmd="curl -f http://localhost:9091/healthz" \
+            --health-interval=30s \
+            --health-start-period=90s \
+            --health-timeout=20s \
+            --health-retries=3 \
+            milvusdb/milvus:v2.3.3 \
+            milvus run standalone
+
           docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' milvus-standalone
       
       - name: Run recommender container
