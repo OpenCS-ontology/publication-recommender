@@ -6,7 +6,7 @@ import os
 
 
 def extract_embedding_from_graph(graph: Graph):
-    bn = Namespace("https://w3id.org/ocs/kg/papers/")
+    bn = Namespace("https://w3id.org/ocs/ont/papers/")
     graph.bind("", bn)
     embedding = eval(str(list(graph.triples((None, bn.hasWordEmbedding, None)))[0][2]))
     assert embedding
