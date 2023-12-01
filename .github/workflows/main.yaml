@@ -30,8 +30,9 @@ jobs:
         run: |
           docker pull milvusdb/milvus:v2.3.3
           docker run -d -t --name milvus-standalone -p 19530:19530 -p 9091:9091 -e ETCD_ENDPOINTS=etcd:2379 -e MINIO_ADDRESS=minio:9000 -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/var/lib/milvus milvusdb/milvus:v2.3.3
+          docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' milvus-standalone
       
-      - name: Run publication_recommender container
+      - name: Run recommender container
         run: |
           docker build -t recommender_image .
           docker run -d -t --name recommender-container -p 8060:8060 recommender_image
@@ -46,8 +47,8 @@ jobs:
 
       - name: Stop and remove containers
         run: |
-          docker stop milvus-etcd milvus-minio publication_recommender_container milvus-standalone
-          docker rm milvus-etcd milvus-minio publication_recommender_container milvus-standalone
+          docker stop milvus-etcd milvus-minio recommender-container milvus-standalone
+          docker rm milvus-etcd milvus-minio recommender-container milvus-standalone
 
   build-and-push-image:
     runs-on: ubuntu-latest
