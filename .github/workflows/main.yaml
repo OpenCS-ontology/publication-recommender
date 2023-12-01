@@ -35,10 +35,11 @@ jobs:
         run: |
           docker build -t recommender_image .
           docker run -d --name recommender-container -p 8060:8060 ghcr.io/opencs-ontology/publication-recommender:main
+          sleep infinity
 
       - name: Wait for containers to be healthy
         run: |
-          sleep 20
+          sleep 30
 
       - name: Check if container runs properly
         run: |
