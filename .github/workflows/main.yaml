@@ -34,7 +34,7 @@ jobs:
       - name: Run publication_recommender container
         run: |
           docker build -t recommender_image .
-          docker run -d -t --name recommender-container -p 8060:8060 ghcr.io/opencs-ontology/publication-recommender:main
+          docker run -d -t --name recommender-container -p 8060:8060 recommender_image
 
       - name: Wait for containers to be healthy
         run: |
