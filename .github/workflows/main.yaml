@@ -19,23 +19,22 @@ jobs:
       - name: Run etcd container
         run: |
           docker pull quay.io/coreos/etcd:v3.5.5
-          docker run -d --name milvus-etcd -p 2379:2379 quay.io/coreos/etcd:v3.5.5
+          docker run -d -t --name milvus-etcd -p 2379:2379 quay.io/coreos/etcd:v3.5.5
 
       - name: Run minio container
         run: |
           docker pull quay.io/minio/minio
-          docker run -d --name milvus-minio -p 9000:9000 -p 9001:9001 -e MINIO_ACCESS_KEY=minioadmin -e MINIO_SECRET_KEY=minioadmin minio/minio:RELEASE.2023-03-20T20-16-18Z server /minio_data --console-address ":9001"
+          docker run -d -t --name milvus-minio -p 9000:9000 -p 9001:9001 -e MINIO_ACCESS_KEY=minioadmin -e MINIO_SECRET_KEY=minioadmin minio/minio:RELEASE.2023-03-20T20-16-18Z server /minio_data --console-address ":9001"
 
       - name: Run milvus container
         run: |
           docker pull milvusdb/milvus:v2.3.3
-          docker run -d --name milvus-standalone -p 19530:19530 -p 9091:9091 -e ETCD_ENDPOINTS=etcd:2379 -e MINIO_ADDRESS=minio:9000 -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/var/lib/milvus milvusdb/milvus:v2.3.3
+          docker run -d -t --name milvus-standalone -p 19530:19530 -p 9091:9091 -e ETCD_ENDPOINTS=etcd:2379 -e MINIO_ADDRESS=minio:9000 -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/var/lib/milvus milvusdb/milvus:v2.3.3
       
       - name: Run publication_recommender container
         run: |
           docker build -t recommender_image .
-          docker run -d --name recommender-container -p 8060:8060 ghcr.io/opencs-ontology/publication-recommender:main
-          sleep infinity
+          docker run -d -t --name recommender-container -p 8060:8060 ghcr.io/opencs-ontology/publication-recommender:main
 
       - name: Wait for containers to be healthy
         run: |
