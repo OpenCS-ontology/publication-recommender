@@ -22,15 +22,21 @@ jobs:
           sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
 
-      - name: Build and Run Containers
+      - name: Build and Run Milvus Containers
         run: docker compose -f container_test/compose.yaml up -d
+
+      - name: Build and Run Publication recommender container
+        run: |
+          docker build -t publication_recommender_image .
+          docker run -t -d --name publication_recommender_container -p 8060:8060 publication_recommender_image  
+
 
       - name: Wait for Services to Start
         run: sleep 20
 
       - name: Check if publication recommender runs properly
         run: |
-          docker exec publication_recommender_container bash /home/container_test/test_script.sh
+          docker exec publication_recommender_container bash /home/container_test/test_similarity_script.sh
 
       - name: Check if kg merge runs properly
         run: |
