@@ -27,8 +27,8 @@ jobs:
 
       - name: Build and Run Publication recommender container
         run: |
-          docker build -t publication_recommender_image .
-          docker run -t -d --name publication_recommender_container -p 8060:8060 publication_recommender_image  
+          sudo docker build -t publication_recommender_image .
+          sudo docker run -t -d --name publication_recommender_container -p 8060:8060 publication_recommender_image  
 
 
       - name: Wait for Services to Start
