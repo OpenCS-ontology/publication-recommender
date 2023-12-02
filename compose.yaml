@@ -4,9 +4,7 @@ services:
   image: ghcr.io/opencs-ontology/publication-recommender:main
   container_name: publication_recommender_container
   ports:
-    - "8060"
-  volumes:
-    - embedded_ttls:/home/input_ttl_files
+    - "8060:8060"
   tty: true
   etcd:
     container_name: milvus-etcd
