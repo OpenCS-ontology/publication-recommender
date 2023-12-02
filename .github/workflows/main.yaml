@@ -12,76 +12,46 @@ env:
 jobs:
   container-test:
     runs-on: ubuntu-latest
+    services:
+      etcd:
+        image: quay.io/coreos/etcd:v3.5.5
+        env:
+          ETCD_AUTO_COMPACTION_MODE: revision
+          ETCD_AUTO_COMPACTION_RETENTION: 1000
+          ETCD_QUOTA_BACKEND_BYTES: 4294967296
+          ETCD_SNAPSHOT_COUNT: 50000
+        ports:
+          - 2379:2379
+        options: --name milvus-etcd --health-cmd "etcdctl endpoint health" --health-interval 30s --health-timeout 20s --health-retries 3
+      minio:
+        image: minio/minio:RELEASE.2023-03-20T20-16-18Z
+        env:
+          MINIO_ACCESS_KEY: minioadmin
+          MINIO_SECRET_KEY: minioadmin
+        ports:
+          - 9000:9000
+          - 9001:9001
+        options: --name milvus-minio --health-cmd "curl -f http://localhost:9000/minio/health/live" --health-interval 30s --health-timeout 20s --health-retries 3
+
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Create Docker Network
-        run: |
-          docker network create milvus
+      - name: Set up Docker Compose
+        uses: docker/compose-cli@v1
+        with:
+          compose-file: docker-compose.yml
 
-      - name: Run etcd container
-        run: |
-          docker pull quay.io/coreos/etcd:v3.5.5
-          docker run --network=milvus -d \
-            --name milvus-etcd \
-            -p 2379:2379 \
-            -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/etcd:/etcd \
-            --health-cmd="etcdctl endpoint health" \
-            --health-interval=30s \
-            --health-timeout=20s \
-            --health-retries=3 \
-            quay.io/coreos/etcd:v3.5.5 \
-            etcd -advertise-client-urls=http://127.0.0.1:2379 -listen-client-urls http://0.0.0.0:2379 --data-dir /etcd
+      - name: Build and Run Containers
+        run: docker compose up -d
 
-
-      - name: Run minio container
-        run: |
-          docker pull quay.io/minio/minio
-          docker run --network=milvus -d \
-            --name milvus-minio \
-            -p 9001:9001 \
-            -p 9000:9000 \
-            -e MINIO_ACCESS_KEY=minioadmin \
-            -e MINIO_SECRET_KEY=minioadmin \
-            -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/minio:/minio_data \
-            --health-cmd="curl -f http://localhost:9000/minio/health/live" \
-            --health-interval=30s \
-            --health-timeout=20s \
-            --health-retries=3 \
-            minio/minio:RELEASE.2023-03-20T20-16-18Z \
-            server /minio_data --console-address ":9001"
-
-
-      - name: Run milvus container
-        run: |
-          docker pull milvusdb/milvus:v2.3.3
-          docker run --network=milvus -d \
-            --name milvus-standalone \
-            -p 19530:19530 \
-            -p 9091:9091 \
-            --security-opt seccomp=unconfined \
-            -e ETCD_ENDPOINTS=etcd:2379 \
-            -e MINIO_ADDRESS=minio:9000 \
-            -v ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/var/lib/milvus \
-            --health-cmd="curl -f http://localhost:9091/healthz" \
-            --health-interval=30s \
-            --health-start-period=90s \
-            --health-timeout=20s \
-            --health-retries=3 \
-            milvusdb/milvus:v2.3.3 \
-            milvus run standalone
-
-          docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' milvus-standalone
+      - name: Wait for Services to Start
+        run: sleep 60
       
       - name: Run recommender container
         run: |
           docker build -t recommender_image .
-          docker run --network=milvus -d -t --name recommender-container -p 8060:8060 recommender_image
-
-      - name: Wait for containers to be healthy
-        run: |
-          sleep 20
+          docker run -d -t --name recommender-container -p 8060:8060 recommender_image
 
       - name: Check if container runs properly
         run: |
