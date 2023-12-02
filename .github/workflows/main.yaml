@@ -23,20 +23,20 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
 
       - name: Build and Run Containers
-        run: |
-          docker compose -f container_test/compose.yaml up -d
+        run: docker compose up -d
 
       - name: Wait for Services to Start
         run: sleep 20
 
-      - name: Check if publication recommender runs properly
+      - name: Check if container runs properly
         run: |
-          docker exec publication_recommender_container bash /home/container_test/test_script.sh
+          docker execpublication_recommender_container bash /home/container_test/test_script.sh
 
       - name: Stop and remove containers
         run: |
           docker stop milvus-etcd milvus-minio publication_recommender_container milvus-standalone
           docker rm milvus-etcd milvus-minio publication_recommender_container milvus-standalone
+
   build-and-push-image:
     runs-on: ubuntu-latest
     needs: container-test
