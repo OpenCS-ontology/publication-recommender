@@ -54,6 +54,7 @@ services:
         depends_on:
           - "etcd"
           - "minio"
+          
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
