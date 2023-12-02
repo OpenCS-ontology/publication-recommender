@@ -27,9 +27,9 @@ jobs:
 
       - name: Wait for Services to Start
         run: | 
-        nc -zv 172.18.0.4 19530
-        sleep 60
-        nc -zv 172.18.0.4 19530
+          nc -zv 172.18.0.4 19530
+          sleep 60
+          nc -zv 172.18.0.4 19530
 
       - name: Check if container runs properly
         run: |
