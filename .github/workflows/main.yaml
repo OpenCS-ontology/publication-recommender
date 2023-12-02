@@ -30,11 +30,11 @@ jobs:
 
       - name: Check if container runs properly
         run: |
-          docker exec recommender-container bash /home/container_test/test_script.sh
+          docker exec publication_recommender_container bash /home/container_test/test_script.sh
 
       - name: Stop and remove containers
         run: |
-          docker stop milvus-etcd milvus-minio recommender-container milvus-standalone
+          docker stop milvus-etcd milvus-minio publication_recommender_container milvus-standalone
           docker rm milvus-etcd milvus-minio recommender-container milvus-standalone
 
   build-and-push-image:
