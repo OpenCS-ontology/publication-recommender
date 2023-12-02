@@ -145,8 +145,7 @@ def main():
             # polynomial_degree=5,
         )
         knee = kl.knee
-
-        print(f"Distances: {results[0].distances}")
+        assert knee
 
         for res in results[0][0:knee]:
             sim_paper_uri = URIRef(res.id)

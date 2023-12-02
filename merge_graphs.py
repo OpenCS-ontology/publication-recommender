@@ -18,6 +18,7 @@ def main():
 
     directory_path = '/home/input_ttl_files'
     file_list = list_files(directory_path)
+    assert file_list
 
     cs_kg = Namespace("https://w3id.org/ocs/kg/papers/")
     cs_ont = Namespace("https://w3id.org/ocs/ont/papers/")
@@ -48,7 +49,8 @@ def main():
     conf_papers_file = dir + "conf_papers.ttl"
     papers_file = dir + "papers.ttl"
     organizations_file = dir + "organizations.ttl"
-    rest_file = dir + "rest.ttl"  
+    rest_file = dir + "rest.ttl" 
+
 
     articles = Graph()
     authors = Graph()
@@ -105,39 +107,38 @@ def main():
 
         with open(file, "r") as f:
             ttl_content = f.read()
+            assert ttl_content
+
             graph.parse(data=ttl_content, format="turtle")
 
-
-            #authors
             for s, p, o in graph.triples((None, None, None)):
                 if (s, RDF.type, fabio.ResearchPaper) in graph:
-                    print(s)
                     papers.add((s, p, o))
-                    graph.remove((s, p, o))
+                    continue
 
                 if (s, RDF.type, fabio.JournalArticle) in graph:
                     articles.add((s, p, o))
-                    graph.remove((s, p, o))
+                    continue
 
                 if (s, RDF.type, fabio.ConferencePaper) in graph:
                     conf_papers.add((s, p, o))
-                    graph.remove((s, p, o))
+                    continue
 
                 if ((s, RDF.type, schema.Person) in graph) or ((s, RDF.type, pro.RoleInTime) in graph):
                     authors.add((s, p, o))
-                    graph.remove((s, p, o))
+                    continue
 
                 if (s, RDF.type, frapo.Organization) in graph:
                     organizations.add((s, p, o))
-                    graph.remove((s, p, o))
+                    continue
 
-                for prefix in ["doco", "deo"]:
-                    if str(s).startswith(prefix):
+                for prefix in ["doco/", "deo/"]:
+                    if prefix in str(s):
                         bibliography.add((s, p, o))
-                        graph.remove((s, p, o))
+                        continue
 
-            for s, p, o in graph.triples((None, None, None)):
                 rest.add((s, p, o))
+
 
     with open(articles_file, "wb") as file:
         g = articles.serialize(format='turtle')
