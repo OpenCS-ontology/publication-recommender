@@ -12,67 +12,21 @@ env:
 jobs:
   container-test:
     runs-on: ubuntu-latest
-services:
-      etcd:
-        image: quay.io/coreos/etcd:v3.5.5
-        env:
-          ETCD_AUTO_COMPACTION_MODE: revision
-          ETCD_AUTO_COMPACTION_RETENTION: 1000
-          ETCD_QUOTA_BACKEND_BYTES: 4294967296
-          ETCD_SNAPSHOT_COUNT: 50000
-        ports:
-          - 2379:2379
-        options: --name milvus-etcd --health-cmd "etcdctl endpoint health" --health-interval 30s --health-timeout 20s --health-retries 3
-      minio:
-        image: minio/minio:RELEASE.2023-03-20T20-16-18Z
-        env:
-          MINIO_ACCESS_KEY: minioadmin
-          MINIO_SECRET_KEY: minioadmin
-        ports:
-          - 9000:9000
-          - 9001:9001
-        options: --name milvus-minio --health-cmd "curl -f http://localhost:9000/minio/health/live" --health-interval 30s --health-timeout 20s --health-retries 3
-      standalone:
-        image: milvusdb/milvus:v2.3.3
-        command: ["milvus", "run", "standalone"]
-        security_opt:
-          - seccomp:unconfined
-        environment:
-          ETCD_ENDPOINTS: etcd:2379
-          MINIO_ADDRESS: minio:9000
-        volumes:
-          - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/milvus:/var/lib/milvus
-        healthcheck:
-          test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"]
-          interval: 30s
-          start_period: 90s
-          timeout: 20s
-          retries: 3
-        ports:
-          - "19530:19530"
-          - "9091:9091"
-        depends_on:
-          - "etcd"
-          - "minio"
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Docker Compose
-        uses: docker/compose-cli@v2
-        with:
-          compose-file: docker-compose.yml
+    - name: Set up Docker Compose
+      run: |
+        sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo chmod +x /usr/local/bin/docker-compose
 
       - name: Build and Run Containers
         run: docker compose up -d
 
       - name: Wait for Services to Start
-        run: sleep 60
-      
-      - name: Run recommender container
-        run: |
-          docker build -t recommender_image .
-          docker run -d -t --name recommender-container -p 8060:8060 recommender_image
+        run: sleep 20
 
       - name: Check if container runs properly
         run: |
