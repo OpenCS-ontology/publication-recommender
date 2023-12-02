@@ -140,9 +140,9 @@ def main():
             curve="convex",
             direction="decreasing",
             online=True,
-            S=1,
-            interp_method="polynomial",
-            polynomial_degree=5,
+            # S=1,
+            # interp_method="polynomial",
+            # polynomial_degree=5,
         )
         knee = kl.knee
 
