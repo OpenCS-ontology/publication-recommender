@@ -38,7 +38,7 @@ def extract_title_from_graph(graph: Graph):
 
 
 def main():
-    connections.connect(alias="default", host="0.0.0.0", port="19530")
+    connections.connect(alias="default", host="172.18.0.4", port="19530")
 
     database_name = "papers"
     collection_name = "research_papers"
