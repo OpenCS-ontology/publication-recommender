@@ -23,7 +23,7 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
 
       - name: Build and Run Containers
-        run: docker compose -f /container_test/compose.yaml up -d
+        run: docker compose -f container_test/compose.yaml up -d
 
       - name: Wait for Services to Start
         run: sleep 20
