@@ -1,0 +1,838 @@
+@prefix : <https://w3id.org/ocs/kg/papers/> .
+@prefix c4o: <http://purl.org/spar/c4o/> .
+@prefix co: <http://purl.org/co/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix default1: <https://w3id.org/ocs/ont/papers/> .
+@prefix deo: <http://purl.org/spar/deo/> .
+@prefix doco: <http://purl.org/spar/doco/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix po: <http://www.essepuntato.it/2008/12/pattern#> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:paper_f0b84a319 a fabio:ResearchPaper ;
+    dcterms:creator [ :hasItem :author_PM0EkBXn8 ] ;
+    dcterms:title "Parthood and Convexity as the Basic Notions of a Theory of Space"^^xsd:string ;
+    datacite:hasDescription [ datacite:hasDescriptionType datacite:abstract ;
+            literal:hasLiteralValue "A deductive system of geometry is presented which is based on atomistic mereology (''mereology with points'') and the notion of convexity. The system is formulated in a liberal many-sorted logic which makes use of class-theoretic notions without however adopting any comprehension axioms. The geometry developed within this framework roughly corresponds to the``line spaces'' known from the literature. The basic ideas of the system are presented in the article's``Introduction'' within a historical context. After a brief presentation of the logical and mereological framework adopted, a ``pregeometry'' is described in which only the notion of convexity but no further axiom is added to that background framework. Pregeometry is extended to the full system in three steps. First the notion of a line segment is explained as the convex hull of the mereological sum of two points. In a second step two axioms are added which describe what it means for a thus determined line segment to be ``straight''. In the final step we deal with the order of points on a line segment and define the notion of a line. The presentation of the geometric system is concluded with a brief consideration of the geometrical principles known by the names of Peano and Pasch. Two additional topics are treated in short sections at the end of the article: (1) the introduction of coordinates and (2) the idea of a ``geometrical algebra''."^^xsd:string ] ;
+    frbr:realization :Conference_Paper_ff38e6ecf ;
+    po:contains :back_matter_f0b84a319,
+        :body_matter_f0b84a319 ;
+    default1:hasWordEmbedding "[-0.1573270708322525, 0.5336553454399109, -0.3310791254043579, 0.12599295377731323, 0.04127076640725136, -0.5984569191932678, 0.24655824899673462, -0.0013223456917330623, -0.435752809047699, -0.09813613444566727, 0.3834596574306488, -0.18815977871418, -0.3778354227542877, -0.5319337844848633, -0.05736421421170235, -0.11231573671102524, -0.49915221333503723, 0.40567320585250854, 0.2973974645137787, -0.775431752204895, 0.3465166389942169, 0.11704834550619125, -0.8115636706352234, 0.3788755536079407, 0.4535439908504486, 0.5490664839744568, -0.8804401159286499, 0.6058005094528198, 0.018800878897309303, 0.18507954478263855, 0.3478708863258362, -0.04045352339744568, 0.6928221583366394, 0.24286988377571106, -0.5008547902107239, -0.419783353805542, 0.5457988977432251, -0.2735178768634796, -0.5849906802177429, 0.8080043792724609, -0.27352312207221985, 0.14657405018806458, 0.09072669595479965, -0.9421411156654358, 0.26853516697883606, 1.3590824604034424, 0.7155592441558838, 0.132234126329422, 0.1841626614332199, -1.0716028213500977, 1.1038051843643188, -0.7860958576202393, 0.026339270174503326, 0.614486038684845, 1.038515329360962, -0.08037997782230377, 0.22344325482845306, -0.001177472760900855, 0.20427802205085754, -0.028696689754724503, -0.6133295893669128, 0.13217215240001678, 0.3172217309474945, 0.2373061627149582, 0.6556960940361023, 0.25085508823394775, 0.48983627557754517, -0.8338866829872131, 0.05849216505885124, 0.6421627998352051, 0.4992339015007019, -1.3376141786575317, -0.17010600864887238, 1.1579517126083374, 0.6504270434379578, 0.2728538513183594, 0.5415142774581909, 0.058823537081480026, -0.478694349527359, -0.2596129775047302, 0.6491696238517761, 0.3916601836681366, 0.2595779299736023, -1.4826151132583618, -0.22524641454219818, 0.5063387751579285, 0.29604050517082214, 0.3879578113555908, -0.20554021000862122, 0.7942301630973816, 0.13636188209056854, 0.2318078875541687, 0.0657743439078331, 0.5123775005340576, -0.1136302500963211, 0.600690484046936, -0.6029793620109558, 0.23291480541229248, 0.6439956426620483, 0.9751424789428711, -0.4052506685256958, 0.5114680528640747, 0.7623575925827026, -0.3002844750881195, 1.3327144384384155, 0.029387440532445908, 0.2619415819644928, -0.3169872462749481, 0.10554993897676468, 0.32731783390045166, -0.0014216824201866984, -0.9749202132225037, -0.23255780339241028, -0.29869651794433594, 0.26075854897499084, -0.5945066213607788, 0.07172716408967972, 0.5579698085784912, -0.4931740462779999, -0.0482608824968338, -0.3439538776874542, -0.49486660957336426, 0.3709488809108734, 0.1604023426771164, 0.40625953674316406, 0.5398934483528137, -0.11832404136657715, 0.0286093857139349, 0.8096761107444763, -0.18707452714443207, 0.028552448377013206, 0.2655699849128723, 0.7060784697532654, -0.2304350882768631, -0.0002518465043976903, 0.44942864775657654, -1.16499662399292, -0.5216810703277588, -1.0037221908569336, 0.402355819940567, -1.4575591087341309, 0.18924036622047424, 1.2952563762664795, 1.2312421798706055, -1.1261142492294312, 0.21102431416511536, -0.7936529517173767, -0.4670630097389221, 0.8655310273170471, 0.34461233019828796, -0.1968451738357544, -0.27768513560295105, -0.6398818492889404, 0.10496019572019577, 0.25601109862327576, -0.038071151822805405, 0.27530437707901, 0.08036884665489197, -0.7152809500694275, 0.29498979449272156, 0.5685915946960449, -0.6558351516723633, 0.6522876024246216, 0.31334736943244934, -0.8822575807571411, 0.9281485676765442, 0.32705995440483093, -0.800687849521637, 0.8494301438331604, -0.7570801973342896, -0.6832638382911682, 0.06900396943092346, -0.14839506149291992, 0.16174820065498352, -0.21484771370887756, -0.9913473725318909, -0.7058766484260559, -0.35684138536453247, 0.44215860962867737, 0.4159846901893616, 0.2700466811656952, 0.6329788565635681, 0.008290370926260948, 0.15886105597019196, 1.2430095672607422, 0.3350788950920105, 0.22268322110176086, -0.15150967240333557, -0.9742423295974731, -0.7689546942710876, 0.66354900598526, 0.8369969129562378, 1.355165719985962, -0.8003021478652954, -0.9676991701126099, 0.3372359871864319, 0.3583170771598816, -0.04169906675815582, -0.03420652076601982, 0.5454192757606506, -0.9680187106132507, 0.30402040481567383, -0.7371001839637756, 0.831120491027832, -0.04307710751891136, -0.6801064610481262, -0.6701562404632568, 1.0307425260543823, -0.5238186120986938, 0.7969083786010742, -0.824745774269104, -0.042059797793626785, 1.0119447708129883, -0.3863908648490906, -0.3604966700077057, 0.02945874072611332, 0.07019601762294769, -0.8861439228057861, 0.17083904147148132, 0.4405222237110138, 0.29564687609672546, 0.6366691589355469, 0.07212653756141663, 0.2396012544631958, -0.24077419936656952, 0.04504627361893654, -0.9013593792915344, 1.3195024728775024, -0.21441660821437836, 0.1263790875673294, 0.11793012171983719, -0.7520743608474731, -0.4206530451774597, 0.05817999318242073, 0.341621071100235, -0.4307401478290558, 0.20724686980247498, 0.8784522414207458, -0.616635262966156, 0.09743139892816544, 0.4866117537021637, 0.6468479633331299, -0.5518184304237366, 0.12874996662139893, -0.034310005605220795, -1.0128881931304932, -0.23985685408115387, 0.6754637360572815, 0.5501960515975952, 0.4091561436653137, 0.8354170918464661, -0.5860159397125244, 0.8016880750656128, -0.035253580659627914, -0.11756006628274918, 0.7215847373008728, 0.5388456583023071, 0.7287536859512329, -0.20289532840251923, -0.9857855439186096, -0.3188442885875702, -0.5880434513092041, 0.029775472357869148, 0.938308835029602, 0.5497796535491943, -0.31243765354156494, -0.2008873075246811, -0.42197543382644653, -0.528755784034729, 0.939368486404419, 0.06092091649770737, 0.04845758527517319, -1.3414664268493652, -0.5703279376029968, 0.4849703907966614, 0.1997474581003189, 0.8381433486938477, 0.07977429777383804, -0.768973171710968, -1.0310144424438477, 0.21536217629909515, 0.04663170501589775, 0.5167582035064697, 0.6389347910881042, -0.43471649289131165, -0.6650064587593079, 0.18981178104877472, -0.6308284997940063, 0.5078925490379333, 0.2930319905281067, 0.9806804060935974, -0.6852017045021057, 0.13155348598957062, 0.27335673570632935, -0.1883559376001358, -1.1956506967544556, 0.2259918749332428, -0.4039318263530731, -0.4425702393054962, -0.6923984289169312, 0.10625969618558884, 0.17958912253379822, -0.06101993843913078, -0.468862384557724, -0.8872697949409485, -0.08704384416341782, -0.05807879567146301, 0.4341563582420349, -0.1861254870891571, 0.6542428135871887, -0.28143417835235596, -1.4637725353240967, 0.3023355305194855, 0.36761197447776794, -1.0791475772857666, 0.1400212049484253, -0.0210630651563406, -0.7181381583213806, 0.6499153971672058, 0.5697668194770813, 0.019809257239103317, -0.007586376275867224, 0.9691540598869324, -0.016396917402744293, -0.3795442283153534, 0.25992438197135925, -0.25293686985969543, 0.42458733916282654, 0.3888961672782898, 0.2569218873977661, -0.2905028760433197, 0.3704533874988556, 0.9967353343963623, -0.5058599710464478, 0.9063737988471985, 0.06702344119548798, 0.17728501558303833, 0.7043275833129883, 0.5721554160118103, -1.1062769889831543, 0.34072887897491455, -0.7640762329101562, -0.8492226004600525, -0.33949774503707886, -0.22544065117835999, -1.1272459030151367, -0.38804206252098083, 0.006332704331725836, -0.8122515678405762, 0.347455233335495, -0.6335967779159546, 0.1314881294965744, -0.4910527467727661, -0.6152839660644531, -0.027094732969999313, -0.8323512077331543, 0.3263210356235504, -0.10078981518745422, 0.47398924827575684, -0.4196983277797699, -0.3418777585029602, -0.5193864107131958, 0.2449306845664978, -0.28520089387893677, -0.061099350452423096, 0.3204493820667267, 0.531178891658783, -1.0984201431274414, 0.12890979647636414, -0.3508123457431793, 0.7180539965629578, 0.030501512810587883, 0.32844096422195435, 0.6761685609817505, -0.11182735115289688, 0.4157443642616272, 0.7840801477432251, 0.14746274054050446, -0.02671629749238491, 0.5548590421676636, 0.7065874338150024, -0.7591741681098938, -0.3200230002403259, 0.017565863206982613, 1.9570553302764893, -0.17869718372821808, 0.5533239841461182, 0.5116695165634155, 1.2065585851669312, 1.0855189561843872, 0.2750988006591797, 0.28237608075141907, 0.5428447127342224, 0.8073416352272034, -0.05770210176706314, -0.032258208841085434, 0.296555757522583, 1.1286182403564453, 0.3230835497379303, 0.5350862741470337, -0.41256827116012573, 0.3450378477573395, -1.3473352193832397, 0.6975045204162598, -1.2572966814041138, -1.4141687154769897, 0.14309602975845337, 0.7070281505584717, -0.6645046472549438, 0.15652517974376678, 0.5626196265220642, 0.5252036452293396, 0.3114001452922821, -0.33085113763809204, 0.7820815443992615, -0.4881673753261566, 0.014119542203843594, 0.3326483964920044, 0.14545023441314697, 0.6961912512779236, -0.9698545336723328, 0.3882751166820526, 14.80236530303955, 0.30192288756370544, -0.4400205612182617, -0.4592238962650299, 0.6161296963691711, -0.5013671517372131, -0.29910796880722046, 0.3976709246635437, -0.4420793056488037, -0.12141548842191696, 0.6388982534408569, 0.42173993587493896, 0.17438097298145294, 1.0954409837722778, -0.0922192633152008, -0.3740183711051941, -0.470101922750473, -0.27405068278312683, 0.41212794184684753, -0.393974632024765, -0.008462048135697842, 0.03701489046216011, 0.2310567945241928, -0.011611628346145153, 0.2087169736623764, 0.009347324259579182, 0.5583435893058777, -0.338439404964447, 0.7548595666885376, 0.13626158237457275, 0.13053730130195618, -0.6294812560081482, 0.5313881039619446, 0.017191143706440926, -0.6202934384346008, -0.6205987334251404, -0.12192367762327194, -1.2115269899368286, -0.02512577548623085, 0.46053624153137207, -1.1101763248443604, 0.1644429862499237, -0.49773916602134705, -0.11036304384469986, -0.35618022084236145, 0.8967105150222778, 0.004114603158086538, -0.40416786074638367, -0.6412922143936157, -0.12331760674715042, -0.23177962005138397, 0.18278062343597412, 0.2876580059528351, -0.07243967801332474, -0.4226047992706299, 0.49176475405693054, -0.05987463518977165, -0.06783595681190491, -0.14948834478855133, 0.00597936799749732, -0.2940613329410553, -0.19888438284397125, -0.08545747399330139, 0.6406669020652771, -0.07030318677425385, -0.14532862603664398, -0.19576194882392883, -0.17388500273227692, -0.5126994252204895, -0.6256680488586426, -0.5206527709960938, -1.1162440776824951, -0.619210958480835, -0.0023817310575395823, -0.06684263050556183, 0.43348491191864014, -1.422932505607605, -0.5903435349464417, -0.09311743825674057, 0.08637771010398865, 0.3576721251010895, 0.04075056314468384, 0.12574735283851624, 0.2885749638080597, 0.09729518741369247, -0.7837756276130676, 0.49431559443473816, -0.7659391760826111, -0.45223790407180786, 0.040042657405138016, -0.36574700474739075, -1.0470296144485474, -0.417884886264801, -0.2319110631942749, -0.7560703158378601, 0.10243783891201019, 0.5277000665664673, -1.0456230640411377, -0.21169036626815796, -0.3654087483882904, 0.1268371194601059, -0.09233861416578293, -0.3204057812690735, -1.9344680309295654, 0.20264804363250732, 0.38125932216644287, 0.04964616522192955, 0.601040244102478, 0.5377260446548462, -0.3958245813846588, -0.5237851142883301, -0.05651126429438591, 0.7145691514015198, -1.0132139921188354, -0.8956235647201538, -0.8305635452270508, -0.33100181818008423, -0.03207092732191086, 0.028396734967827797, -0.20150847733020782, -0.6249936819076538, -0.2204248607158661, -0.1018226370215416, -0.6236289739608765, -1.3585565090179443, 0.24139809608459473, 0.3889918327331543, -0.5173925161361694, -1.0818957090377808, 0.8546968698501587, -0.04132607579231262, -0.4229508936405182, -0.48715710639953613, 0.3194534480571747, 0.70167076587677, -0.8884247541427612, 0.9999687671661377, -0.16675306856632233, 0.5217030048370361, -0.0009176669991575181, -0.2758079469203949, -0.11862166970968246, 0.012339793145656586, -0.5565161108970642, 0.714073121547699, -0.19670386612415314, 0.7987391948699951, -0.4227485656738281, 0.9625880718231201, 0.21504558622837067, -0.38092273473739624, -0.493670254945755, -0.7236735820770264, 0.015795931220054626, 0.3665561378002167, -0.7853239178657532, 0.3389572501182556, -0.12491954118013382, 0.9511095285415649, 0.06726924329996109, 1.0416338443756104, 0.45598119497299194, -0.3333556354045868, -0.30264905095100403, 0.05069708824157715, -0.3538148105144501, 0.39733579754829407, -1.1448109149932861, -1.2251224517822266, -0.0958692654967308, 0.007585822604596615, -0.39670437574386597, 0.4095374643802643, -1.3197492361068726, -0.9977021813392639, 0.2601254880428314, -0.29904791712760925, -0.3618086576461792, 0.5069396495819092, -0.5764603018760681, -0.6865952610969543, -0.24726082384586334, -0.9711105823516846, -0.019305042922496796, -0.03478334844112396, 0.10679555684328079, -0.557758629322052, 0.951669454574585, -0.006830842699855566, 0.7015650272369385, 0.7886834740638733, -0.45675235986709595, -0.8333122134208679, -0.46003055572509766, 0.4916169345378876, -0.23407118022441864, -0.0031083880458027124, -1.2107921838760376, 0.6964496374130249, 0.19715526700019836, -0.03698163852095604, -1.000386357307434, 0.4993278682231903, -0.9642118811607361, -0.3176453709602356, 0.6800479888916016, -0.19849346578121185, 0.18278999626636505, -0.46194806694984436, -0.3226728141307831, -0.4526210129261017, 0.45712584257125854, 0.2014557123184204, -0.9213507175445557, -0.4363875389099121, -0.22511538863182068, -0.18698208034038544, -0.419035404920578, 1.0558074712753296, -1.065604329109192, -0.7123673558235168, 0.7628362774848938, 0.11610301584005356, -0.029654989019036293, 1.1481983661651611, 0.08712425082921982, 0.018293946981430054, -0.5756989121437073, -0.4379079341888428, -0.1227453351020813, 0.028050515800714493, 0.5872990489006042, -0.2676224410533905, 0.14282435178756714, -1.360586166381836, 1.564686894416809, -0.2946828007698059, -0.10435564070940018, -0.7712074518203735, -0.27502545714378357, -0.04135117679834366, 0.5947851538658142, -0.3979066014289856, 1.0739880800247192, -0.3968092203140259, -0.5474396347999573, 0.6016321778297424, -0.8137309551239014, -0.48491424322128296, -0.5824865102767944, -0.02778620645403862, 1.3883408308029175, -0.4808664619922638, 0.01884409971535206, -0.850853681564331, 0.2868070602416992, -0.13306917250156403, -0.24562546610832214, 0.7310538291931152, 0.4190049469470978, -0.6526367664337158, 0.1432919055223465, 0.13511061668395996, 0.07767955958843231, -0.014761212281882763, 0.6886434555053711, -0.09844619035720825, -0.1793728619813919, -0.45511773228645325, -0.5230212211608887, 0.5203556418418884, 0.6136580109596252, 0.12650661170482635, 0.5674540996551514, -0.3263254761695862, -0.30697813630104065, -0.5807796716690063, 0.49175429344177246, 0.47300395369529724, -0.8212621212005615, -0.7014946341514587, 0.6572447419166565, 1.1539794206619263, -0.2189258486032486, 0.9964094161987305, -1.0644395351409912, -0.09853500127792358, 1.5148346424102783, 0.13007253408432007, -0.9028421640396118, 0.5231861472129822, -0.9465232491493225, 0.02158663421869278, -0.08008173853158951, 0.20558980107307434, 0.05367407575249672, 0.38452091813087463, 0.8921868801116943, 0.35545411705970764, 0.4115811586380005, -0.1201421245932579, 0.4102717638015747, -1.4649109840393066, 0.06174806132912636, 1.1969801187515259, 1.2680743932724, -0.6056702733039856, 0.27998313307762146, -0.3541272282600403, 0.4472014605998993, -0.20530663430690765, -0.31833919882774353, -0.7769659161567688, 1.1939855813980103, 0.2871207892894745, 0.4549788534641266, 0.6393409967422485, 0.11469487100839615, 0.055258091539144516, -0.4879775643348694, 0.7990105152130127, -1.003435492515564, -0.40581440925598145, 0.40710532665252686, -0.15462283790111542, -0.3989225924015045, -0.15325744450092316, -0.6234789490699768, -0.8370841145515442, -0.5452674627304077, -0.680555522441864, 0.2924937307834625, 0.9775410890579224, 0.5856149196624756, -0.06277555227279663, -0.13218384981155396, -0.21277320384979248, 0.06625904142856598, -0.23692697286605835, -0.10840664803981781, -0.4252249598503113, -0.6077309250831604, -0.40959304571151733, 0.5695299506187439, 0.25836923718452454, -0.3982401192188263]"^^xsd:string .
+
+:BIBREF0_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF10_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF11_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF13_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF16_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF19_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF1_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF21_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF22_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF23_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF24_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF25_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF26_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF27_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF28_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF30_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF34_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF35_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF37_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF38_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF39_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF3_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF40_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF41_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF42_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF43_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF44_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF48_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF49_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF4_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF50_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF6_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF7_f0b84a319 a deo:BibliographicReference .
+
+:BIBREF8_f0b84a319 a deo:BibliographicReference .
+
+:Conference_Paper_ff38e6ecf a fabio:ConferencePaper ;
+    prism:pageCount 13 ;
+    prism:publicationDate "2015-10-11"^^xsd:date ;
+    dcterms:language "en-US"^^xsd:string ;
+    dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    datacite:doi "http://dx.doi.org/10.15439/2015F70"^^xsd:anyURI ;
+    fabio:hasURL "https://annals-csis.org/Volume_7/drp/70.html"^^xsd:anyURI ;
+    frbr:partOf :Conference_Proceedings_076c456b8 ;
+    owl:sameAs <https://annals-csis.org/Volume_7/drp/70.html> .
+
+:Conference_Proceedings_076c456b8 a fabio:ConferenceProceedings ;
+    schema:name "1st Workshop on Logics for Qualitative Modelling and Reasoning"^^xsd:string .
+
+:ListOfFigures_f0b84a319 a doco:ListOfFigures ;
+    po:contains :figure_0_f0b84a319,
+        :figure_10_f0b84a319,
+        :figure_11_f0b84a319,
+        :figure_12_f0b84a319,
+        :figure_1_f0b84a319,
+        :figure_2_f0b84a319,
+        :figure_3_f0b84a319,
+        :figure_4_f0b84a319,
+        :figure_5_f0b84a319,
+        :figure_6_f0b84a319,
+        :figure_7_f0b84a319,
+        :figure_8_f0b84a319,
+        :figure_9_f0b84a319 .
+
+:ListOfTables_f0b84a319 a doco:ListOfTables ;
+    po:contains :table_0_f0b84a319,
+        :table_1_f0b84a319,
+        :table_2_f0b84a319,
+        :table_3_f0b84a319,
+        :table_4_f0b84a319,
+        :table_5_f0b84a319 .
+
+:author_PM0EkBXn8 a schema:Person ;
+    schema:familyName "Robering"^^xsd:string ;
+    schema:givenName "Klaus"^^xsd:string ;
+    schema:name "Klaus Robering"^^xsd:string .
+
+:back_matter_f0b84a319 a doco:BackMatter ;
+    co:firstItem [ co:itemContent :bibliography_f0b84a319 ] ;
+    po:contains :ListOfFigures_f0b84a319,
+        :ListOfTables_f0b84a319,
+        :bibliography_f0b84a319 .
+
+:body_matter_f0b84a319 a doco:BodyMatter ;
+    co:firstItem [ co:itemContent :section1_f0b84a319 ;
+            co:nextItem [ co:itemContent :section2_f0b84a319 ;
+                    co:nextItem [ co:itemContent :section3_f0b84a319 ;
+                            co:nextItem [ co:itemContent :section4_f0b84a319 ;
+                                    co:nextItem [ co:itemContent :section5_f0b84a319 ;
+                                            co:nextItem [ co:itemContent :section6_f0b84a319 ;
+                                                    co:nextItem [ co:itemContent :section7_f0b84a319 ;
+                                                            co:nextItem [ co:itemContent :section8_f0b84a319 ;
+                                                                    co:nextItem [ co:itemContent :section9_f0b84a319 ;
+                                                                            co:nextItem [ co:itemContent :section10_f0b84a319 ;
+                                                                                    co:nextItem [ co:itemContent :section11_f0b84a319 ;
+                                                                                            co:nextItem [ co:itemContent :section12_f0b84a319 ;
+                                                                                                    co:nextItem [ co:itemContent :section13_f0b84a319 ;
+                                                                                                            co:nextItem [ co:itemContent :section14_f0b84a319 ] ] ] ] ] ] ] ] ] ] ] ] ] ] ;
+    po:contains :section10_f0b84a319,
+        :section11_f0b84a319,
+        :section12_f0b84a319,
+        :section13_f0b84a319,
+        :section14_f0b84a319,
+        :section1_f0b84a319,
+        :section2_f0b84a319,
+        :section3_f0b84a319,
+        :section4_f0b84a319,
+        :section5_f0b84a319,
+        :section6_f0b84a319,
+        :section7_f0b84a319,
+        :section8_f0b84a319,
+        :section9_f0b84a319 .
+
+:figure_0_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_0_f0b84a319,
+        :figure_description_0_f0b84a319,
+        :figure_label_0_f0b84a319 .
+
+:figure_10_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_10_f0b84a319,
+        :figure_description_10_f0b84a319,
+        :figure_label_10_f0b84a319 .
+
+:figure_11_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_11_f0b84a319,
+        :figure_description_11_f0b84a319,
+        :figure_label_11_f0b84a319 .
+
+:figure_12_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_12_f0b84a319,
+        :figure_description_12_f0b84a319,
+        :figure_label_12_f0b84a319 .
+
+:figure_1_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_1_f0b84a319,
+        :figure_description_1_f0b84a319,
+        :figure_label_1_f0b84a319 .
+
+:figure_5_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_5_f0b84a319,
+        :figure_description_5_f0b84a319,
+        :figure_label_5_f0b84a319 .
+
+:figure_6_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_6_f0b84a319,
+        :figure_description_6_f0b84a319,
+        :figure_label_6_f0b84a319 .
+
+:figure_7_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_7_f0b84a319,
+        :figure_description_7_f0b84a319,
+        :figure_label_7_f0b84a319 .
+
+:figure_8_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_8_f0b84a319,
+        :figure_description_8_f0b84a319,
+        :figure_label_8_f0b84a319 .
+
+:figure_9_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_9_f0b84a319,
+        :figure_description_9_f0b84a319,
+        :figure_label_9_f0b84a319 .
+
+:figure_box_0_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[383.7, 259.06, 164.05, 10.2], [303.48, 270.62, 244.4, 10.2], [303.48, 282.3, 244.25, 10.2], [303.47, 293.86, 244.28, 10.2], [303.48, 305.54, 244.56, 10.2], [303.48, 317.22, 244.37, 10.2], [303.48, 328.78, 29.28, 10.2]]" ;
+    schema:pagination 3 .
+
+:figure_box_10_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[57.2, 564.31, 89.98, 10.2], [164.52, 565.78, 24.39, 8.65], [96.32, 575.87, 111.99, 10.97], [47.51, 592.81, 244.36, 10.2], [47.51, 604.48, 244.4, 10.2], [47.51, 616.16, 244.4, 10.97], [47.51, 627.72, 244.4, 10.97], [47.51, 639.4, 244.4, 10.97], [47.51, 650.96, 76.04, 10.97], [124.11, 651.31, 4.32, 5.64], [128.9, 650.96, 74.75, 10.97], [204.22, 651.31, 4.32, 5.64], [209.01, 650.96, 83.01, 10.97], [47.51, 662.64, 120.53, 10.91], [168.6, 662.99, 4.32, 5.64], [173.39, 664.1, 7.26, 9.44], [184.83, 662.64, 107.09, 10.2], [48.21, 674.32, 243.65, 10.97], [47.51, 685.88, 243.83, 10.97], [55.21, 707.68, 236.38, 9.34], [47.5, 717.62, 244.25, 8.16], [47.5, 726.26, 12.22, 8.16]]" ;
+    schema:pagination 13 .
+
+:figure_box_11_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[338.86, 175.09, 173.2, 8.16]]" ;
+    schema:pagination 13 .
+
+:figure_box_12_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[313.17, 472.41, 172.83, 10.97]]" ;
+    schema:pagination 13 .
+
+:figure_box_1_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[57.2, 573.84, 14.02, 8.65]]" ;
+    schema:pagination 4 .
+
+:figure_box_2_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[57.2, 414.49, 89.44, 10.2], [97.02, 426.17, 45.91, 10.2], [143.49, 426.52, 4.32, 5.64], [148.28, 427.57, 7.0, 8.69]]" ;
+    schema:pagination 6 .
+
+:figure_box_3_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[88.38, 174.62, 162.49, 8.16]]" ;
+    schema:pagination 7 .
+
+:figure_box_4_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[57.2, 360.19, 88.28, 10.2], [91.41, 371.75, 45.91, 10.2], [137.89, 372.1, 4.32, 5.64], [142.68, 371.75, 11.4, 10.2], [47.51, 389.74, 244.4, 10.97], [47.51, 401.41, 244.3, 10.2], [47.51, 412.97, 244.56, 10.2], [47.51, 424.65, 244.5, 10.2], [47.51, 436.33, 166.61, 10.2], [57.2, 448.59, 234.78, 10.2], [47.51, 460.15, 244.47, 10.2], [47.51, 471.83, 150.15, 10.2], [57.2, 491.91, 98.23, 10.97], [155.99, 492.26, 4.32, 5.64], [161.48, 493.38, 17.76, 9.5], [91.42, 503.59, 74.04, 10.97]]" ;
+    schema:pagination 7 .
+
+:figure_box_5_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[313.17, 546.45, 46.7, 10.2], [359.88, 546.35, 26.33, 10.3], [303.48, 563.85, 206.2, 10.2]]" ;
+    schema:pagination 7 .
+
+:figure_box_6_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[59.3, 654.92, 220.45, 8.16], [57.2, 675.84, 234.73, 10.2], [57.2, 694.4, 65.18, 10.97], [122.94, 694.75, 4.32, 5.64], [128.43, 694.4, 54.32, 10.97], [183.31, 694.75, 4.32, 5.64], [188.8, 695.81, 62.95, 9.56], [47.51, 713.09, 244.27, 10.97], [47.51, 724.65, 131.51, 10.97], [179.58, 725.0, 4.32, 5.64], [189.97, 724.65, 29.33, 10.97], [219.87, 725.0, 4.32, 5.64], [225.35, 724.65, 56.84, 10.97]]" ;
+    schema:pagination 9 .
+
+:figure_box_7_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[303.48, 330.63, 244.09, 8.16]]" ;
+    schema:pagination 9 .
+
+:figure_box_8_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[368.29, 609.84, 111.82, 8.16]]" ;
+    schema:pagination 9 .
+
+:figure_box_9_f0b84a319 a doco:FigureBox ;
+    c4o:hasContent "[[313.17, 707.83, 87.91, 10.2], [388.96, 716.45, 8.68, 7.14], [403.67, 707.83, 78.38, 10.97], [482.61, 708.06, 4.32, 5.64], [488.1, 709.24, 21.4, 9.56], [357.19, 723.25, 74.39, 10.97], [418.5, 731.86, 8.68, 7.14], [438.59, 723.25, 56.33, 10.97], [55.06, 31.31, 329.13, 7.34], [47.51, 84.84, 244.33, 10.2], [47.51, 96.51, 95.03, 10.2]]" ;
+    schema:pagination 10 .
+
+:figure_description_0_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "(b) If X and Y are terms, then X, Y is a term, too. (c) If X and Y are terms, then X = Y and X ∈ Y are formulas. (d) If ϕ and ψ are formulas, so are ¬ϕ and [ϕ • ψ] where • is one of the signs ∧, ∨ →, or ↔. (e) If ϕ is a formula and v a variable, then ∃v.ϕ and ∀v.ϕ are formulas and v.ϕ and {v | ϕ} terms. Terms denote either individuals or classes." .
+
+:figure_description_10_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "Idempotency cc = c Commutativity c 1 c 2 = c 2 c 1 Is the third law postulated to hold by Prenowitz for his join operation, thus assiociativity, valid (for convex regions), too? In order to show that c 1 (c 2 c 3 ) = (c 1 c 2 )c 3 , it suffices in view of The 6 to show that c 1 (c 2 c 3 ) and (c 1 c 2 )c 3 have exactly the same points. Let us consider a point p 4 of c 1 (c 2 c 3 ); we have to show that p 4 ∈ P > (c 1 c 2 )c 3 . From p 4 P > c 1 (c 2 c 3 ) we conclude the existence of points p j ∈ P > c j (1 ≤ j ≤ 3) and of a point p 5 Bp 2 p 3 such that p 4 Bp 1 p 5 ; cf. the constellation built up by the solids line in the left hand diagram of Fig. 7. That p Def 18 corresponds in our mereological framework to a similar definition provided by Prenowitz and Jantocziak in their set-theoretic setting; cf. [9, p. 55]." .
+
+:figure_description_11_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 7. Associativity of the generalized join operation" .
+
+:figure_description_12_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "Associativity c 1 (c 2 c 3 ) = (c 1 c 2 )c 3" .
+
+:figure_description_1_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "None" .
+
+:figure_description_2_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "(a) w ∈ D (b) u ∈ P > w" .
+
+:figure_description_3_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 1. Two convex regions and a non-convex one" .
+
+:figure_description_4_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "(a) [u] ∈ D (b) u ∈ P > [u] Proof: Let A := {u 1 | ∀c.[ u, c ∈ P → u 1 , c ∈ P}]. If there are no convex regions containing u, then A = D and [u] = w ∈ D; and (b) holds by The 4. If, however, there are convex regions containing u, then u ∈ A ∅ and hence [u] ∈ D by The 2-(c). The assertion (b), then, follows by The 5. From The 7 we have immediately The 8-(a); the second claim of that theorem is a direct consequence of the definition of the product and the hull operation. The 8: (a) p 1 , p 2 ∈ P > p 1 p 2 (b) p 1 p 2 = p 2 p 1" .
+
+:figure_description_5_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "D c ⊆ Cv Proof: This follows readily from The 5 and Def 14." .
+
+:figure_description_6_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 3. Decomposition of a segment into two segmental components As an immediate consequence of decomposability we have: The 20: p 2 ∈ P > p 1 p 3 ∧ p 3 ∈ P > p 1 p 2 → p 2 = p 3 Proof: By decomposability p 1 p 3 = p 1 p 2 + p 2 p 3 with p 2 = inf(p 1 p 2 , p 2 p 3 ). But since p 3 ∈ P > 1 p 2 ∩ P > p 2 p 3 , p 2 = p 3 ." .
+
+:figure_description_7_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 4. The combination of two segments results in a straight segment again" .
+
+:figure_description_8_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 5. The Ramification Property." .
+
+:figure_description_9_f0b84a319 a doco:FigureLabel ;
+    c4o:hasContent "(a) B = == = def { p 1 , p 2 , p 3 | p 2 ∈ P > p 1 p 3 } (b) p 2 Bp 1 p 3 ⇐⇒ def p 1 , p 2 , p 3 ∈ BKLAUS ROBERING: PARTHOOD AND CONVEXITY AS THE BASIC NOTIONS OF A THEORY OF SPACE Decomposability implies that of three points at least one lies between the two others." .
+
+:figure_label_0_f0b84a319 a doco:Label ;
+    c4o:hasContent "None" .
+
+:figure_label_10_f0b84a319 a doco:Label ;
+    c4o:hasContent "The 28 : 4 26" .
+
+:figure_label_11_f0b84a319 a doco:Label ;
+    c4o:hasContent "Fig. 7 ." .
+
+:figure_label_12_f0b84a319 a doco:Label ;
+    c4o:hasContent "The 29 :" .
+
+:figure_label_1_f0b84a319 a doco:Label ;
+    c4o:hasContent "Def" .
+
+:figure_label_2_f0b84a319 a doco:Label ;
+    c4o:hasContent "The 4 :" .
+
+:figure_label_3_f0b84a319 a doco:Label ;
+    c4o:hasContent "Fig. 1 ." .
+
+:figure_label_4_f0b84a319 a doco:Label ;
+    c4o:hasContent "The 7 :" .
+
+:figure_label_5_f0b84a319 a doco:Label ;
+    c4o:hasContent "The 10 :" .
+
+:figure_label_6_f0b84a319 a doco:Label ;
+    c4o:hasContent "GEO 5 : 2 = p 1 p 2 • p 2 p 3 AFig. 3 ." .
+
+:figure_label_7_f0b84a319 a doco:Label ;
+    c4o:hasContent "Fig. 4 ." .
+
+:figure_label_8_f0b84a319 a doco:Label ;
+    c4o:hasContent "The 21 :Fig. 5 ." .
+
+:figure_label_9_f0b84a319 a doco:Label ;
+    c4o:hasContent "Def 15 :" .
+
+:referenceToBIBREF0_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF0_f0b84a319 ;
+    c4o:hasContent "[1]" ;
+    schema:pagination 7 .
+
+:referenceToBIBREF10_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF10_f0b84a319 ;
+    c4o:hasContent "[11]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF13_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF13_f0b84a319 ;
+    c4o:hasContent "[14]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF16_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF16_f0b84a319 ;
+    c4o:hasContent "[17]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF19_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF19_f0b84a319 ;
+    c4o:hasContent "[20]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF1_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF1_f0b84a319 ;
+    c4o:hasContent "[2]" ;
+    schema:pagination 1,
+        2 .
+
+:referenceToBIBREF21_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF21_f0b84a319 ;
+    c4o:hasContent "[22]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF27_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF27_f0b84a319 ;
+    c4o:hasContent "[28]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF28_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF28_f0b84a319 ;
+    c4o:hasContent "[29]" ;
+    schema:pagination 4,
+        5 .
+
+:referenceToBIBREF30_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF30_f0b84a319 ;
+    c4o:hasContent "[31]" ;
+    schema:pagination 4,
+        5 .
+
+:referenceToBIBREF34_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF34_f0b84a319 ;
+    c4o:hasContent "[35]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF35_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF35_f0b84a319 ;
+    c4o:hasContent "[36]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF37_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF37_f0b84a319 ;
+    c4o:hasContent "[38]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF38_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF38_f0b84a319 ;
+    c4o:hasContent "[39]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF39_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF39_f0b84a319 ;
+    c4o:hasContent "[40]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF3_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF3_f0b84a319 ;
+    c4o:hasContent "[4]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF40_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF40_f0b84a319 ;
+    c4o:hasContent "[41]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF41_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF41_f0b84a319 ;
+    c4o:hasContent "[42]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF42_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF42_f0b84a319 ;
+    c4o:hasContent "[43]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF43_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF43_f0b84a319 ;
+    c4o:hasContent "[44]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF44_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF44_f0b84a319 ;
+    c4o:hasContent "[45]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF48_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF48_f0b84a319 ;
+    c4o:hasContent "[49]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF49_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF49_f0b84a319 ;
+    c4o:hasContent "[50]" ;
+    schema:pagination 10 .
+
+:referenceToBIBREF4_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF4_f0b84a319 ;
+    c4o:hasContent "[5]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF50_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF50_f0b84a319 ;
+    c4o:hasContent "[51]" ;
+    schema:pagination 10 .
+
+:referenceToBIBREF6_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF6_f0b84a319 ;
+    c4o:hasContent "[7]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF7_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF7_f0b84a319 ;
+    c4o:hasContent "[8]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF8_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF8_f0b84a319 ;
+    c4o:hasContent "[9]" ;
+    schema:pagination 2 .
+
+:reference_102_f0b84a319 a deo:Reference ;
+    dcterms:references :figure_2_f0b84a319 ;
+    c4o:hasContent "Figure 4" ;
+    schema:pagination 9 .
+
+:reference_104_f0b84a319 a deo:Reference ;
+    c4o:hasContent "Figure 5" ;
+    schema:pagination 9 .
+
+:reference_116_f0b84a319 a deo:Reference ;
+    dcterms:references :figure_2_f0b84a319 ;
+    c4o:hasContent "Figure 4" ;
+    schema:pagination 10 .
+
+:reference_117_f0b84a319 a deo:Reference ;
+    dcterms:references :figure_4_f0b84a319 ;
+    c4o:hasContent "Figure 7" ;
+    schema:pagination 13 .
+
+:reference_118_f0b84a319 a deo:Reference ;
+    dcterms:references :figure_4_f0b84a319 ;
+    c4o:hasContent "Figure 7" ;
+    schema:pagination 13 .
+
+:reference_83_f0b84a319 a deo:Reference ;
+    dcterms:references :figure_3_f0b84a319 ;
+    c4o:hasContent "Figure 1" ;
+    schema:pagination 6 .
+
+:reference_94_f0b84a319 a deo:Reference ;
+    c4o:hasContent "Figure 2" ;
+    schema:pagination 8 .
+
+:reference_95_f0b84a319 a deo:Reference ;
+    c4o:hasContent "Figure 2" ;
+    schema:pagination 8 .
+
+:reference_99_f0b84a319 a deo:Reference ;
+    dcterms:references :figure_3_f0b84a319 ;
+    c4o:hasContent "Figure 1" ;
+    schema:pagination 9 .
+
+:sectionLabel11_f0b84a319 a doco:SectionLabel ;
+    c4o:hasContent "4." .
+
+:sectionLabel14_f0b84a319 a doco:SectionLabel ;
+    c4o:hasContent "7." .
+
+:sectionLabel1_f0b84a319 a doco:SectionLabel ;
+    c4o:hasContent "1." .
+
+:sectionLabel2_f0b84a319 a doco:SectionLabel ;
+    c4o:hasContent "2." .
+
+:sectionLabel6_f0b84a319 a doco:SectionLabel ;
+    c4o:hasContent "3." .
+
+:sectionLabel8_f0b84a319 a doco:SectionLabel ;
+    c4o:hasContent "18" .
+
+:sectionTitle10_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "GEO 3: D" .
+
+:sectionTitle11_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "Straightness and Order" .
+
+:sectionTitle12_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "A. Straightness" .
+
+:sectionTitle13_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "B. Order and Lines" .
+
+:sectionTitle14_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "Conclusion" .
+
+:sectionTitle1_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "Introduction" .
+
+:sectionTitle2_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "Background: Class Theory and Mereology" .
+
+:sectionTitle3_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "A. Class Theory" .
+
+:sectionTitle4_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "The 1: Cls({v | ϕ})" .
+
+:sectionTitle5_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "B. Atomistic Mereology" .
+
+:sectionTitle6_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "Interval Spaces and Convexities" .
+
+:sectionTitle7_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "A. Pregeometry" .
+
+:sectionTitle8_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "On the background of set theory, an interval space I = X, I is defined to be a pair consisting of a set X of points and an operation I : X × X → 2 X such that for p, q ∈ X it holds true that p, q ∈ I(p, q) and I(p, q) = I(q, p); cf" .
+
+:sectionTitle9_f0b84a319 a doco:SectionTitle ;
+    c4o:hasContent "B. Convex Structure" .
+
+:table_0_f0b84a319 a doco:Table ;
+    po:contains :table_box_0_f0b84a319,
+        :table_description_0_f0b84a319,
+        :table_label_0_f0b84a319 .
+
+:table_1_f0b84a319 a doco:Table ;
+    po:contains :table_box_1_f0b84a319,
+        :table_description_1_f0b84a319,
+        :table_label_1_f0b84a319 .
+
+:table_2_f0b84a319 a doco:Table ;
+    po:contains :table_box_2_f0b84a319,
+        :table_description_2_f0b84a319,
+        :table_label_2_f0b84a319 .
+
+:table_3_f0b84a319 a doco:Table ;
+    po:contains :table_box_3_f0b84a319,
+        :table_description_3_f0b84a319,
+        :table_label_3_f0b84a319 .
+
+:table_4_f0b84a319 a doco:Table ;
+    po:contains :table_box_4_f0b84a319,
+        :table_description_4_f0b84a319,
+        :table_label_4_f0b84a319 .
+
+:table_5_f0b84a319 a doco:Table ;
+    po:contains :table_box_5_f0b84a319,
+        :table_description_5_f0b84a319,
+        :table_label_5_f0b84a319 .
+
+:table_box_0_f0b84a319 a doco:TableBox ;
+    c4o:hasContent "[[303.47, 223.92, 244.4, 135.15]]" ;
+    schema:pagination 6 .
+
+:table_box_1_f0b84a319 a doco:TableBox ;
+    c4o:hasContent "[[303.48, 226.48, 244.45, 104.04]]" ;
+    schema:pagination 7 .
+
+:table_box_2_f0b84a319 a doco:TableBox ;
+    c4o:hasContent "[[414.47, 31.31, 140.2, 7.34]]" ;
+    schema:pagination 8 .
+
+:table_box_3_f0b84a319 a doco:TableBox ;
+    c4o:hasContent "[[47.5, 199.16, 244.62, 301.39]]" ;
+    schema:pagination 10 .
+
+:table_box_4_f0b84a319 a doco:TableBox ;
+    c4o:hasContent "[[303.48, 173.78, 244.47, 168.3]]" ;
+    schema:pagination 10 .
+
+:table_box_5_f0b84a319 a doco:TableBox ;
+    c4o:hasContent "[[303.48, 495.07, 244.59, 167.21]]" ;
+    schema:pagination 10 .
+
+:table_description_0_f0b84a319 a doco:TableLabel ;
+    c4o:hasContent "49, p. 163]. MER 5: D p = {u | P > u ⊆ {u}} MER 5 has still to be supplemented by Tarski's postulate that each individual has at least one punctual part." .
+
+:table_description_1_f0b84a319 a doco:TableLabel ;
+    c4o:hasContent "1)' is immediate from The 4-(b). -(C-2)'. The first conjunct of the hypothesis ensures that u 1 := inf(A) ∈ D. It remains to be shown that each segment p 1 p 2 where p 1 , p 2∈ P > u 1 is itself a part of u 1 . From p 1 , p 2 ∈ P > u 1 itfollows byThe 5 that for each u 2 ∈ A p 1 , p 2 ∈ P > u 2 and hence p 1 p 2 ∈ P > u 2 since A ⊆ Cv. Thus p 1 p 2 ∈ u 2 for each u 2 ∈ A, hence u Suppose p 1 , p 2 ∈ P > u 1 . According to Def 10, the two points share, respectively, a part with two individuals u 2 , u 3 ∈ A." .
+
+:table_description_2_f0b84a319 a doco:TableLabel ;
+    c4o:hasContent "OF THE LQMR WORKSHOP. WARSAW, 2015" .
+
+:table_description_3_f0b84a319 a doco:TableLabel ;
+    c4o:hasContent "5 s = p 4 p 1 + p 1 p 5 with p 1 = p 4 p 1 • p 1 p 5 . Assume that p 2 and p 3 belong to different component segments of s, e.g.: p 2 Bp 4 p 1 and p 3 Bp 1 p 5 (the converse distribution is treated in analogous way). Two further applications of The5 yield p 4 p 1 = p 4 p 2 + p 2 p 1 and p 1 p 5 = p 1 p 3 + p 3 p 5 where p 2 and p 3 are, respectively, the only common points of the component segments. Hence both p 1 P > p 4 p 2 and p 1 P > p 3 p 5 . Again by GEO 5 we have s = p 4 p 2 + p 2 p 5 with p 2 = p 4 p 2 • p 2 p 5 . From the latter and p 1 P > p 4 p 2 we conclude p 1 Bp 2 p 5 and, since p 3 Bp 1 p 5 , p 3 Bp 2 p 5 , too. A further application of The 5 yields p 2 p 5 = p 2 p 3 + p 3 p 5 with p 3 = p 2 p 3 • p 3 p 5 . We already know that p 1 P > p 3 p 5 and thus infer p 1 Bp 2 p 3 . -Now assume that p 2 , p 3 belong to the same component segment of our first division of s into p 4 p 1 and p 1 p 5 . Assume p 2 , p 3 ∈ P > p 4 p 1 ; the remaining possibility is treated in an analogous way. The 5 yields that p 4 p 1 = p 4 p 2 + p 2 p 1 with p 2 = p 4 p 2 • p 2 p 1 . Hence either p 3 Bp 1 p 2 and nothing remains to prove, or p 3 ∈ P > p 4 p 2 . In the latter case we know by The 20 that p 2 P > p 4 p 3 . But by a final application of The 5 we have p 4 p 1 = p 4 p 3 + p 3 p 1 with p 3 = p 4 p 3 • p 3 p 1 ; therefore p 2 Bp 1 p 3 . Def 15 does not require that the two boundary points delimiting the position of the third point differ. If they do not, the point in between them is identical to them. The 23: p 1 Bp 2 p 2 → p 1 = p 2" .
+
+:table_description_4_f0b84a319 a doco:TableLabel ;
+    c4o:hasContent "+ p 1 p 3 → ¬p 1 B + p 2 p 3 IV. p 2 B + p 1 p 3 → p 1 p 2 ∈ P > p 1 p 3 V. p 2 B + p 1 p 3 ∧ p 4 P > p 1 p 2 ∪ P > p 2 p 3 → p 4 Pp 1 p 3 VI. ∃p 3 .p 2 B + p 1 p 3 VII. p 2 B + p 1 p 3 ∧ p 2 B + p 1 p 4 → p 3 B + p 1 p 4 ∨ p 4 B + p 1 p 3 VIII. p 2 B + p 1 p 3 ∧ p 1 B + p 2 p 4 → p 1 B + p 3 p 4 IX. ∃p 3 .[¬p 1 B + p 2 p 3 ∧ ¬p 2 B + p 1 p 3 ∧ ¬p 3 B + p 1 p 2 ] TABLE I Pasch's Axioms for Segments and Betweenness Pasch's axiom II. is accepted here in the slightly modified but equivalent form GEO 8. GEO 8: p 1 p 2 → p 1 p 2 p 1 + p 2" .
+
+:table_description_5_f0b84a319 a doco:TableLabel ;
+    c4o:hasContent "The 24: p 1 p 2 ∧ p 2 Bp 3 p 1 ∧ p 1 Bp 2 p 4 → p 3 p 1 + p 2 p 4 = p 3 p 4 Proof: According to GEO 6, p 3 p 1 + p 2 p 4 is a segment, and according to The 8 and The 15 it contains the segment p 3 p 4 as a part. Thus it remains to be shown that also conversely p 3 p 1 + p 2 p 4 ∈ P > p 3 p 4 ( * ). -In order to prove this, we first deal with some special cases. (a) If p 1 = p 3 , then p 1 = p 3 p 1 = p 3 . But this would, in contradiction to the assumption of the theorem, imply that p 1 = p 2 since p 2 Bp 3 p 1 . Hence p 1 p 3 . -(b) Furthermore, p 2 p 4 , too. For otherwise we would have p 2 = p 2 p 4 = p 4 and hence from the hypothesis p 1 Bp 2 p 4 p 1 = p 2 , which again contradicts the assumption p 1 p 2 . -(c) Finally, p 3 p 4 , too. For otherwise we had p 1 Bp 2 p 3 because of p 1 Bp 2 p 4 . But since p 2 Bp 3 p 1 , p 3 p 1 = p 3 p 2 + p 2 p 1 with like, e.g., ring theory or lattice theory -which fix their models by lists of equations." .
+
+:table_label_0_f0b84a319 a doco:Label ;
+    c4o:hasContent "None" .
+
+:table_label_1_f0b84a319 a doco:Label ;
+    c4o:hasContent "None" .
+
+:table_label_2_f0b84a319 a doco:Label ;
+    c4o:hasContent "None" .
+
+:table_label_3_f0b84a319 a doco:Label ;
+    c4o:hasContent "None" .
+
+:table_label_4_f0b84a319 a doco:Label ;
+    c4o:hasContent "None" .
+
+:table_label_5_f0b84a319 a doco:Label ;
+    c4o:hasContent "None" .
+
+:bibliography_f0b84a319 a doco:Bibliography ;
+    co:firstItem [ ] .
+
+:referenceToBIBREF11_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF11_f0b84a319 ;
+    c4o:hasContent "[12]" ;
+    schema:pagination 2,
+        10 .
+
+:referenceToBIBREF22_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF22_f0b84a319 ;
+    c4o:hasContent "[23]" ;
+    schema:pagination 3,
+        5 .
+
+:referenceToBIBREF23_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF23_f0b84a319 ;
+    c4o:hasContent "[24]" ;
+    schema:pagination 3,
+        5 .
+
+:referenceToBIBREF24_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF24_f0b84a319 ;
+    c4o:hasContent "[25]" ;
+    schema:pagination 3,
+        5 .
+
+:referenceToBIBREF25_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF25_f0b84a319 ;
+    c4o:hasContent "[26]" ;
+    schema:pagination 3,
+        5 .
+
+:referenceToBIBREF26_f0b84a319 a deo:Reference ;
+    dcterms:references :BIBREF26_f0b84a319 ;
+    c4o:hasContent "[27]" ;
+    schema:pagination 3,
+        5 .
+
+:section10_f0b84a319 a doco:Section ;
+    po:contains :reference_94_f0b84a319,
+        :reference_95_f0b84a319 ;
+    po:containsAsHeader :sectionTitle10_f0b84a319 .
+
+:section11_f0b84a319 a doco:Section ;
+    po:contains :sectionLabel11_f0b84a319 ;
+    po:containsAsHeader :sectionTitle11_f0b84a319 .
+
+:section12_f0b84a319 a doco:Section ;
+    po:contains :reference_102_f0b84a319,
+        :reference_104_f0b84a319,
+        :reference_99_f0b84a319 ;
+    po:containsAsHeader :sectionTitle12_f0b84a319 .
+
+:section13_f0b84a319 a doco:Section ;
+    po:contains :referenceToBIBREF11_f0b84a319,
+        :referenceToBIBREF49_f0b84a319,
+        :referenceToBIBREF50_f0b84a319,
+        :reference_116_f0b84a319,
+        :reference_117_f0b84a319,
+        :reference_118_f0b84a319 ;
+    po:containsAsHeader :sectionTitle13_f0b84a319 .
+
+:section14_f0b84a319 a doco:Section ;
+    po:contains :sectionLabel14_f0b84a319 ;
+    po:containsAsHeader :sectionTitle14_f0b84a319 .
+
+:section1_f0b84a319 a doco:Section ;
+    po:contains :referenceToBIBREF10_f0b84a319,
+        :referenceToBIBREF11_f0b84a319,
+        :referenceToBIBREF13_f0b84a319,
+        :referenceToBIBREF1_f0b84a319,
+        :referenceToBIBREF3_f0b84a319,
+        :referenceToBIBREF4_f0b84a319,
+        :referenceToBIBREF6_f0b84a319,
+        :referenceToBIBREF7_f0b84a319,
+        :referenceToBIBREF8_f0b84a319,
+        :sectionLabel1_f0b84a319 ;
+    po:containsAsHeader :sectionTitle1_f0b84a319 .
+
+:section2_f0b84a319 a doco:Section ;
+    po:contains :referenceToBIBREF22_f0b84a319,
+        :referenceToBIBREF23_f0b84a319,
+        :referenceToBIBREF24_f0b84a319,
+        :referenceToBIBREF25_f0b84a319,
+        :referenceToBIBREF26_f0b84a319,
+        :sectionLabel2_f0b84a319 ;
+    po:containsAsHeader :sectionTitle2_f0b84a319 .
+
+:section3_f0b84a319 a doco:Section ;
+    po:contains :referenceToBIBREF19_f0b84a319,
+        :referenceToBIBREF21_f0b84a319 ;
+    po:containsAsHeader :sectionTitle3_f0b84a319 .
+
+:section4_f0b84a319 a doco:Section ;
+    po:containsAsHeader :sectionTitle4_f0b84a319 .
+
+:section5_f0b84a319 a doco:Section ;
+    po:contains :referenceToBIBREF16_f0b84a319,
+        :referenceToBIBREF22_f0b84a319,
+        :referenceToBIBREF23_f0b84a319,
+        :referenceToBIBREF24_f0b84a319,
+        :referenceToBIBREF25_f0b84a319,
+        :referenceToBIBREF26_f0b84a319,
+        :referenceToBIBREF27_f0b84a319,
+        :referenceToBIBREF28_f0b84a319,
+        :referenceToBIBREF30_f0b84a319,
+        :referenceToBIBREF34_f0b84a319,
+        :referenceToBIBREF35_f0b84a319,
+        :referenceToBIBREF37_f0b84a319,
+        :referenceToBIBREF38_f0b84a319,
+        :referenceToBIBREF39_f0b84a319,
+        :referenceToBIBREF40_f0b84a319,
+        :referenceToBIBREF41_f0b84a319,
+        :referenceToBIBREF42_f0b84a319,
+        :referenceToBIBREF43_f0b84a319,
+        :referenceToBIBREF44_f0b84a319,
+        :referenceToBIBREF48_f0b84a319 ;
+    po:containsAsHeader :sectionTitle5_f0b84a319 .
+
+:section6_f0b84a319 a doco:Section ;
+    po:contains :sectionLabel6_f0b84a319 ;
+    po:containsAsHeader :sectionTitle6_f0b84a319 .
+
+:section7_f0b84a319 a doco:Section ;
+    po:contains :referenceToBIBREF0_f0b84a319,
+        :reference_83_f0b84a319 ;
+    po:containsAsHeader :sectionTitle7_f0b84a319 .
+
+:section8_f0b84a319 a doco:Section ;
+    po:contains :sectionLabel8_f0b84a319 ;
+    po:containsAsHeader :sectionTitle8_f0b84a319 .
+
+:section9_f0b84a319 a doco:Section ;
+    po:containsAsHeader :sectionTitle9_f0b84a319 .
+
+:figure_2_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_2_f0b84a319,
+        :figure_description_2_f0b84a319,
+        :figure_label_2_f0b84a319 .
+
+:figure_3_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_3_f0b84a319,
+        :figure_description_3_f0b84a319,
+        :figure_label_3_f0b84a319 .
+
+:figure_4_f0b84a319 a doco:Figure ;
+    po:contains :figure_box_4_f0b84a319,
+        :figure_description_4_f0b84a319,
+        :figure_label_4_f0b84a319 .
+
