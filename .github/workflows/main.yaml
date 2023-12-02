@@ -59,6 +59,7 @@ jobs:
       - name: Wait for Services to Start
         run: | 
           sleep 20
+          docker ps
 
       - name: Check if container runs properly
         run: |
