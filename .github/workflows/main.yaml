@@ -28,9 +28,13 @@ jobs:
       - name: Wait for Services to Start
         run: sleep 20
 
-      - name: Check if container runs properly
+      - name: Check if publication recommender runs properly
         run: |
-          docker exec publication_recommender_container bash /home/container_test/test_script.sh
+          docker exec publication_recommender_container bash /home/container_test/test_similarity_script.sh
+
+      - name: Check if kg merge runs properly
+        run: |
+          docker exec publication_recommender_container bash /home/container_test/test_merge_script.sh
 
       - name: Stop and remove containers
         run: |
