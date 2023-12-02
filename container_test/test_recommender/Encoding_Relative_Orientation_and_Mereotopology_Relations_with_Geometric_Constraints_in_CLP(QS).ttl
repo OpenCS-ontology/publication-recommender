@@ -1,0 +1,1230 @@
+@prefix : <https://w3id.org/ocs/kg/papers/> .
+@prefix c4o: <http://purl.org/spar/c4o/> .
+@prefix co: <http://purl.org/co/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix default1: <https://w3id.org/ocs/ont/papers/> .
+@prefix deo: <http://purl.org/spar/deo/> .
+@prefix doco: <http://purl.org/spar/doco/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix literal: <http://www.essepuntato.it/2010/06/literalreification/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix po: <http://www.essepuntato.it/2008/12/pattern#> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:paper_900546262 a fabio:ResearchPaper ;
+    dcterms:creator [ :hasItem :author_Jw66Jg2BH,
+                :author_u57LD6ZjN ] ;
+    dcterms:title "Encoding Relative Orientation and Mereotopology Relations with Geometric Constraints in CLP(QS)"^^xsd:string ;
+    datacite:hasDescription [ datacite:hasDescriptionType datacite:abstract ;
+            literal:hasLiteralValue "One approach for encoding the semantics of spatial relations within a declarative programming framework is by systems of polynomial constraints. However, solving such constraints is computationally intractable in general (i.e. the theory of real-closed fields), and thus far the proposed symbolic algebraic methods do not scale to real world problems. In this paper we address this intractability by investigating the use of constructive geometric constraint solving (in combination with numerical optimisation) within the context of constraint logic programming over qualitative spaces, CLP(QS). We present novel geometric encodings for relative orientation and mereotopology relations and show that our encodings are significantly more robust than other proposed approaches for directly encoding inequalities, due to our encodings being based on a standard, well known set of relations encoded as quadratic equations. Our encodings are general (i.e. not implementation specific) and can thus be directly employed in all standard geometric constraint solvers, particularly solvers that are prominent within the Computer Aided Design and Manufacturing communities. We empirically evaluate our approach on a range of benchmark problems from the Qualitative Spatial Reasoning community, and show that our method outperforms other symbolic algebraic approaches to spatial reasoning by orders of magnitude on those benchmark problems (such as Cylindrical Algebraic Decomposition)."^^xsd:string ] ;
+    frbr:realization :Conference_Paper_641201be4 ;
+    po:contains :back_matter_900546262,
+        :body_matter_900546262 ;
+    default1:hasWordEmbedding "[0.14932020008563995, 0.36431509256362915, -0.12855234742164612, 0.21815967559814453, 0.042621199041604996, -0.3087993562221527, -0.04276540130376816, -0.06584412604570389, -0.04305196925997734, -0.14413632452487946, 0.3404196798801422, -0.37999600172042847, -0.519087016582489, -0.10227496176958084, 0.13340935111045837, 0.06786022335290909, -0.6531283855438232, 0.29321053624153137, 0.6254180669784546, -0.6893729567527771, 0.7674095034599304, 0.898406982421875, -0.7564168572425842, 0.008810348808765411, 0.20506194233894348, 1.2164201736450195, -1.5468798875808716, 0.6729171276092529, 0.2300146073102951, 0.5873056650161743, 0.33516639471054077, 0.4716190695762634, 0.4365788996219635, 0.2572074830532074, -0.28369733691215515, -0.611631453037262, 0.7447816133499146, -0.5982272624969482, -0.5872499346733093, 0.5173010230064392, -0.12396793067455292, 0.2556738555431366, 0.7558056712150574, -1.1297485828399658, -0.47185754776000977, 0.5167862176895142, 0.16785301268100739, 0.3247148096561432, 0.7317711114883423, -0.19787266850471497, 1.0638662576675415, -0.7516385912895203, 0.473251610994339, 0.9666954874992371, 0.9195860028266907, -0.11088260263204575, -0.20257572829723358, -0.2479419857263565, -0.03674276918172836, -0.28405746817588806, -1.4414613246917725, -0.02136668749153614, 0.12802691757678986, -0.1760491579771042, 1.3251776695251465, 0.4981326162815094, -0.008677429519593716, -0.8731555342674255, 0.2008138746023178, 0.7701758146286011, 0.2084423005580902, -1.155551791191101, 0.34309622645378113, 0.6926630735397339, -0.2064811736345291, 0.6634080410003662, 0.13573594391345978, 0.6409686803817749, -0.7711947560310364, -0.18685829639434814, 0.6954532861709595, -0.019937584176659584, 0.39251673221588135, -1.7924168109893799, -0.2622808814048767, 0.4114599823951721, -0.13944528996944427, -0.02025839127600193, 0.24132558703422546, 1.0121827125549316, -0.1013932079076767, 0.38492804765701294, -0.1737709939479828, 1.0611916780471802, -0.27635541558265686, 0.3524737060070038, -0.6660004258155823, 0.6405279040336609, 0.7432642579078674, 0.7994534373283386, -0.6052836179733276, 0.6209465861320496, 0.27349019050598145, -0.38528865575790405, 1.1700128316879272, 0.23417070508003235, -0.35925549268722534, -0.6653783321380615, -0.010513250716030598, -0.0761503130197525, 0.35781264305114746, -1.6968295574188232, -0.3130203187465668, -0.4330442547798157, -0.07114239782094955, -0.5498553514480591, 0.1276036947965622, 0.5438283681869507, -0.5608046054840088, -0.1668824553489685, -0.43641912937164307, -0.2859675884246826, 0.5011315941810608, 0.5135029554367065, -0.06914553791284561, 0.49782654643058777, -0.16800107061862946, 0.20985868573188782, 0.20969398319721222, 0.08018773794174194, 0.05197698622941971, -0.1918935477733612, 0.8759282231330872, -0.4883480370044708, -0.578644871711731, 0.16733598709106445, -1.3041092157363892, 0.1662939041852951, -1.3080320358276367, 0.4111908972263336, -1.0952154397964478, 0.21374844014644623, 1.55551278591156, 0.6697942614555359, -1.0728486776351929, -0.12163495272397995, -0.4610801935195923, 0.18928709626197815, 0.6627131700515747, 0.665981113910675, -0.059361815452575684, -0.5356879234313965, -0.5883582234382629, 0.2064778208732605, 0.12416789680719376, -0.3795323073863983, -0.06783319264650345, -0.6276267170906067, -1.0971957445144653, 0.08477908372879028, 0.9828636050224304, -0.4047001004219055, 0.7125112414360046, 0.5483558773994446, -0.7745969891548157, 0.25620248913764954, 0.39547014236450195, -0.13827502727508545, 0.34437358379364014, 0.1456083357334137, -0.7558854222297668, 0.25988277792930603, -0.1929822415113449, 0.6451677083969116, -0.18239399790763855, -0.836078405380249, -0.3544710874557495, -0.20783773064613342, 0.36748063564300537, -0.16302233934402466, 0.3873113989830017, 1.0952330827713013, 0.0960850641131401, 0.2636139392852783, 0.8119031190872192, 0.47837579250335693, -0.7266612648963928, 0.4164373576641083, -0.9203806519508362, -0.524970293045044, 0.884307324886322, 0.30000540614128113, 1.007401704788208, -0.8074378371238708, -0.49915260076522827, 0.41958972811698914, -0.1320323795080185, -0.3880850374698639, 0.05696956068277359, 0.5100571513175964, -0.6734626889228821, 0.21967120468616486, -0.5525843501091003, 0.4658393859863281, -0.13779620826244354, -0.3011002242565155, -0.3631064295768738, 0.6356574296951294, 0.05797653645277023, 0.940191388130188, -1.0826363563537598, -0.3020097017288208, 0.5057222247123718, -0.3029489517211914, -0.779752254486084, 0.6147182583808899, 0.16055792570114136, -0.4793570339679718, -0.22947776317596436, 0.8495405912399292, 0.38671788573265076, 0.5335367321968079, 0.6648013591766357, -0.35930028557777405, -0.2718304395675659, 0.07213989645242691, -1.4712636470794678, 1.38902747631073, -0.12991270422935486, -0.04103492945432663, -0.16524936258792877, -1.2183772325515747, -0.1169806718826294, -0.1405368447303772, 0.1286391019821167, -1.1231943368911743, -0.17097188532352448, 0.5038816928863525, -0.4957297742366791, 0.029556989669799805, 0.3950989544391632, 0.8332430124282837, -0.4460471272468567, 0.3493320941925049, 0.3161501884460449, -1.2955331802368164, 0.3745602071285248, 0.3990752696990967, 0.7585219144821167, 0.2973288893699646, 0.47653982043266296, -0.01356455683708191, 0.39646342396736145, -0.05554502457380295, -0.18276791274547577, 0.07761485129594803, 0.8795219659805298, 0.9592294692993164, 0.4395132064819336, -0.8506644368171692, -0.37882286310195923, -0.45329442620277405, 0.5725781917572021, 0.6073780059814453, 0.5831384658813477, -0.023441381752490997, 0.07837959378957748, -0.19352199137210846, 0.08140302449464798, 0.3931835889816284, -0.10181775689125061, -0.565925121307373, -1.1152721643447876, -0.40271881222724915, 0.8452315926551819, 1.3618359565734863, -0.024724015966057777, 0.29463332891464233, -0.9760790467262268, -0.945955216884613, 0.5904476046562195, -0.14600776135921478, 0.5316651463508606, 0.37525415420532227, -0.5107306838035583, -0.5677642822265625, 0.43461230397224426, -0.29596754908561707, 0.9082176089286804, -0.41924217343330383, 0.9383313059806824, -0.7908130288124084, -0.5916900038719177, 0.042676787823438644, 0.40662238001823425, -0.48947980999946594, 0.5346245169639587, -0.237406924366951, -0.2502231001853943, -0.4244787395000458, 0.14012667536735535, -0.12513956427574158, 0.17783014476299286, 0.13941682875156403, -0.6187008023262024, -0.030961405485868454, 0.36300504207611084, 0.43072980642318726, -0.0647251158952713, 0.06081170216202736, -0.5306339263916016, -0.3017498850822449, 0.2840236723423004, 0.27387404441833496, -1.202059268951416, -0.08706741780042648, -0.14185471832752228, -0.3059973120689392, 0.40522801876068115, -0.1753789186477661, 0.04061802849173546, -0.11247274279594421, 0.8934252858161926, -0.3093476891517639, -0.4210669994354248, 0.887307345867157, 0.3166992664337158, -0.21768634021282196, -0.16567376255989075, -0.19160358607769012, 0.23949715495109558, -0.1251063346862793, 0.5506008267402649, -0.5612078905105591, 0.8086016774177551, -0.3259252905845642, 0.5105022192001343, 0.18060989677906036, 0.7815174460411072, -0.2451866865158081, 0.5053776502609253, -0.3421333134174347, -0.5318093299865723, 0.2676759660243988, -0.5292153358459473, -0.6286290287971497, -0.6501241326332092, -0.35718560218811035, -0.7773861885070801, 0.2863464951515198, -0.3880365192890167, 0.09900877624750137, -0.19519565999507904, -1.0107461214065552, -0.6903480291366577, -1.172391414642334, 0.73819500207901, -0.4754766821861267, 0.7368022799491882, -0.375313401222229, -1.078336477279663, -0.31013208627700806, -0.0014432568568736315, -0.34276238083839417, 0.3634672164916992, 0.47199955582618713, 0.5047470927238464, -0.4619816243648529, -0.6079438924789429, -0.3128916025161743, 0.2532777488231659, -0.1960974633693695, -0.3808671534061432, 1.040442705154419, 0.6859020590782166, 0.446590393781662, -0.6308020949363708, -0.32218635082244873, -0.4509384334087372, 0.22480157017707825, 0.31935665011405945, -0.21872493624687195, -0.6402939558029175, 0.025401342660188675, 2.006507635116577, 0.4078418016433716, 0.40466174483299255, 0.2561648488044739, 0.9568735957145691, 1.0001800060272217, 0.6987088918685913, 0.6045449376106262, 0.004185299389064312, 1.28898286819458, 0.09531043469905853, -0.3817707300186157, 0.5350300669670105, 0.6852832436561584, -0.21942219138145447, 0.3101794719696045, -0.19774533808231354, 0.4921777844429016, -1.3333489894866943, 0.7608869075775146, -1.0975267887115479, -0.6423696279525757, 0.37753164768218994, 0.16666999459266663, -0.0590067096054554, -0.09588591009378433, -0.3574526011943817, 0.47419631481170654, -0.2791905403137207, -0.06597979366779327, 0.5408592820167542, -0.8943454623222351, 0.5486146807670593, 0.90645432472229, 0.6449202299118042, 0.5987130403518677, -0.6253671050071716, 0.04175087437033653, 14.939088821411133, 0.656494677066803, -0.3224334418773651, -0.1932959258556366, 0.27575406432151794, -0.13656309247016907, -0.5554456114768982, 0.2760777473449707, -0.30139100551605225, -0.42275065183639526, 0.4457530677318573, 0.8832883238792419, 0.2524130046367645, 0.6351529955863953, -0.018443753942847252, -0.6813904643058777, -0.8035566210746765, -0.09341483563184738, 0.15476775169372559, -1.0717768669128418, -0.5913368463516235, -0.11994662135839462, 0.4006962478160858, -0.5279588103294373, 0.8062333464622498, -0.285030722618103, 0.5685024857521057, -0.7815152406692505, 0.9851948618888855, -0.2080172747373581, 0.6381550431251526, -0.8592199087142944, 0.41508010029792786, 0.015125762671232224, -0.7232657670974731, -0.509818434715271, 0.2782561779022217, -1.1712433099746704, 0.06602881848812103, 0.10249797999858856, -0.784498393535614, 0.575063169002533, -0.07850529253482819, 0.2533140182495117, -0.09776479005813599, 0.5219138264656067, -0.016894832253456116, -0.7513181567192078, -0.5480399131774902, 0.04146602749824524, -0.578438937664032, 0.2728012502193451, 0.01841835118830204, -0.3210600018501282, -0.16672800481319427, 0.11960719525814056, 0.005539471749216318, 0.7654645442962646, 0.27878689765930176, -0.30451300740242004, -0.6103029251098633, -0.7463743090629578, -0.06194581836462021, 0.26547980308532715, -0.1077156588435173, 0.20966100692749023, 0.04502429440617561, -0.31521180272102356, -0.22402061522006989, 0.31166407465934753, -0.5103039145469666, -0.7074986696243286, -0.044413529336452484, -0.055118829011917114, 0.046517908573150635, -0.17788080871105194, -1.2984157800674438, -0.3401913046836853, -0.28333941102027893, -0.6525226831436157, -0.044280730187892914, -0.4109511077404022, 0.30157384276390076, 0.10547856986522675, 0.27741193771362305, -0.8298338651657104, 0.11899563670158386, -0.9117445945739746, 0.32703760266304016, 0.48749640583992004, -0.291643351316452, -0.43232619762420654, 0.22165046632289886, -0.8599644899368286, -0.7979562878608704, 0.20961222052574158, 0.6323418617248535, -0.5888245701789856, -0.22600404918193817, 0.008815821260213852, -0.25035542249679565, 0.11696365475654602, -0.11383325606584549, -1.1903001070022583, 0.13692277669906616, 0.4881562888622284, -0.18943940103054047, 0.5938849449157715, 0.656316876411438, 0.03116905689239502, -1.1645156145095825, 0.0946691557765007, 0.36904627084732056, -0.8184084296226501, -0.19825081527233124, -0.48853832483291626, -0.030275017023086548, 0.1950364112854004, -0.3051183223724365, 0.2193107008934021, -0.4685426950454712, -0.20898333191871643, -0.6407061815261841, -0.3336099088191986, -1.1136144399642944, 0.309082567691803, 0.5928278565406799, -0.874264121055603, -0.617722749710083, -0.09820440411567688, 0.0702710673213005, -0.9744648933410645, -0.8039905428886414, 1.243140459060669, 0.9964534640312195, -0.5755640268325806, 1.534860610961914, -0.5510779619216919, 1.1176868677139282, -0.293984055519104, -0.46371641755104065, -0.2157841920852661, 0.21166910231113434, -0.19702203571796417, 0.048974599689245224, -0.19293148815631866, 0.568436324596405, -0.6576886773109436, 0.5692892670631409, 0.5605162978172302, -0.07068456709384918, -0.6506074666976929, -0.2266218215227127, 0.05549057200551033, -0.17431092262268066, -0.39083001017570496, 0.1957630217075348, 0.2929973900318146, 0.42375972867012024, -0.32466763257980347, 0.7301564812660217, 0.9894895553588867, -0.5296266078948975, 0.04534740746021271, -0.16368715465068817, -0.10314019024372101, -0.1898643970489502, -0.6909600496292114, -1.2050983905792236, -0.323679119348526, -0.1572166085243225, -0.07570704072713852, 0.032220304012298584, -1.0828912258148193, -1.139912724494934, -0.08057138323783875, -0.08708348125219345, -0.09844588488340378, 0.8833196759223938, 0.08278317749500275, -1.2164517641067505, -0.6268062591552734, -0.8834316730499268, -0.20063459873199463, 0.33879491686820984, -0.8190933465957642, 0.029561571776866913, -0.06940796971321106, -0.036619048565626144, 0.045014671981334686, 0.2642132043838501, -0.5637272596359253, -0.820006787776947, -0.6147782206535339, 0.7498632073402405, 0.34249964356422424, 0.22846589982509613, -0.9535512924194336, 0.9260814189910889, -0.4308265745639801, -0.1225568875670433, -0.47519588470458984, 0.45732274651527405, -0.9622533917427063, -0.10427852720022202, 0.7350454926490784, -0.5039308667182922, -0.3580110967159271, -0.3215384781360626, -0.4836912751197815, -0.7993820905685425, 0.5651965737342834, -0.3776060938835144, -0.49413925409317017, -0.5987427234649658, -0.229558527469635, -0.6692113280296326, -0.44599810242652893, 0.4502768814563751, -0.9424059391021729, -0.4739644229412079, 0.37857016921043396, 0.023205459117889404, 0.1386450231075287, 0.7209622263908386, 0.18259049952030182, 0.43674173951148987, -0.6046076416969299, 0.11095887422561646, -0.06472526490688324, 0.2364312708377838, 0.37078583240509033, -0.35191091895103455, 0.4938339591026306, -1.270700454711914, 1.2468748092651367, -0.23880906403064728, -0.12462712824344635, -0.7740116119384766, -0.03625483810901642, 0.5111872553825378, 0.06009461358189583, 0.5764933824539185, 1.1574053764343262, -0.6338006854057312, -0.627424955368042, 0.27529358863830566, -0.9425613284111023, -0.32744333148002625, -0.6928963661193848, 0.07083529233932495, 0.8813893795013428, -0.19537347555160522, 0.42837533354759216, -0.9647899866104126, 0.5080411434173584, 0.13956624269485474, -0.350578248500824, 0.5144148468971252, 0.8274517059326172, -0.7981242537498474, -0.4791633188724518, 0.4947749674320221, -0.331633597612381, -0.1691969335079193, 0.4565730690956116, 0.3105878233909607, -0.7017084956169128, 0.0027936322148889303, -0.6416306495666504, -0.32176610827445984, 0.8471909165382385, 0.004620501771569252, -0.058240991085767746, -0.062126412987709045, -0.1051182821393013, -0.42790186405181885, 0.17268741130828857, 0.7506327629089355, -0.9132007956504822, -0.2526121735572815, 0.5876730680465698, 1.224212408065796, -0.007692755199968815, 0.4566061794757843, -1.4935630559921265, 0.1788182109594345, 1.1890594959259033, 0.387125164270401, -0.6016752123832703, 0.19955787062644958, 0.5962844491004944, -0.10012936592102051, -0.1817605197429657, 0.06889398396015167, 0.24406611919403076, 0.8018729090690613, 1.4194824695587158, 0.1278122216463089, 0.3561537265777588, 0.2946668863296509, 0.42390763759613037, -0.10073460638523102, 0.598895251750946, 0.41205087304115295, 1.7000939846038818, 0.27983301877975464, -0.03156439960002899, -0.4843251407146454, 0.42518389225006104, -0.1070927307009697, -0.4396032691001892, -0.49818477034568787, 0.7339198589324951, -0.017427334561944008, 0.6517888307571411, 1.1305307149887085, -0.2677029073238373, 0.6448338031768799, -0.7936468124389648, 1.1568905115127563, -0.8905903697013855, 0.1635005921125412, 0.022784531116485596, 0.4100593030452728, -0.7186141014099121, -0.29380568861961365, -0.3459843695163727, -0.789929211139679, -0.3837496340274811, -0.21797387301921844, 0.20133937895298004, 0.29681167006492615, 0.7625977396965027, 0.47289687395095825, 0.31715595722198486, -0.31762629747390747, -0.28237399458885193, -0.41243976354599, 0.10457673668861389, -0.31487372517585754, -1.1958465576171875, -0.5469864010810852, -0.17818118631839752, 0.2320900857448578, -0.4074256718158722]"^^xsd:string .
+
+:Conference_Paper_641201be4 a fabio:ConferencePaper ;
+    prism:pageCount 8 ;
+    prism:publicationDate "2015-10-11"^^xsd:date ;
+    dcterms:language "en-US"^^xsd:string ;
+    dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    datacite:doi "http://dx.doi.org/10.15439/2015F371"^^xsd:anyURI ;
+    fabio:hasURL "https://annals-csis.org/Volume_7/drp/371.html"^^xsd:anyURI ;
+    frbr:partOf :Conference_Proceedings_076c456b8 ;
+    owl:sameAs <https://annals-csis.org/Volume_7/drp/371.html> .
+
+:Conference_Proceedings_076c456b8 a fabio:ConferenceProceedings ;
+    schema:name "1st Workshop on Logics for Qualitative Modelling and Reasoning"^^xsd:string .
+
+:ListOfFigures_900546262 a doco:ListOfFigures ;
+    po:contains :figure_0_900546262,
+        :figure_1_900546262,
+        :figure_2_900546262,
+        :figure_3_900546262,
+        :figure_4_900546262,
+        :figure_5_900546262,
+        :figure_6_900546262,
+        :figure_7_900546262,
+        :figure_8_900546262,
+        :figure_9_900546262 .
+
+:ListOfTables_900546262 a doco:ListOfTables .
+
+:author_Jw66Jg2BH a schema:Person ;
+    schema:familyName "Schultz"^^xsd:string ;
+    schema:givenName "Carl"^^xsd:string ;
+    schema:name "Carl Schultz"^^xsd:string .
+
+:author_u57LD6ZjN a schema:Person ;
+    schema:familyName "Bhatt"^^xsd:string ;
+    schema:givenName "Mehul"^^xsd:string ;
+    schema:name "Mehul Bhatt"^^xsd:string .
+
+:back_matter_900546262 a doco:BackMatter ;
+    co:firstItem [ co:itemContent :bibliography_900546262 ] ;
+    po:contains :ListOfFigures_900546262,
+        :ListOfTables_900546262,
+        :bibliography_900546262 .
+
+:body_matter_900546262 a doco:BodyMatter ;
+    co:firstItem [ co:itemContent :section1_900546262 ;
+            co:nextItem [ co:itemContent :section2_900546262 ;
+                    co:nextItem [ co:itemContent :section3_900546262 ;
+                            co:nextItem [ co:itemContent :section4_900546262 ;
+                                    co:nextItem [ co:itemContent :section5_900546262 ;
+                                            co:nextItem [ co:itemContent :section6_900546262 ;
+                                                    co:nextItem [ co:itemContent :section7_900546262 ;
+                                                            co:nextItem [ co:itemContent :section8_900546262 ;
+                                                                    co:nextItem [ co:itemContent :section9_900546262 ;
+                                                                            co:nextItem [ co:itemContent :section10_900546262 ;
+                                                                                    co:nextItem [ co:itemContent :section11_900546262 ;
+                                                                                            co:nextItem [ co:itemContent :section12_900546262 ;
+                                                                                                    co:nextItem [ co:itemContent :section13_900546262 ;
+                                                                                                            co:nextItem [ co:itemContent :section14_900546262 ;
+                                                                                                                    co:nextItem [ co:itemContent :section15_900546262 ;
+                                                                                                                            co:nextItem [ co:itemContent :section16_900546262 ;
+                                                                                                                                    co:nextItem [ co:itemContent :section17_900546262 ;
+                                                                                                                                            co:nextItem [ co:itemContent :section18_900546262 ;
+                                                                                                                                                    co:nextItem [ co:itemContent :section19_900546262 ;
+                                                                                                                                                            co:nextItem [ co:itemContent :section20_900546262 ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ;
+    po:contains :section10_900546262,
+        :section11_900546262,
+        :section12_900546262,
+        :section13_900546262,
+        :section14_900546262,
+        :section15_900546262,
+        :section16_900546262,
+        :section17_900546262,
+        :section18_900546262,
+        :section19_900546262,
+        :section1_900546262,
+        :section20_900546262,
+        :section2_900546262,
+        :section3_900546262,
+        :section4_900546262,
+        :section5_900546262,
+        :section6_900546262,
+        :section7_900546262,
+        :section8_900546262,
+        :section9_900546262 .
+
+:figure_1_900546262 a doco:Figure ;
+    po:contains :figure_box_1_900546262,
+        :figure_description_1_900546262,
+        :figure_label_1_900546262 .
+
+:figure_3_900546262 a doco:Figure ;
+    po:contains :figure_box_3_900546262,
+        :figure_description_3_900546262,
+        :figure_label_3_900546262 .
+
+:figure_7_900546262 a doco:Figure ;
+    po:contains :figure_box_7_900546262,
+        :figure_description_7_900546262,
+        :figure_label_7_900546262 .
+
+:figure_box_0_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[303.45, 167.58, 244.31, 8.56], [303.45, 176.3, 168.09, 8.81]]" ;
+    schema:pagination 2 .
+
+:figure_box_1_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[306.36, 456.26, 109.94, 5.17], [314.5, 464.01, 138.44, 5.17], [314.5, 471.77, 134.37, 5.17], [314.51, 479.52, 69.22, 5.17], [318.58, 487.28, 4.07, 5.17], [318.58, 495.04, 69.22, 5.17], [318.58, 502.79, 65.15, 5.17], [314.5, 510.55, 8.14, 5.17]]" ;
+    schema:pagination 2 .
+
+:figure_box_2_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[75.77, 132.82, 187.79, 8.81]]" ;
+    schema:pagination 3 .
+
+:figure_box_3_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[311.05, 196.0, 229.12, 8.56]]" ;
+    schema:pagination 4 .
+
+:figure_box_4_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[303.45, 189.19, 244.31, 8.81], [303.45, 197.92, 132.03, 8.56], [438.99, 197.58, 4.22, 4.1], [439.43, 203.96, 3.55, 4.68], [446.94, 197.92, 100.82, 8.56], [303.45, 206.64, 100.86, 8.56]]" ;
+    schema:pagination 5 .
+
+:figure_box_5_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[303.45, 357.07, 244.31, 8.56], [303.45, 365.8, 33.39, 8.56]]" ;
+    schema:pagination 5 .
+
+:figure_box_6_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[318.19, 226.99, 214.84, 8.81], [375.8, 91.38, 97.75, 110.4]]" ;
+    schema:pagination 7 .
+
+:figure_box_7_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[105.83, 182.7, 127.66, 8.56], [228.64, 200.24, 177.29, 110.67]]" ;
+    schema:pagination 8 .
+
+:figure_box_8_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[303.45, 250.85, 244.31, 8.56], [303.45, 259.58, 244.31, 8.56], [303.45, 268.31, 91.15, 8.56], [178.14, 202.39, 177.29, 110.67]]" ;
+    schema:pagination 8 .
+
+:figure_box_9_900546262 a doco:FigureBox ;
+    c4o:hasContent "[[320.31, 414.36, 210.6, 8.56], [437.6, 292.93, 102.81, 90.39]]" ;
+    schema:pagination 8 .
+
+:figure_description_0_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 1.Recursively enumerating the ways that a rectangle A can be partitioned into a union of rectangles, union(B, C)." .
+
+:figure_description_1_900546262 a doco:FigureLabel ;
+    c4o:hasContent "partition(A, union(B,C)) :mereology(equal, A, union(Br,Cr)), mereology(discrete_from, Br, Cr), ((B = Br, C = Cr) ; partition(Br, B), partition(Cr, C) )." .
+
+:figure_description_2_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 2. Square partitioning solutions for n = 4, 6, 7, 8, 9." .
+
+:figure_description_3_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 3. Minimum distance circle C can not have diameter less than ε." .
+
+:figure_description_4_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 5. Point p is constrained to lie anywhere to the left of line (a, b). The angle from point b to p about c is fixed at π 2 counter-clockwise. The distance between c, p is not constrained." .
+
+:figure_description_5_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig.6.Relative orientation encodings for regions and more efficient encodings." .
+
+:figure_description_6_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 9. Consistent tent configuration with n = 7 points: a, . . . , g." .
+
+:figure_description_7_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 10. Contact benchmark problems." .
+
+:figure_description_8_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 12. Space-time history volumes derived from intermediate configurations produced during the solving process. Task requirement is five mutually touching, same-sized circles." .
+
+:figure_description_9_900546262 a doco:FigureLabel ;
+    c4o:hasContent "Fig. 13. Lamp shade product design with qualitative constraints." .
+
+:figure_label_0_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 1 ." .
+
+:figure_label_1_900546262 a doco:Label ;
+    c4o:hasContent "None" .
+
+:figure_label_2_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 2 ." .
+
+:figure_label_3_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 3 .Fig. 4 ." .
+
+:figure_label_4_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 5 ." .
+
+:figure_label_5_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 6 ." .
+
+:figure_label_6_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 9 ." .
+
+:figure_label_7_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 10 .Fig. 11 ." .
+
+:figure_label_8_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 12 ." .
+
+:figure_label_9_900546262 a doco:Label ;
+    c4o:hasContent "Fig. 13 ." .
+
+:referenceToBIBREF0_900546262 a deo:Reference ;
+    dcterms:references :BIBREF0_900546262 ;
+    c4o:hasContent "[1]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF10_900546262 a deo:Reference ;
+    dcterms:references :BIBREF10_900546262 ;
+    c4o:hasContent "[11]" ;
+    schema:pagination 6 .
+
+:referenceToBIBREF11_900546262 a deo:Reference ;
+    dcterms:references :BIBREF11_900546262 ;
+    c4o:hasContent "[12]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF12_900546262 a deo:Reference ;
+    dcterms:references :BIBREF12_900546262 ;
+    c4o:hasContent "[13]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF13_900546262 a deo:Reference ;
+    dcterms:references :BIBREF13_900546262 ;
+    c4o:hasContent "[14]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF14_900546262 a deo:Reference ;
+    dcterms:references :BIBREF14_900546262 ;
+    c4o:hasContent "[15]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF18_900546262 a deo:Reference ;
+    dcterms:references :BIBREF18_900546262 ;
+    c4o:hasContent "[19]" ;
+    schema:pagination 3 .
+
+:referenceToBIBREF19_900546262 a deo:Reference ;
+    dcterms:references :BIBREF19_900546262 ;
+    c4o:hasContent "[20]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF20_900546262 a deo:Reference ;
+    dcterms:references :BIBREF20_900546262 ;
+    c4o:hasContent "[21]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF21_900546262 a deo:Reference ;
+    dcterms:references :BIBREF21_900546262 ;
+    c4o:hasContent "[22]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF22_900546262 a deo:Reference ;
+    dcterms:references :BIBREF22_900546262 ;
+    c4o:hasContent "[23]" ;
+    schema:pagination 7 .
+
+:referenceToBIBREF23_900546262 a deo:Reference ;
+    dcterms:references :BIBREF23_900546262 ;
+    c4o:hasContent "[24]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF24_900546262 a deo:Reference ;
+    dcterms:references :BIBREF24_900546262 ;
+    c4o:hasContent "[25]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF27_900546262 a deo:Reference ;
+    dcterms:references :BIBREF27_900546262 ;
+    c4o:hasContent "[28]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF28_900546262 a deo:Reference ;
+    dcterms:references :BIBREF28_900546262 ;
+    c4o:hasContent "[29]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF29_900546262 a deo:Reference ;
+    dcterms:references :BIBREF29_900546262 ;
+    c4o:hasContent "[30]" ;
+    schema:pagination 5 .
+
+:referenceToBIBREF2_900546262 a deo:Reference ;
+    dcterms:references :BIBREF2_900546262 ;
+    c4o:hasContent "[3]" ;
+    schema:pagination 1,
+        2 .
+
+:referenceToBIBREF30_900546262 a deo:Reference ;
+    dcterms:references :BIBREF30_900546262 ;
+    c4o:hasContent "[31]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF32_900546262 a deo:Reference ;
+    dcterms:references :BIBREF32_900546262 ;
+    c4o:hasContent "[33]" ;
+    schema:pagination 6 .
+
+:referenceToBIBREF3_900546262 a deo:Reference ;
+    dcterms:references :BIBREF3_900546262 ;
+    c4o:hasContent "[4]" ;
+    schema:pagination 1 .
+
+:referenceToBIBREF4_900546262 a deo:Reference ;
+    dcterms:references :BIBREF4_900546262 ;
+    c4o:hasContent "[5]" ;
+    schema:pagination 7 .
+
+:referenceToBIBREF5_900546262 a deo:Reference ;
+    dcterms:references :BIBREF5_900546262 ;
+    c4o:hasContent "[6]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF6_900546262 a deo:Reference ;
+    dcterms:references :BIBREF6_900546262 ;
+    c4o:hasContent "[7]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF7_900546262 a deo:Reference ;
+    dcterms:references :BIBREF7_900546262 ;
+    c4o:hasContent "[8]" ;
+    schema:pagination 3 .
+
+:reference_30_900546262 a deo:Reference ;
+    dcterms:references :figure_0_900546262 ;
+    c4o:hasContent "Figure 1" ;
+    schema:pagination 2 .
+
+:reference_31_900546262 a deo:Reference ;
+    dcterms:references :figure_2_900546262 ;
+    c4o:hasContent "Figure 2" ;
+    schema:pagination 2 .
+
+:reference_42_900546262 a deo:Reference ;
+    c4o:hasContent "Table I" ;
+    schema:pagination 3 .
+
+:reference_43_900546262 a deo:Reference ;
+    c4o:hasContent "Figure 3" ;
+    schema:pagination 4 .
+
+:reference_45_900546262 a deo:Reference ;
+    c4o:hasContent "Figure 4" ;
+    schema:pagination 4 .
+
+:reference_48_900546262 a deo:Reference ;
+    dcterms:references :figure_4_900546262 ;
+    c4o:hasContent "Figure 5" ;
+    schema:pagination 5 .
+
+:reference_49_900546262 a deo:Reference ;
+    dcterms:references :figure_5_900546262 ;
+    c4o:hasContent "Figure 6(a)" ;
+    schema:pagination 5 .
+
+:reference_50_900546262 a deo:Reference ;
+    dcterms:references :figure_5_900546262 ;
+    c4o:hasContent "Figure 6" ;
+    schema:pagination 5 .
+
+:reference_51_900546262 a deo:Reference ;
+    dcterms:references :figure_5_900546262 ;
+    c4o:hasContent "Figure 6" ;
+    schema:pagination 5 .
+
+:reference_52_900546262 a deo:Reference ;
+    c4o:hasContent "Figure 7(a)" ;
+    schema:pagination 5 .
+
+:reference_55_900546262 a deo:Reference ;
+    c4o:hasContent "Figure 7" ;
+    schema:pagination 6 .
+
+:reference_56_900546262 a deo:Reference ;
+    c4o:hasContent "Figure 8(a)" ;
+    schema:pagination 6 .
+
+:reference_58_900546262 a deo:Reference ;
+    dcterms:references :figure_5_900546262 ;
+    c4o:hasContent "Figure 6" ;
+    schema:pagination 6 .
+
+:reference_59_900546262 a deo:Reference ;
+    c4o:hasContent "Figure 8" ;
+    schema:pagination 6 .
+
+:reference_60_900546262 a deo:Reference ;
+    c4o:hasContent "Figure 8" ;
+    schema:pagination 7 .
+
+:reference_69_900546262 a deo:Reference ;
+    dcterms:references :figure_6_900546262 ;
+    c4o:hasContent "Figure 9" ;
+    schema:pagination 7 .
+
+:reference_70_900546262 a deo:Reference ;
+    dcterms:references :figure_0_900546262 ;
+    c4o:hasContent "Figure 10" ;
+    schema:pagination 7 .
+
+:reference_71_900546262 a deo:Reference ;
+    dcterms:references :figure_0_900546262 ;
+    c4o:hasContent "Figure 11" ;
+    schema:pagination 7 .
+
+:reference_72_900546262 a deo:Reference ;
+    dcterms:references :figure_0_900546262 ;
+    c4o:hasContent "Figure 11" ;
+    schema:pagination 8 .
+
+:reference_75_900546262 a deo:Reference ;
+    dcterms:references :figure_8_900546262 ;
+    c4o:hasContent "Figure 12" ;
+    schema:pagination 8 .
+
+:reference_76_900546262 a deo:Reference ;
+    dcterms:references :figure_9_900546262 ;
+    c4o:hasContent "Figure 13" ;
+    schema:pagination 8 .
+
+:sectionLabel16_900546262 a doco:SectionLabel ;
+    c4o:hasContent "4." .
+
+:sectionLabel1_900546262 a doco:SectionLabel ;
+    c4o:hasContent "1." .
+
+:sectionLabel20_900546262 a doco:SectionLabel ;
+    c4o:hasContent "5." .
+
+:sectionLabel4_900546262 a doco:SectionLabel ;
+    c4o:hasContent "2." .
+
+:sectionLabel7_900546262 a doco:SectionLabel ;
+    c4o:hasContent "3." .
+
+:sectionTitle10_900546262 a doco:SectionTitle ;
+    c4o:hasContent "B. Point-segment coincidence" .
+
+:sectionTitle11_900546262 a doco:SectionTitle ;
+    c4o:hasContent "COIN(p," .
+
+:sectionTitle12_900546262 a doco:SectionTitle ;
+    c4o:hasContent "C. Relative Orientation" .
+
+:sectionTitle13_900546262 a doco:SectionTitle ;
+    c4o:hasContent "D. Topological relations between circles" .
+
+:sectionTitle14_900546262 a doco:SectionTitle ;
+    c4o:hasContent "BRACE(l ab , C" .
+
+:sectionTitle15_900546262 a doco:SectionTitle ;
+    c4o:hasContent "E. Egg-yolk approach for defining relations between regions" .
+
+:sectionTitle16_900546262 a doco:SectionTitle ;
+    c4o:hasContent "EMPIRICAL EVALUATION" .
+
+:sectionTitle17_900546262 a doco:SectionTitle ;
+    c4o:hasContent "A. Tent Benchmark Problem" .
+
+:sectionTitle18_900546262 a doco:SectionTitle ;
+    c4o:hasContent "B. Contact problems" .
+
+:sectionTitle19_900546262 a doco:SectionTitle ;
+    c4o:hasContent "C. Computer Aided Product Design" .
+
+:sectionTitle1_900546262 a doco:SectionTitle ;
+    c4o:hasContent "INTRODUCTION" .
+
+:sectionTitle20_900546262 a doco:SectionTitle ;
+    c4o:hasContent "DISCUSSION AND CONCLUSIONS" .
+
+:sectionTitle2_900546262 a doco:SectionTitle ;
+    c4o:hasContent "A. Motivations for utilising geometric constraint solving" .
+
+:sectionTitle3_900546262 a doco:SectionTitle ;
+    c4o:hasContent "B. An example of Spatial Reasoning in CLP(QS)" .
+
+:sectionTitle4_900546262 a doco:SectionTitle ;
+    c4o:hasContent "SPATIAL REASONING BY POLYNOMIAL ENCODINGS" .
+
+:sectionTitle5_900546262 a doco:SectionTitle ;
+    c4o:hasContent "A. Constructive Geometric Constraint Solving" .
+
+:sectionTitle6_900546262 a doco:SectionTitle ;
+    c4o:hasContent "B. The Standard Geometric Constraint Language" .
+
+:sectionTitle7_900546262 a doco:SectionTitle ;
+    c4o:hasContent "ENCODING QUALITATIVE SPATIAL RELATIONS USING GEOMETRIC CONSTRAINT LANGUAGES" .
+
+:sectionTitle8_900546262 a doco:SectionTitle ;
+    c4o:hasContent "A. Minimum distance" .
+
+:sectionTitle9_900546262 a doco:SectionTitle ;
+    c4o:hasContent "MDIST(C) ≡" .
+
+:bibliography_900546262 a doco:Bibliography ;
+    co:firstItem [ co:itemContent :BIBREF0_900546262 ;
+            co:nextItem [ co:itemContent :BIBREF1_900546262 ;
+                    co:nextItem [ co:itemContent :BIBREF2_900546262 ;
+                            co:nextItem [ co:itemContent :BIBREF3_900546262 ;
+                                    co:nextItem [ co:itemContent :BIBREF4_900546262 ;
+                                            co:nextItem [ co:itemContent :BIBREF5_900546262 ;
+                                                    co:nextItem [ co:itemContent :BIBREF6_900546262 ;
+                                                            co:nextItem [ co:itemContent :BIBREF7_900546262 ;
+                                                                    co:nextItem [ co:itemContent :BIBREF8_900546262 ;
+                                                                            co:nextItem [ co:itemContent :BIBREF9_900546262 ;
+                                                                                    co:nextItem [ co:itemContent :BIBREF10_900546262 ;
+                                                                                            co:nextItem [ co:itemContent :BIBREF11_900546262 ;
+                                                                                                    co:nextItem [ co:itemContent :BIBREF12_900546262 ;
+                                                                                                            co:nextItem [ co:itemContent :BIBREF13_900546262 ;
+                                                                                                                    co:nextItem [ co:itemContent :BIBREF14_900546262 ;
+                                                                                                                            co:nextItem [ co:itemContent :BIBREF15_900546262 ;
+                                                                                                                                    co:nextItem [ co:itemContent :BIBREF16_900546262 ;
+                                                                                                                                            co:nextItem [ co:itemContent :BIBREF17_900546262 ;
+                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF18_900546262 ;
+                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF19_900546262 ;
+                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF20_900546262 ;
+                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF21_900546262 ;
+                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF22_900546262 ;
+                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF23_900546262 ;
+                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF24_900546262 ;
+                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF25_900546262 ;
+                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF26_900546262 ;
+                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF27_900546262 ;
+                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF28_900546262 ;
+                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF29_900546262 ;
+                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF30_900546262 ;
+                                                                                                                                                                                                                                                            co:nextItem [ co:itemContent :BIBREF31_900546262 ;
+                                                                                                                                                                                                                                                                    co:nextItem [ co:itemContent :BIBREF32_900546262 ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ;
+    po:contains :BIBREF0_900546262,
+        :BIBREF10_900546262,
+        :BIBREF11_900546262,
+        :BIBREF12_900546262,
+        :BIBREF13_900546262,
+        :BIBREF14_900546262,
+        :BIBREF15_900546262,
+        :BIBREF16_900546262,
+        :BIBREF17_900546262,
+        :BIBREF18_900546262,
+        :BIBREF19_900546262,
+        :BIBREF1_900546262,
+        :BIBREF20_900546262,
+        :BIBREF21_900546262,
+        :BIBREF22_900546262,
+        :BIBREF23_900546262,
+        :BIBREF24_900546262,
+        :BIBREF25_900546262,
+        :BIBREF26_900546262,
+        :BIBREF27_900546262,
+        :BIBREF28_900546262,
+        :BIBREF29_900546262,
+        :BIBREF2_900546262,
+        :BIBREF30_900546262,
+        :BIBREF31_900546262,
+        :BIBREF32_900546262,
+        :BIBREF3_900546262,
+        :BIBREF4_900546262,
+        :BIBREF5_900546262,
+        :BIBREF6_900546262,
+        :BIBREF7_900546262,
+        :BIBREF8_900546262,
+        :BIBREF9_900546262 .
+
+:figure_2_900546262 a doco:Figure ;
+    po:contains :figure_box_2_900546262,
+        :figure_description_2_900546262,
+        :figure_label_2_900546262 .
+
+:figure_4_900546262 a doco:Figure ;
+    po:contains :figure_box_4_900546262,
+        :figure_description_4_900546262,
+        :figure_label_4_900546262 .
+
+:figure_6_900546262 a doco:Figure ;
+    po:contains :figure_box_6_900546262,
+        :figure_description_6_900546262,
+        :figure_label_6_900546262 .
+
+:figure_8_900546262 a doco:Figure ;
+    po:contains :figure_box_8_900546262,
+        :figure_description_8_900546262,
+        :figure_label_8_900546262 .
+
+:figure_9_900546262 a doco:Figure ;
+    po:contains :figure_box_9_900546262,
+        :figure_description_9_900546262,
+        :figure_label_9_900546262 .
+
+:referenceToBIBREF16_900546262 a deo:Reference ;
+    dcterms:references :BIBREF16_900546262 ;
+    c4o:hasContent "[17]" ;
+    schema:pagination 2,
+        8 .
+
+:referenceToBIBREF17_900546262 a deo:Reference ;
+    dcterms:references :BIBREF17_900546262 ;
+    c4o:hasContent "[18]" ;
+    schema:pagination 2,
+        8 .
+
+:referenceToBIBREF1_900546262 a deo:Reference ;
+    dcterms:references :BIBREF1_900546262 ;
+    c4o:hasContent "[2]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF25_900546262 a deo:Reference ;
+    dcterms:references :BIBREF25_900546262 ;
+    c4o:hasContent "[26]" ;
+    schema:pagination 1,
+        7 .
+
+:referenceToBIBREF26_900546262 a deo:Reference ;
+    dcterms:references :BIBREF26_900546262 ;
+    c4o:hasContent "[27]" ;
+    schema:pagination 2,
+        3 .
+
+:referenceToBIBREF31_900546262 a deo:Reference ;
+    dcterms:references :BIBREF31_900546262 ;
+    c4o:hasContent "[32]" ;
+    schema:pagination 2 .
+
+:referenceToBIBREF9_900546262 a deo:Reference ;
+    dcterms:references :BIBREF9_900546262 ;
+    c4o:hasContent "[10]" ;
+    schema:pagination 3 .
+
+:section10_900546262 a doco:Section ;
+    po:contains :reference_45_900546262 ;
+    po:containsAsHeader :sectionTitle10_900546262 .
+
+:section11_900546262 a doco:Section ;
+    po:containsAsHeader :sectionTitle11_900546262 .
+
+:section12_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF15_900546262,
+        :referenceToBIBREF8_900546262,
+        :reference_48_900546262,
+        :reference_49_900546262,
+        :reference_50_900546262,
+        :reference_51_900546262 ;
+    po:containsAsHeader :sectionTitle12_900546262 .
+
+:section13_900546262 a doco:Section ;
+    po:contains :reference_52_900546262 ;
+    po:containsAsHeader :sectionTitle13_900546262 .
+
+:section14_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF29_900546262 ;
+    po:containsAsHeader :sectionTitle14_900546262 .
+
+:section15_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF10_900546262,
+        :referenceToBIBREF32_900546262,
+        :reference_55_900546262,
+        :reference_56_900546262,
+        :reference_58_900546262,
+        :reference_59_900546262,
+        :reference_60_900546262 ;
+    po:containsAsHeader :sectionTitle15_900546262 .
+
+:section16_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF8_900546262,
+        :sectionLabel16_900546262 ;
+    po:containsAsHeader :sectionTitle16_900546262 .
+
+:section17_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF22_900546262,
+        :referenceToBIBREF25_900546262,
+        :referenceToBIBREF4_900546262,
+        :reference_69_900546262 ;
+    po:containsAsHeader :sectionTitle17_900546262 .
+
+:section18_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF16_900546262,
+        :referenceToBIBREF17_900546262,
+        :reference_70_900546262,
+        :reference_71_900546262,
+        :reference_72_900546262,
+        :reference_75_900546262 ;
+    po:containsAsHeader :sectionTitle18_900546262 .
+
+:section19_900546262 a doco:Section ;
+    po:contains :reference_76_900546262 ;
+    po:containsAsHeader :sectionTitle19_900546262 .
+
+:section1_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF0_900546262,
+        :referenceToBIBREF19_900546262,
+        :referenceToBIBREF1_900546262,
+        :referenceToBIBREF20_900546262,
+        :referenceToBIBREF21_900546262,
+        :referenceToBIBREF23_900546262,
+        :referenceToBIBREF24_900546262,
+        :referenceToBIBREF25_900546262,
+        :referenceToBIBREF27_900546262,
+        :referenceToBIBREF28_900546262,
+        :referenceToBIBREF2_900546262,
+        :referenceToBIBREF30_900546262,
+        :referenceToBIBREF31_900546262,
+        :referenceToBIBREF3_900546262,
+        :referenceToBIBREF5_900546262,
+        :referenceToBIBREF6_900546262,
+        :sectionLabel1_900546262 ;
+    po:containsAsHeader :sectionTitle1_900546262 .
+
+:section20_900546262 a doco:Section ;
+    po:contains :sectionLabel20_900546262 ;
+    po:containsAsHeader :sectionTitle20_900546262 .
+
+:section2_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF11_900546262,
+        :referenceToBIBREF12_900546262,
+        :referenceToBIBREF15_900546262,
+        :referenceToBIBREF16_900546262,
+        :referenceToBIBREF17_900546262,
+        :referenceToBIBREF1_900546262,
+        :referenceToBIBREF26_900546262 ;
+    po:containsAsHeader :sectionTitle2_900546262 .
+
+:section3_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF31_900546262,
+        :reference_30_900546262,
+        :reference_31_900546262 ;
+    po:containsAsHeader :sectionTitle3_900546262 .
+
+:section4_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF9_900546262,
+        :sectionLabel4_900546262 ;
+    po:containsAsHeader :sectionTitle4_900546262 .
+
+:section5_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF13_900546262,
+        :referenceToBIBREF14_900546262,
+        :referenceToBIBREF15_900546262,
+        :referenceToBIBREF18_900546262,
+        :referenceToBIBREF26_900546262,
+        :referenceToBIBREF7_900546262,
+        :referenceToBIBREF9_900546262 ;
+    po:containsAsHeader :sectionTitle5_900546262 .
+
+:section6_900546262 a doco:Section ;
+    po:contains :reference_42_900546262 ;
+    po:containsAsHeader :sectionTitle6_900546262 .
+
+:section7_900546262 a doco:Section ;
+    po:contains :sectionLabel7_900546262 ;
+    po:containsAsHeader :sectionTitle7_900546262 .
+
+:section8_900546262 a doco:Section ;
+    po:contains :reference_43_900546262 ;
+    po:containsAsHeader :sectionTitle8_900546262 .
+
+:section9_900546262 a doco:Section ;
+    po:contains :referenceToBIBREF8_900546262 ;
+    po:containsAsHeader :sectionTitle9_900546262 .
+
+:BIBREF0_900546262 a deo:BibliographicReference ;
+    dcterms:issued 2007 ;
+    dcterms:publisher [ schema:name "Handbook of Spatial Logics" ] .
+
+:BIBREF10_900546262 a deo:BibliographicReference ;
+    prism:endingPage "187" ;
+    prism:startingPage "171" ;
+    prism:volume "2" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Cohn" ;
+            schema:givenName "A" ],
+        [ a schema:Person ;
+            schema:familyName "Gotts" ;
+            schema:givenName "N" ] ;
+    dcterms:issued 1996 ;
+    dcterms:publisher [ schema:name "Geographic Objects with Indeterminate Boundaries" ] ;
+    dcterms:title "The ‘Egg-Yolk’ Representation of Regions with Indeterminate Boundaries" ;
+    datacite:doi "http://dx.doi.org/10.1201/9781003062660-16"^^xsd:anyURI .
+
+:BIBREF11_900546262 a deo:BibliographicReference ;
+    prism:endingPage "183" ;
+    prism:startingPage "134" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1975 ;
+    dcterms:publisher [ schema:name "Lecture Notes in Computer Science" ] ;
+    dcterms:title "Quantifier elimination for real closed fields by cylindrical algebraic decompostion" ;
+    datacite:doi "http://dx.doi.org/10.1007/3-540-07407-4_17"^^xsd:anyURI .
+
+:BIBREF12_900546262 a deo:BibliographicReference ;
+    prism:endingPage "328" ;
+    prism:issueIdentifier "3" ;
+    prism:startingPage "299" ;
+    prism:volume "12" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Collins" ;
+            schema:givenName "George" ],
+        [ a schema:Person ;
+            schema:familyName "Hong" ;
+            schema:givenName "Hoon" ] ;
+    dcterms:issued 1991 ;
+    dcterms:publisher [ schema:name "Journal of Symbolic Computation" ] ;
+    dcterms:title "Partial Cylindrical Algebraic Decomposition for quantifier elimination" ;
+    datacite:doi "http://dx.doi.org/10.1016/s0747-7171(08)80152-6"^^xsd:anyURI .
+
+:BIBREF13_900546262 a deo:BibliographicReference ;
+    prism:endingPage "122" ;
+    prism:issueIdentifier "2" ;
+    prism:startingPage "115" ;
+    prism:volume "30" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Gao" ;
+            schema:givenName "Xiao-Shan" ],
+        [ a schema:Person ;
+            schema:familyName "Chou" ;
+            schema:givenName "Shang-Ching" ] ;
+    dcterms:issued 1998 ;
+    dcterms:publisher [ schema:name "Computer-Aided Design" ] ;
+    dcterms:title "Solving geometric constraint systems. II. A symbolic approach and decision of Rc-constructibility" ;
+    datacite:doi "http://dx.doi.org/10.1016/s0010-4485(97)00055-9"^^xsd:anyURI .
+
+:BIBREF14_900546262 a deo:BibliographicReference ;
+    prism:endingPage "54" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "47" ;
+    prism:volume "30" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Gao" ;
+            schema:givenName "Xiao-Shan" ],
+        [ a schema:Person ;
+            schema:familyName "Chou" ;
+            schema:givenName "Shang-Ching" ] ;
+    dcterms:issued 1998 ;
+    dcterms:publisher [ schema:name "Computer-Aided Design" ] ;
+    dcterms:title "Solving geometric constraint systems. I. A global propagation approach" ;
+    datacite:doi "http://dx.doi.org/10.1016/s0010-4485(97)00052-3"^^xsd:anyURI .
+
+:BIBREF15_900546262 a deo:BibliographicReference ;
+    prism:endingPage "879" ;
+    prism:issueIdentifier "14" ;
+    prism:startingPage "867" ;
+    prism:volume "31" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Ge" ;
+            schema:givenName "Jian-Xin" ],
+        [ a schema:Person ;
+            schema:familyName "Chou" ;
+            schema:givenName "Shang-Ching" ],
+        [ a schema:Person ;
+            schema:familyName "Gao" ;
+            schema:givenName "Xiao-Shan" ] ;
+    dcterms:issued 1999 ;
+    dcterms:publisher [ schema:name "Computer-Aided Design" ] ;
+    dcterms:title "Geometric constraint satisfaction using optimization methods" ;
+    datacite:doi "http://dx.doi.org/10.1016/s0010-4485(99)00074-3"^^xsd:anyURI .
+
+:BIBREF16_900546262 a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1985 ;
+    dcterms:publisher [ schema:name "Formal Theories of the Commonsense World" ] ;
+    dcterms:title "The second naive physics manifesto" .
+
+:BIBREF17_900546262 a deo:BibliographicReference ;
+    dcterms:issued 2005 ;
+    dcterms:publisher [ schema:name "Cohn, Prof. Anthony George, (born 19 Aug. 1954), Professor of Automated Reasoning, School of Computing, University of Leeds, since 1996" ] .
+
+:BIBREF18_900546262 a deo:BibliographicReference ;
+    prism:volume "1" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1956 ;
+    dcterms:publisher [ schema:name "The thirteen books of Euclid's Elements" ] .
+
+:BIBREF19_900546262 a deo:BibliographicReference ;
+    dcterms:issued 1988 ;
+    dcterms:publisher [ schema:name "Geometric Reasoning" ] .
+
+:BIBREF1_900546262 a deo:BibliographicReference ;
+    prism:endingPage "877" ;
+    prism:issueIdentifier "4" ;
+    prism:startingPage "865" ;
+    prism:volume "13" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Arnon" ;
+            schema:givenName "Dennis" ],
+        [ a schema:Person ;
+            schema:familyName "Collins" ;
+            schema:givenName "George" ],
+        [ a schema:Person ;
+            schema:familyName "Mccallum" ;
+            schema:givenName "Scott" ] ;
+    dcterms:issued 1984 ;
+    dcterms:publisher [ schema:name "SIAM Journal on Computing" ] ;
+    dcterms:title "Cylindrical Algebraic Decomposition I: The Basic Algorithm" ;
+    datacite:doi "http://dx.doi.org/10.1137/0213054"^^xsd:anyURI .
+
+:BIBREF20_900546262 a deo:BibliographicReference ;
+    prism:endingPage "469" ;
+    prism:issueIdentifier "3" ;
+    prism:startingPage "435" ;
+    prism:volume "41" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Ladkin" ;
+            schema:givenName "Peter" ],
+        [ a schema:Person ;
+            schema:familyName "Maddux" ;
+            schema:givenName "Roger" ] ;
+    dcterms:issued 1994 ;
+    dcterms:publisher [ schema:name "Journal of the ACM" ] ;
+    dcterms:title "On binary constraint problems" ;
+    datacite:doi "http://dx.doi.org/10.1145/176584.176585"^^xsd:anyURI .
+
+:BIBREF21_900546262 a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 2014 ;
+    dcterms:publisher [ schema:name "Proceedings of the 2014 6th International Conference on Electronics, Computers and Artificial Intelligence (ECAI)" ] ;
+    dcterms:title "Keynotes" ;
+    datacite:doi "http://dx.doi.org/10.1109/ecai.2014.7090137"^^xsd:anyURI .
+
+:BIBREF22_900546262 a deo:BibliographicReference ;
+    prism:volume "27" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Wolter" ;
+            schema:givenName "D" ],
+        [ a schema:Person ;
+            schema:familyName "Lee" ;
+            schema:givenName "J" ] ;
+    dcterms:issued 2011 ;
+    dcterms:publisher [ schema:name "IJCAI-2011 Workshop" ] ;
+    dcterms:title "A new perspective on reasoning with qualitative spatial knowledge" .
+
+:BIBREF23_900546262 a deo:BibliographicReference ;
+    prism:endingPage "108" ;
+    prism:issueIdentifier "2" ;
+    prism:startingPage "97" ;
+    prism:volume "34" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Hu" ;
+            schema:givenName "Shi-Min" ],
+        [ a schema:Person ;
+            schema:familyName "Li" ;
+            schema:givenName "Yan-Tao" ],
+        [ a schema:Person ;
+            schema:familyName "Sun" ;
+            schema:givenName "Jia-Guang" ] ;
+    dcterms:issued 2002 ;
+    dcterms:publisher [ schema:name "Computer-Aided Design" ] ;
+    dcterms:title "A constructive approach to solving 3-D geometric constraint systems using dependence analysis" ;
+    datacite:doi "http://dx.doi.org/10.1016/s0010-4485(01)00054-9"^^xsd:anyURI .
+
+:BIBREF24_900546262 a deo:BibliographicReference ;
+    dcterms:issued 2011 ;
+    dcterms:publisher [ schema:name "Qualitative Spatial and Temporal Reasoning" ] .
+
+:BIBREF25_900546262 a deo:BibliographicReference ;
+    prism:endingPage "68" ;
+    prism:startingPage "54" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1993 ;
+    dcterms:publisher [ schema:name "Lecture Notes in Computer Science" ] ;
+    dcterms:title "Qualitative triangulation for spatial reasoning" ;
+    datacite:doi "http://dx.doi.org/10.1007/3-540-57207-4_5"^^xsd:anyURI .
+
+:BIBREF26_900546262 a deo:BibliographicReference ;
+    prism:endingPage "407" ;
+    prism:startingPage "397" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1991 ;
+    dcterms:publisher [ schema:name "Proceedings of the first ACM symposium on Solid modeling foundations and CAD/CAM applications - SMA '91" ] ;
+    dcterms:title "Algebraic solution for geometry from dimensional constraints" ;
+    datacite:doi "http://dx.doi.org/10.1145/112515.112573"^^xsd:anyURI .
+
+:BIBREF27_900546262 a deo:BibliographicReference ;
+    prism:endingPage "108" ;
+    prism:startingPage "95" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Pesant" ;
+            schema:givenName "Gilles" ],
+        [ a schema:Person ;
+            schema:familyName "Boyer" ;
+            schema:givenName "Michel" ] ;
+    dcterms:issued 1994 ;
+    dcterms:publisher [ schema:name "Lecture Notes in Computer Science" ] ;
+    dcterms:title "QUAD-CLP(R): Adding the power of quadratic constraints" ;
+    datacite:doi "http://dx.doi.org/10.1007/3-540-58601-6_93"^^xsd:anyURI .
+
+:BIBREF28_900546262 a deo:BibliographicReference ;
+    prism:endingPage "262" ;
+    prism:issueIdentifier "3" ;
+    prism:startingPage "241" ;
+    prism:volume "22" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Boyer" ;
+            schema:givenName "Michel" ],
+        [ a schema:Person ;
+            schema:familyName "Pesant" ;
+            schema:givenName "Gilles" ] ;
+    dcterms:issued 1999 ;
+    dcterms:publisher [ schema:name "Journal of Automated Reasoning" ] ;
+    dcterms:title "Reasoning about solids using constraint logic programming" ;
+    datacite:doi "http://dx.doi.org/10.1023/a:1006080931326"^^xsd:anyURI .
+
+:BIBREF29_900546262 a deo:BibliographicReference ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Cui" ;
+            schema:givenName "Z" ],
+        [ a schema:Person ;
+            schema:familyName "Cohn" ;
+            schema:givenName "A" ],
+        [ a schema:Person ;
+            schema:familyName "Randell" ;
+            schema:givenName "D" ] ;
+    dcterms:issued 1992 ;
+    dcterms:publisher [ schema:name "Principles of Knowledge Representation and Reasoning" ] ;
+    dcterms:title "The Morgan Kaufmann Series in Representation and Reasoning" ;
+    datacite:doi "http://dx.doi.org/10.1016/b978-1-4832-1452-8.50093-2"^^xsd:anyURI .
+
+:BIBREF2_900546262 a deo:BibliographicReference ;
+    prism:endingPage "230" ;
+    prism:startingPage "210" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Lee" ;
+            schema:givenName "Jae" ],
+        [ a schema:Person ;
+            schema:familyName "Bhatt" ;
+            schema:givenName "Mehul" ],
+        [ a schema:Person ;
+            schema:familyName "Schultz" ;
+            schema:givenName "Carl" ] ;
+    dcterms:issued 2011 ;
+    dcterms:publisher [ schema:name "Spatial Information Theory" ] ;
+    dcterms:title "CLP(QS): A Declarative Spatial Reasoning Framework" ;
+    datacite:doi "http://dx.doi.org/10.1007/978-3-642-23196-4_12"^^xsd:anyURI .
+
+:BIBREF30_900546262 a deo:BibliographicReference ;
+    prism:endingPage "203" ;
+    prism:issueIdentifier "2" ;
+    prism:startingPage "177" ;
+    prism:volume "26" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Bhatt" ;
+            schema:givenName "Mehul" ],
+        [ a schema:Person ;
+            schema:familyName "Schultz" ;
+            schema:givenName "Carl" ] ;
+    dcterms:issued 2012 ;
+    dcterms:publisher [ schema:name "Artificial Intelligence for Engineering Design, Analysis and Manufacturing" ] ;
+    dcterms:title "Multimodal spatial data access for architecture design assistance" ;
+    datacite:doi "http://dx.doi.org/10.1017/s0890060412000066"^^xsd:anyURI .
+
+:BIBREF31_900546262 a deo:BibliographicReference ;
+    prism:endingPage "800" ;
+    prism:startingPage "795" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Bhatt" ;
+            schema:givenName "M" ],
+        [ a schema:Person ;
+            schema:familyName "Schultz" ;
+            schema:givenName "C" ] ;
+    dcterms:issued 2014 ;
+    dcterms:publisher [ schema:name "ECAI 2014 -21st European Conference on Artificial Intelligence" ] ;
+    dcterms:title "Declarative spatial reasoning with boolean combinations of axis-aligned rectangular polytopes" .
+
+:BIBREF32_900546262 a deo:BibliographicReference ;
+    prism:endingPage "198" ;
+    prism:startingPage "151" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1999 ;
+    dcterms:publisher [ schema:name "Geometry" ] ;
+    dcterms:title "Projective Geometry: conics" ;
+    datacite:doi "http://dx.doi.org/10.1017/cbo9780511807503.006"^^xsd:anyURI .
+
+:BIBREF3_900546262 a deo:BibliographicReference ;
+    prism:endingPage "214" ;
+    prism:startingPage "170" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Bhatt" ;
+            schema:givenName "Mehul" ],
+        [ a schema:Person ;
+            schema:familyName "Schultz" ;
+            schema:givenName "Carl" ],
+        [ a schema:Person ;
+            schema:familyName "Freksa" ;
+            schema:givenName "Christian" ] ;
+    dcterms:issued 2013 ;
+    dcterms:publisher [ schema:name "Representing Space in Cognition" ] ;
+    dcterms:title "The ‘space’ in spatial assistance systems: conception, formalization, and computation*" ;
+    datacite:doi "http://dx.doi.org/10.1093/acprof:oso/9780199679911.003.0009"^^xsd:anyURI .
+
+:BIBREF4_900546262 a deo:BibliographicReference ;
+    prism:endingPage "111" ;
+    prism:issueIdentifier "1" ;
+    prism:startingPage "109" ;
+    prism:volume "30" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 2009 ;
+    dcterms:publisher [ schema:name "Artificial Intelligence" ] ;
+    dcterms:title "Call for papers: IJCAI-87 international joint conference on artificial intelligence" ;
+    datacite:doi "http://dx.doi.org/10.1016/0004-3702(86)90069-x"^^xsd:anyURI .
+
+:BIBREF5_900546262 a deo:BibliographicReference ;
+    prism:endingPage "288" ;
+    prism:startingPage "274" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1996 ;
+    dcterms:publisher [ schema:name "Artificial Intelligence and Symbolic Mathematical Computation" ] ;
+    dcterms:title "Solving geometrical constraint systems using CLP based on linear constraint solver" ;
+    datacite:doi "http://dx.doi.org/10.1007/3-540-61732-9_63"^^xsd:anyURI .
+
+:BIBREF6_900546262 a deo:BibliographicReference ;
+    prism:endingPage "405" ;
+    prism:issueIdentifier "4" ;
+    prism:startingPage "383" ;
+    prism:volume "4" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Cohen" ;
+            schema:givenName "Jacques" ],
+        [ a schema:Person ;
+            schema:familyName "Bouhineau" ;
+            schema:givenName "Denis" ],
+        [ a schema:Person ;
+            schema:familyName "Trilling" ;
+            schema:givenName "Laurent" ] ;
+    dcterms:issued 1999 ;
+    dcterms:publisher [ schema:name "Constraints" ] ;
+    dcterms:title "An application of CLP: Checking the correctness of theorems in geometry" ;
+    datacite:doi "http://dx.doi.org/10.1023/a:1009825124248"^^xsd:anyURI .
+
+:BIBREF7_900546262 a deo:BibliographicReference ;
+    prism:endingPage "501" ;
+    prism:issueIdentifier "6" ;
+    prism:startingPage "487" ;
+    prism:volume "27" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Bouma" ;
+            schema:givenName "William" ],
+        [ a schema:Person ;
+            schema:familyName "Hoffmann" ;
+            schema:givenName "Christoph" ],
+        [ a schema:Person ;
+            schema:familyName "Fudos" ;
+            schema:givenName "Ioannis" ],
+        [ a schema:Person ;
+            schema:familyName "Paige" ;
+            schema:givenName "Robert" ],
+        [ a schema:Person ;
+            schema:familyName "Cai" ;
+            schema:givenName "Jiazhen" ] ;
+    dcterms:issued 1995 ;
+    dcterms:publisher [ schema:name "Computer-Aided Design" ] ;
+    dcterms:title "Geometric constraint solver" ;
+    datacite:doi "http://dx.doi.org/10.1016/0010-4485(94)00013-4"^^xsd:anyURI .
+
+:BIBREF8_900546262 a deo:BibliographicReference ;
+    prism:endingPage "1208" ;
+    prism:issueIdentifier "5" ;
+    prism:startingPage "1190" ;
+    prism:volume "16" ;
+    dcterms:creator [ a schema:Person ;
+            schema:familyName "Nocedal" ;
+            schema:givenName "Jorge" ],
+        [ a schema:Person ;
+            schema:familyName "Zhu" ;
+            schema:givenName "Ciyou" ],
+        [ a schema:Person ;
+            schema:familyName "Lu" ;
+            schema:givenName "Peihuang" ],
+        [ a schema:Person ;
+            schema:familyName "Byrd" ;
+            schema:givenName "Richard" ] ;
+    dcterms:issued 1995 ;
+    dcterms:publisher [ schema:name "SIAM Journal on Scientific Computing" ] ;
+    dcterms:title "A Limited Memory Algorithm for Bound Constrained Optimization" ;
+    datacite:doi "http://dx.doi.org/10.1137/0916069"^^xsd:anyURI .
+
+:BIBREF9_900546262 a deo:BibliographicReference ;
+    prism:endingPage "89" ;
+    prism:startingPage "75" ;
+    prism:volume "41" ;
+    dcterms:creator [ a schema:Person ] ;
+    dcterms:issued 1988 ;
+    dcterms:publisher [ schema:name "Mechanical Geometry Theorem Proving" ] ;
+    dcterms:title "Geometry Theorem Proving Using The Gröbner Basis Method" ;
+    datacite:doi "http://dx.doi.org/10.1007/978-94-009-4037-6_5"^^xsd:anyURI .
+
+:referenceToBIBREF15_900546262 a deo:Reference ;
+    dcterms:references :BIBREF15_900546262 ;
+    c4o:hasContent "[16]" ;
+    schema:pagination 2,
+        3,
+        5 .
+
+:referenceToBIBREF8_900546262 a deo:Reference ;
+    dcterms:references :BIBREF8_900546262 ;
+    c4o:hasContent "[9]" ;
+    schema:pagination 4,
+        5,
+        7 .
+
+:figure_0_900546262 a doco:Figure ;
+    po:contains :figure_box_0_900546262,
+        :figure_description_0_900546262,
+        :figure_label_0_900546262 .
+
+:figure_5_900546262 a doco:Figure ;
+    po:contains :figure_box_5_900546262,
+        :figure_description_5_900546262,
+        :figure_label_5_900546262 .
+
