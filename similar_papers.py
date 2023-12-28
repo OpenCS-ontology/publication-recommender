@@ -11,6 +11,7 @@ from pymilvus import (
 )
 from kneed import KneeLocator
 import os
+import re
 
 
 def extract_embedding_from_graph(graph: Graph):
@@ -101,10 +102,10 @@ def main():
     g_sim = Graph()
     cs_kg = Namespace("https://w3id.org/ocs/kg/papers/")
     dc = Namespace("http://purl.org/dc/terms/")
-    cs_ont = Namespace("https://w3id.org/ocs/ont/papers/")
+    ocs_papers = Namespace("https://w3id.org/ocs/ont/papers/")
     owl = Namespace("http://www.w3.org/2002/07/owl#")
     g_sim.bind("", cs_kg)
-    g_sim.bind("cs_ont", cs_ont)
+    g_sim.bind("ocs_papers", ocs_papers)
     g_sim.bind("dc", dc)
     g.bind("owl", owl)
 
@@ -147,28 +148,21 @@ def main():
         knee = kl.knee
         assert knee
 
-        for res in results[0][0:knee]:
+        id_ = re.search(r"[a-zA-Z0-9]{9}$", str(paper_uri)).group(0)
+
+        for i, res in enumerate(results[0][0:knee]):
             sim_paper_uri = URIRef(res.id)
             assert sim_paper_uri
 
             sim_score = res.distance
             assert sim_score
-
-            # sim_title = res.entity.get('paper_title')
-
+            
             if sim_score > 0.85:
-                blank_node = BNode()
-                g_sim.add((paper_uri, cs_ont.hasRelatedPapers, blank_node))
-
-                g_sim.add((blank_node, owl.sameAs, sim_paper_uri))
-                g_sim.add(
-                    (
-                        blank_node,
-                        cs_ont.similarityScore,
-                        Literal(sim_score, datatype=XSD.integer),
-                    )
-                )
-                # g_sim.add((blank_node, dc.title, Literal(sim_title, datatype=XSD.string)))
+                relation = URIRef(ocs_papers + "RelatedTopicRelation" + "_" + id_ + "_" + str(i))
+                g_sim.add((relation, RDF.type, ocs_papers.RelatedPaperRelation))
+                g_sim.add((relation, ocs_papers.hasRelationTarget, sim_paper_uri))
+                g_sim.add((relation, ocs_papers.hasRelationScore, Literal(sim_score, datatype=XSD.integer)))
+                g_sim.add((paper_uri, ocs_papers.hasRelatedPaper, relation))
 
     print("Saving results...")
 

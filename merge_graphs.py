@@ -21,7 +21,7 @@ def main():
     assert file_list
 
     cs_kg = Namespace("https://w3id.org/ocs/kg/papers/")
-    cs_ont = Namespace("https://w3id.org/ocs/ont/papers/")
+    ocs_papers = Namespace("https://w3id.org/ocs/ont/papers/")
     datacite = Namespace("http://purl.org/spar/datacite/")
     dc = Namespace("http://purl.org/dc/terms/")
     fabio = Namespace("http://purl.org/spar/fabio/")
@@ -63,8 +63,8 @@ def main():
     graphs = [articles, authors, bibliography, conf_papers, papers, organizations, rest]
 
     for gr in graphs:
-        gr.bind("cs_ont", cs_ont)
-        gr.bind("cs_kg", cs_kg)
+        gr.bind("ocs_papers", ocs_papers)
+        gr.bind("", cs_kg)
         gr.bind("datacite", datacite)
         gr.bind("dc", dc)
         gr.bind("fabio", fabio)
@@ -86,8 +86,8 @@ def main():
     for file in file_list:
         graph = Graph()
         
-        graph.bind("cs_ont", cs_ont)
-        graph.bind("cs_kg", cs_kg)
+        graph.bind("ocs_papers", ocs_papers)
+        graph.bind("", cs_kg)
         graph.bind("datacite", datacite)
         graph.bind("dc", dc)
         graph.bind("fabio", fabio)
@@ -132,7 +132,7 @@ def main():
                     organizations.add((s, p, o))
                     continue
 
-                for prefix in ["doco/", "deo/"]:
+                for prefix in ["doco", "deo"]:
                     if prefix in str(s):
                         bibliography.add((s, p, o))
                         continue
