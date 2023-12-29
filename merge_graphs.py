@@ -1,5 +1,6 @@
-from rdflib import Graph, Namespace, RDF
+from rdflib import *
 import os
+import tqdm
 
 
 def list_files(directory):
@@ -11,6 +12,54 @@ def list_files(directory):
             file_list.append(file_path)
 
     return file_list
+
+
+def divide_into_subgraph(graph, s, p, o,
+                          papers, articles, conf_papers, authors, organizations, bibliography, rest,
+                            fabio, schema, doco, deo, pro, frapo, co, datacite, literal, ocs_papers):
+    
+    if ((s, RDF.type, fabio.ResearchPaper) in graph) or ((s, RDF.type, ocs_papers.RelatedTopicRelation) in graph):
+        papers.add((s, p, o))
+        return
+    
+    for article_object in ['JournalArticle', 'JournalIssue', 'JournalVolume', 'Journal']:
+        if (s, RDF.type, URIRef(fabio + article_object)) in graph:
+            articles.add((s, p, o))
+            return
+
+    for conference_object in ['ConferencePaper', 'ConferenceProceedings']:  
+        if (s, RDF.type, URIRef(fabio + conference_object)) in graph:
+            conf_papers.add((s, p, o))
+            return
+
+    if (((s, RDF.type, schema.Person) in graph) and ("author" in str(s))) or ((s, RDF.type, pro.RoleInTime) in graph):
+        authors.add((s, p, o))
+        return
+
+    if (s, RDF.type, frapo.Organization) in graph:
+        organizations.add((s, p, o))
+        return
+    
+    stype = graph.value(subject=s, predicate=RDF.type)
+    if stype:
+        if (any(namespace in stype for namespace in [doco, deo])):
+            bibliography.add((s,p,o))
+            return
+        
+    if (p.startswith(co)):
+        bibliography.add((s,p,o))
+        return
+    
+    if p == URIRef(datacite + "hasDescriptionType") or p == URIRef(literal + "hasLiteralValue"):
+        papers.add((s, p, o))
+        return
+    
+    if "BIBREF" in str(s):
+        bibliography.add((s,p,o))
+        return
+
+    rest.add((s, p, o))
+    return
 
 def main():
 
@@ -83,7 +132,7 @@ def main():
         gr.bind("xsd", xsd)
 
 
-    for file in file_list:
+    for file in tqdm.tqdm(file_list, total=len(file_list)):
         graph = Graph()
         
         graph.bind("ocs_papers", ocs_papers)
@@ -112,32 +161,9 @@ def main():
             graph.parse(data=ttl_content, format="turtle")
 
             for s, p, o in graph.triples((None, None, None)):
-                if (s, RDF.type, fabio.ResearchPaper) in graph:
-                    papers.add((s, p, o))
-                    continue
-
-                if (s, RDF.type, fabio.JournalArticle) in graph:
-                    articles.add((s, p, o))
-                    continue
-
-                if (s, RDF.type, fabio.ConferencePaper) in graph:
-                    conf_papers.add((s, p, o))
-                    continue
-
-                if ((s, RDF.type, schema.Person) in graph) or ((s, RDF.type, pro.RoleInTime) in graph):
-                    authors.add((s, p, o))
-                    continue
-
-                if (s, RDF.type, frapo.Organization) in graph:
-                    organizations.add((s, p, o))
-                    continue
-
-                for prefix in ["doco", "deo"]:
-                    if prefix in str(s):
-                        bibliography.add((s, p, o))
-                        continue
-
-                rest.add((s, p, o))
+                divide_into_subgraph(graph, s, p, o,
+                                      papers, articles, conf_papers, authors, organizations, bibliography, rest,
+                                        fabio, schema, doco, deo, pro, frapo, co, datacite, literal, ocs_papers)
 
 
     with open(articles_file, "wb") as file:
