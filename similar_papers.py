@@ -146,7 +146,8 @@ def main():
             # polynomial_degree=5,
         )
         knee = kl.knee
-        assert knee
+        if not knee:
+            knee = len(results[0]) - 1
 
         id_ = re.search(r"[a-zA-Z0-9]{9}$", str(paper_uri)).group(0)
 
