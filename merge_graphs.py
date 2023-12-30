@@ -15,7 +15,7 @@ def list_files(directory):
 
 
 def divide_into_subgraph(graph, s, p, o,
-                          papers, articles, conf_papers, authors, organizations, bibliography, rest,
+                          papers, articles, conf_papers, authors, organizations, bibliography,
                             fabio, schema, doco, deo, pro, frapo, co, datacite, literal, ocs_papers):
     
     if ((s, RDF.type, fabio.ResearchPaper) in graph) or ((s, RDF.type, ocs_papers.RelatedTopicRelation) in graph):
@@ -58,7 +58,7 @@ def divide_into_subgraph(graph, s, p, o,
         bibliography.add((s,p,o))
         return
 
-    rest.add((s, p, o))
+    bibliography.add((s, p, o))
     return
 
 def main():
@@ -98,7 +98,6 @@ def main():
     conf_papers_file = dir + "conf_papers.ttl"
     papers_file = dir + "papers.ttl"
     organizations_file = dir + "organizations.ttl"
-    rest_file = dir + "rest.ttl" 
 
 
     articles = Graph()
@@ -107,9 +106,8 @@ def main():
     conf_papers = Graph()
     papers = Graph()
     organizations = Graph()
-    rest = Graph()
 
-    graphs = [articles, authors, bibliography, conf_papers, papers, organizations, rest]
+    graphs = [articles, authors, bibliography, conf_papers, papers, organizations]
 
     for gr in graphs:
         gr.bind("ocs_papers", ocs_papers)
@@ -162,7 +160,7 @@ def main():
 
             for s, p, o in graph.triples((None, None, None)):
                 divide_into_subgraph(graph, s, p, o,
-                                      papers, articles, conf_papers, authors, organizations, bibliography, rest,
+                                      papers, articles, conf_papers, authors, organizations, bibliography,
                                         fabio, schema, doco, deo, pro, frapo, co, datacite, literal, ocs_papers)
 
 
@@ -196,12 +194,6 @@ def main():
         if isinstance(g, str):
             g = g.encode()
         file.write(g)
-    with open(rest_file, "wb") as file:
-        g = rest.serialize(format='turtle')
-        if isinstance(g, str):
-            g = g.encode()
-        file.write(g)
-
 
     print("Graph created successfully")
 
