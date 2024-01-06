@@ -159,7 +159,7 @@ def main():
             assert sim_score
             
             if sim_score > 0.85:
-                relation = URIRef(ocs_papers + "RelatedTopicRelation" + "_" + id_ + "_" + str(i))
+                relation = URIRef(ocs_papers + "RelatedPaperRelation" + "_" + id_ + "_" + str(i))
                 g_sim.add((relation, RDF.type, ocs_papers.RelatedPaperRelation))
                 g_sim.add((relation, ocs_papers.hasRelationTarget, sim_paper_uri))
                 g_sim.add((relation, ocs_papers.hasRelationScore, Literal(sim_score, datatype=XSD.integer)))
